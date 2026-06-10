@@ -3,7 +3,7 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3>{{ 'GLOBAL_INTERNET_PLANS_TITLE' | translate }}</h3>
+        <h3 class="is-color-title">{{ 'GLOBAL_INTERNET_PLANS_TITLE' | translate }}</h3>
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -16,7 +16,8 @@
     <!-- Search list start -->
     <div class="searchlist" *ngIf="isSearch == true && searchData.length > 0">
       <ion-list>
-        <ion-item *ngFor="let item of searchData" (click)="gotoBundlesSearch(item.name || item.cityName, item.iso, 'country', '', item.is_destination, item.country_name)">
+        <ion-item *ngFor="let item of searchData"
+          (click)="gotoBundlesSearch(item.name || item.cityName, item.iso, 'country', '', item.is_destination, item.country_name)">
           <!-- Flags -->
           <ion-avatar slot="start" *ngIf="item.iso?.toLowerCase() === 'latam'">
             <img src="assets/flags/la.svg" alt="LATAM flag">
@@ -34,7 +35,7 @@
             *ngIf="item.iso?.toLowerCase() !== 'latam' && item.iso?.toLowerCase() !== 'europe+' && item.iso?.toLowerCase() !== 'north america' && item.iso?.toLowerCase() !== 'middle east'">
             <img src="assets/flags/{{ item.iso | lowercase }}.svg" alt="{{ item.iso }} flag">
           </ion-avatar>
-          
+
           <!-- Dynamic name display -->
           <ion-label>{{ item.name || item.cityName }}</ion-label>
         </ion-item>
@@ -69,7 +70,7 @@
 
         <ion-row>
           <ion-col>
-            <h3>{{ 'POPULAR_DESTINATIONS_TITLE' | translate }}</h3>
+            <h3 class="POPULAR_DESTINATIONS_TITLE">{{ 'POPULAR_DESTINATIONS_TITLE' | translate }}</h3>
           </ion-col>
         </ion-row>
 
@@ -77,7 +78,8 @@
           <swiper-container [slidesPerView]="2.3" [freeMode]="true" [loop]="false" pagination="false">
 
             <swiper-slide *ngFor="let popularItems of popularCountriesList">
-              <div class="countrybox" (click)="gotoBundles(popularItems.name, popularItems.iso, 'country','', false, popularItems.name)">
+              <div class="countrybox"
+                (click)="gotoBundles(popularItems.name, popularItems.iso, 'country','', false, popularItems.name)">
                 <img src="assets/countryBanners/{{ popularItems.iso }}.jpg" alt="">
                 <span class="country">{{ popularItems.name }}</span>
                 <span class="arrow"><ion-icon name="arrow-forward-circle-outline"></ion-icon></span>
@@ -91,12 +93,13 @@
 
           <ion-row>
             <ion-col>
-              <h3>{{ 'SELECT_A_COUNTRY_TITLE' | translate }}</h3>
+              <h3 class="POPULAR_DESTINATIONS_TITLE">{{ 'SELECT_A_COUNTRY_TITLE' | translate }}</h3>
             </ion-col>
           </ion-row>
           <ion-row class="country-row">
             <ion-col size="6" *ngFor="let bundleItem of mainObj">
-              <div class="selcountrybox" (click)="gotoBundles(bundleItem.name, bundleItem.iso, 'country','', false, bundleItem.name)">
+              <div class="selcountrybox"
+                (click)="gotoBundles(bundleItem.name, bundleItem.iso, 'country','', false, bundleItem.name)">
                 <span class="country" *ngIf="bundleItem.iso == 'LATAM'">
                   <img src="assets/flags/la.svg" alt="">
                 </span>
@@ -118,7 +121,8 @@
                   <img src="assets/flags/{{ bundleItem.iso | lowercase }}.svg" alt="">
                 </span>
 
-                <span> {{ bundleItem.name.length <= 25 ? bundleItem.name : bundleItem.name.slice(0, 25) + '...' }}</span>
+                <span> {{ bundleItem.name.length <= 25 ? bundleItem.name : bundleItem.name.slice(0, 25) + '...'
+                    }}</span>
               </div>
             </ion-col>
 
@@ -142,26 +146,27 @@
               <div class="detail">
                 <ion-row>
                   <ion-col>
-                    <p class="countryname">{{ zoneItem.name }}</p>
+                    <p class="is-color-title countryname">{{ zoneItem.name }}</p>
                   </ion-col>
                   <ion-col>
                     <p class="day">{{ 'FROM_LABEL' | translate }}
                       <!-- LYD -->
-          <span *ngIf="currencyCode === 'LYD'">
-            <ng-container *ngIf="langDefault === 'ar'; else lydEn">
-              {{ zoneItem.perDay| number:'1.0-0' }} د.ل
-            </ng-container>
+                      <span *ngIf="currencyCode === 'LYD'">
+                        <ng-container *ngIf="langDefault === 'ar'; else lydEn">
+                          {{ zoneItem.perDay| number:'1.0-0' }} د.ل
+                        </ng-container>
 
-            <ng-template #lydEn>
-              LYD&nbsp;{{ zoneItem.perDay | number:'1.0-0' }}
-            </ng-template>
-          </span>
+                        <ng-template #lydEn>
+                          LYD&nbsp;{{ zoneItem.perDay | number:'1.0-0' }}
+                        </ng-template>
+                      </span>
 
-          <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
-            {{zoneItem.perDay | currency:currencyCode }}
-          </span>
-                      {{ 'DAY_LABEL' | translate }}</p>
+                      <!-- Other currencies -->
+                      <span *ngIf="currencyCode !== 'LYD'">
+                        {{zoneItem.perDay | currency:currencyCode }}
+                      </span>
+                      {{ 'DAY_LABEL' | translate }}
+                    </p>
                   </ion-col>
                 </ion-row>
                 <ion-row>
@@ -209,9 +214,9 @@
       <ion-button (click)="gotoTab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
-    
+
   </ion-toolbar>
 </ion-footer>

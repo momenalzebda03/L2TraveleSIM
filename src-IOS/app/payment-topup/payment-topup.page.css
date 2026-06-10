@@ -120,7 +120,7 @@ ion-row ion-col p {
 }
 
 ion-card {
-  --background:var(--card-bg);
+  --background: var(--card-bg);
   --color: var(--theme-color-2);
   margin-inline: 0;
   box-shadow: none;

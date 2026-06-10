@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <h3>Choose a card</h3>
-      <p>
+      <h3 class="is-color-title">Choose a card</h3>
+      <p class="is-color-title">
         Or add a new one
       </p>
     </ion-title>
@@ -15,60 +15,60 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
- 
+
   <div class="container">
 
     <ion-radio-group value="cardselect">
 
       <ion-radio [value]="">
-      <ion-card>        
-        <div class="innerrow">
-          <div class="left">
-            <img src="assets/img/visa.png" alt="">
+        <ion-card>
+          <div class="innerrow">
+            <div class="left">
+              <img src="assets/img/visa.png" alt="">
+            </div>
+            <div class="right">
+              <!-- <ion-icon class="delete" name="trash-outline"></ion-icon> -->
+            </div>
           </div>
-          <div class="right">
-            <!-- <ion-icon class="delete" name="trash-outline"></ion-icon> -->
+          <div class="innerrow rownumber">
+            <div class="left"><small>CARD NUMBER</small></div>
+            <div class="right"><small>CVV</small></div>
           </div>
-        </div>
-        <div class="innerrow rownumber">
-          <div class="left"><small>CARD NUMBER</small></div>
-          <div class="right"><small>CVV</small></div>
-        </div>
-        <div class="innerrow">
-          <div class="left star">
-            <span>****</span> &nbsp; <span>****</span> &nbsp; <span>***</span>
+          <div class="innerrow">
+            <div class="left star">
+              <span>****</span> &nbsp; <span>****</span> &nbsp; <span>***</span>
+            </div>
+            <div class="right star">
+              <span class="number">077</span>
+            </div>
           </div>
-          <div class="right star">
-            <span class="number">077</span>
+          <div class="innerrow">
+            <div class="left">
+              <ion-row>
+                <ion-col size="3"><small>VALID THRU</small></ion-col>
+                <ion-col size="3"><small>06</small><small>/</small><small>30</small>
+                </ion-col>
+              </ion-row>
+            </div>
+            <div class="right">
+            </div>
           </div>
-        </div>
-        <div class="innerrow">
-          <div class="left">
-            <ion-row>
-              <ion-col size="3"><small>VALID THRU</small></ion-col>
-              <ion-col size="3"><small>06</small><small>/</small><small>30</small>
-              </ion-col>
-            </ion-row>
+          <div class="innerrow rowholder">
+            <div class="left">
+              <span class="holdername">CARDHOLDER NAME HERE</span>
+            </div>
+            <div class="right">
+              <img src="assets/img/chip.png" class="cardchip" alt="">
+            </div>
           </div>
-          <div class="right">
-          </div>
-        </div>
-        <div class="innerrow rowholder">
-          <div class="left">
-            <span class="holdername">CARDHOLDER NAME HERE</span>
-          </div>
-          <div class="right">
-            <img src="assets/img/chip.png" class="cardchip" alt="">
-          </div>
-        </div>
-      </ion-card>
+        </ion-card>
       </ion-radio>
 
       <ion-radio [value]="">
         <ion-card>
           <div class="innerrow">
             <div class="left">
-              <img src="assets/img/visa.png"  alt="">
+              <img src="assets/img/visa.png" alt="">
             </div>
             <div class="right">
               <!-- <ion-icon class="delete" name="trash-outline"></ion-icon> -->
@@ -112,7 +112,8 @@
 
   </div>
 
-  <ion-button class="btn-green btn-add-newcard" expand="block" routerLink="/add-payment-card"><!--(click)="gotoNewCard()"-->
+  <ion-button class="btn-green btn-add-newcard" expand="block"
+    routerLink="/add-payment-card"><!--(click)="gotoNewCard()"-->
     Add new card
   </ion-button>
 

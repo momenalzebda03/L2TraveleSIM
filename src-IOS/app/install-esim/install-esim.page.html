@@ -3,7 +3,7 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3 [innerHTML]="'ACTIVATE_PLAN_TITLE' | translate">
+        <h3 [innerHTML]="'ACTIVATE_PLAN_TITLE' | translate" class="is-color-title">
         </h3>
       </ion-title>
       <ion-buttons slot="end">
@@ -40,7 +40,7 @@
     <div class="segment-panel" [ngSwitch]="selectedSegment">
 
       <div *ngSwitchCase="'install'">
-        <ion-button (click)="directInstall()" expand="block" class="btn-green">
+        <ion-button (click)="directInstall()" expand="block" class="custome-btn btn-green">
           {{ 'INSTALL_ESIM_BUTTON' | translate }}
         </ion-button>
         <ion-card class="create-apn">
@@ -248,7 +248,7 @@
       <ion-button (click)="gotoTab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
   </ion-toolbar>
 </ion-footer>

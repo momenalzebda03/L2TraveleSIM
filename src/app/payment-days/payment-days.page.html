@@ -3,25 +3,25 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3>{{ 'PAYMENT_TITLE' | translate }}</h3>
-        <p>{{ 'CHOOSE_HOW_TO_PAY_DESCRIPTION' | translate }}</p>
+        <h3 class="is-color-title">{{ 'PAYMENT_TITLE' | translate }}</h3>
+        <p class="is-color-title">{{ 'CHOOSE_HOW_TO_PAY_DESCRIPTION' | translate }}</p>
       </ion-title>
       <ion-chip slot="end" (click)="gotoTOpup()" [ngClass]="getWalletClass()">
         <!-- LYD -->
-          <span *ngIf="currencyCode === 'LYD'">
-            <ng-container *ngIf="lang === 'ar'; else lydEn">
-              {{ walletBalance | number:'1.0-0' }} د.ل
-            </ng-container>
+        <span *ngIf="currencyCode === 'LYD'" class="is-color-title">
+          <ng-container *ngIf="lang === 'ar'; else lydEn">
+            {{ walletBalance | number:'1.0-0' }} د.ل
+          </ng-container>
 
-            <ng-template #lydEn>
-              LYD&nbsp;{{ walletBalance| number:'1.0-0' }}
-            </ng-template>
-          </span>
+          <ng-template #lydEn>
+            LYD&nbsp;{{ walletBalance| number:'1.0-0' }}
+          </ng-template>
+        </span>
 
-          <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
-            {{ walletBalance | currency:currencyCode }}
-          </span></ion-chip>
+        <!-- Other currencies -->
+        <span *ngIf="currencyCode !== 'LYD'">
+          {{ walletBalance | currency:currencyCode }}
+        </span></ion-chip>
       <ion-buttons slot="end" *ngIf="backURL !='/login' && backURL != '/account-created'">
         <ion-button fill="clear" (click)="gotoBack()">
           <ion-icon name="arrow-back-circle-outline"></ion-icon>
@@ -34,76 +34,76 @@
 
     <ion-row class="top-row">
       <ion-col size="7">
-                <h2 *ngIf="checkoutObj?.isUnlimited && lang!='en'">
+        <h2 *ngIf="checkoutObj?.isUnlimited && lang!='en'" class="is-color-title">
           {{ checkoutObj?.bundleData?.duration }} {{ checkoutObj?.bundleData?.duration > 1 ? 'أيام' : 'يوم' }}
         </h2>
 
-        <h2 *ngIf="checkoutObj?.isUnlimited && lang=='en'">
+        <h2 *ngIf="checkoutObj?.isUnlimited && lang=='en'" class="is-color-title">
           {{ checkoutObj?.bundleData?.duration }} {{ checkoutObj?.bundleData?.duration > 1 ? 'Days' : 'Day' }}
         </h2>
 
 
-        <h2 *ngIf="!checkoutObj.isUnlimited">
-           {{ 'DATA_PLAN' | translate:{ size: checkoutObj.bundleData.dataAmount / 1000 } }}</h2>
+        <h2 *ngIf="!checkoutObj.isUnlimited" class="is-color-title">
+          {{ 'DATA_PLAN' | translate:{ size: checkoutObj.bundleData.dataAmount / 1000 } }}</h2>
       </ion-col>
 
-     <ion-col size="5">
-  <!-- When coupon is applied -->
-  <p class="price cross" *ngIf="coupencodeRes?.is_couped_applied == 1">
-    <span *ngIf="checkoutObj.currency === 'LYD'">
-      <ng-container *ngIf="lang === 'ar'; else lydenCross">
-        {{ checkoutObj.extraAmount | number:'1.0-0' }} د.ل
-      </ng-container>
-      <ng-template #lydenCross>
-        LYD&nbsp;{{ checkoutObj.extraAmount | number:'1.0-0' }}
-      </ng-template>
-    </span>
-    <span *ngIf="checkoutObj.currency !== 'LYD'">
-      {{ checkoutObj.extraAmount | currency:checkoutObj.currency }}
-    </span>
-  </p>
+      <ion-col size="5">
+        <!-- When coupon is applied -->
+        <p class="price cross" *ngIf="coupencodeRes?.is_couped_applied == 1">
+          <span *ngIf="checkoutObj.currency === 'LYD'">
+            <ng-container *ngIf="lang === 'ar'; else lydenCross">
+              {{ checkoutObj.extraAmount | number:'1.0-0' }} د.ل
+            </ng-container>
+            <ng-template #lydenCross>
+              LYD&nbsp;{{ checkoutObj.extraAmount | number:'1.0-0' }}
+            </ng-template>
+          </span>
+          <span *ngIf="checkoutObj.currency !== 'LYD'">
+            {{ checkoutObj.extraAmount | currency:checkoutObj.currency }}
+          </span>
+        </p>
 
-  <!-- When coupon is not applied -->
-  <p class="price" *ngIf="coupencodeRes?.is_couped_applied == 0">
-    <span *ngIf="checkoutObj.currency === 'LYD'">
-      <ng-container *ngIf="lang === 'ar'; else lydenNoCross">
-        {{ checkoutObj.extraAmount | number:'1.0-0' }} د.ل
-      </ng-container>
-      <ng-template #lydenNoCross>
-        LYD&nbsp;{{ checkoutObj.extraAmount | number:'1.0-0' }}
-      </ng-template>
-    </span>
-    <span *ngIf="checkoutObj.currency !== 'LYD'">
-      {{ checkoutObj.extraAmount | currency:checkoutObj.currency }}
-    </span>
-  </p>
-</ion-col>
+        <!-- When coupon is not applied -->
+        <p class="price is-color-title" *ngIf="coupencodeRes?.is_couped_applied == 0">
+          <span *ngIf="checkoutObj.currency === 'LYD'">
+            <ng-container *ngIf="lang === 'ar'; else lydenNoCross">
+              {{ checkoutObj.extraAmount | number:'1.0-0' }} د.ل
+            </ng-container>
+            <ng-template #lydenNoCross>
+              LYD&nbsp;{{ checkoutObj.extraAmount | number:'1.0-0' }}
+            </ng-template>
+          </span>
+          <span *ngIf="checkoutObj.currency !== 'LYD'">
+            {{ checkoutObj.extraAmount | currency:checkoutObj.currency }}
+          </span>
+        </p>
+      </ion-col>
 
 
     </ion-row>
     <ion-row>
       <ion-col size="7">
-        <p class="megapass" *ngIf="checkoutObj.isUnlimited">{{ 'UNLIMITED_DAILY_PASS' | translate }}</p>
-        <p class="megapass" *ngIf="!checkoutObj.isUnlimited">{{ 'VALID_FOR_DAYS' | translate:{ days:
+        <p class="megapass is-color-title" *ngIf="checkoutObj.isUnlimited">{{ 'UNLIMITED_DAILY_PASS' | translate }}</p>
+        <p class="megapass is-color-title" *ngIf="!checkoutObj.isUnlimited">{{ 'VALID_FOR_DAYS' | translate:{ days:
           checkoutObj.bundleData.duration } }}
         </p>
       </ion-col>
-    <ion-col size="5" *ngIf="coupencodeRes?.is_couped_applied == 1">
-  <p class="price">
-    <span *ngIf="coupencodeRes.currency === 'LYD'">
-      <ng-container *ngIf="lang === 'ar'; else lydEnOriginal">
-        {{ coupencodeRes.original_amount | number:'1.0-0' }} د.ل
-      </ng-container>
-      <ng-template #lydEnOriginal>
-        LYD&nbsp;{{ coupencodeRes.original_amount | number:'1.0-0' }}
-      </ng-template>
-    </span>
+      <ion-col size="5" *ngIf="coupencodeRes?.is_couped_applied == 1">
+        <p class="price is-color-title">
+          <span *ngIf="coupencodeRes.currency === 'LYD'">
+            <ng-container *ngIf="lang === 'ar'; else lydEnOriginal">
+              {{ coupencodeRes.original_amount | number:'1.0-0' }} د.ل
+            </ng-container>
+            <ng-template #lydEnOriginal>
+              LYD&nbsp;{{ coupencodeRes.original_amount | number:'1.0-0' }}
+            </ng-template>
+          </span>
 
-    <span *ngIf="coupencodeRes.currency !== 'LYD'">
-      {{ coupencodeRes.original_amount | currency: coupencodeRes.currency }}
-    </span>
-  </p>
-</ion-col>
+          <span *ngIf="coupencodeRes.currency !== 'LYD'">
+            {{ coupencodeRes.original_amount | currency: coupencodeRes.currency }}
+          </span>
+        </p>
+      </ion-col>
 
     </ion-row>
     <ion-row>
@@ -131,37 +131,34 @@
     </ion-row>
 
     <div class="compatibility-card">
-<!-- Main Row -->
-<div class="card-body">
-  
-  <div class="left-section">
-    <div class="icon-box">
-      <ion-icon name="phone-portrait-outline"></ion-icon>
-    </div> 
+      <!-- Main Row -->
+      <div class="card-body">
 
-    <span class="title">
-      {{ 'ESIM_COMPATIBLE_QUESTION' | translate }}
-    </span>
-  </div>
+        <div class="left-section">
+          <div class="icon-box">
+            <ion-icon name="phone-portrait-outline"></ion-icon>
+          </div>
 
-  <div 
-    class="status-btn"
-    [ngClass]="{
+          <span class="title">
+            {{ 'ESIM_COMPATIBLE_QUESTION' | translate }}
+          </span>
+        </div>
+
+        <div class="status-btn" [ngClass]="{
       'yes': isEsimCompatible === true,
       'no': isEsimCompatible === false
-    }"
-  >
-    <span *ngIf="isEsimCompatible === null">
-      {{ 'CHECKING' | translate }}
-    </span>
+    }">
+          <span *ngIf="isEsimCompatible === null">
+            {{ 'CHECKING' | translate }}
+          </span>
 
-    <span *ngIf="isEsimCompatible !== null">
-      {{ isEsimCompatible ? ('YES' | translate) : ('NO' | translate) }}
-    </span>
-  </div>
+          <span *ngIf="isEsimCompatible !== null">
+            {{ isEsimCompatible ? ('YES' | translate) : ('NO' | translate) }}
+          </span>
+        </div>
 
-</div>
-</div>
+      </div>
+    </div>
 
 
     <div class="cardoption">
@@ -178,14 +175,14 @@
           <img src="assets/img/credit-card-dark.png" alt="">{{ 'CREDIT_DEBIT' | translate }}
         </ion-radio>
 
-         <!-- this is new row for t-lync -->
-        <ion-radio  [value]="'tlync'">
+        <!-- this is new row for t-lync -->
+        <ion-radio [value]="'tlync'">
           <img src="assets/img/tlynclogoblack.png" alt="">{{ 't-lync' | translate }}
         </ion-radio>
         <!-- this is new row for t-lync  end -->
       </ion-radio-group>
 
-  
+
       <div class="card-slider" *ngIf="selectedPaymentType === 'credit-debit' && cardList.length > 0">
         <swiper-container (slidechange)="swiperSlideChanged($event)" [freeMode]="true" [loop]="false"
           [pagination]="true">
@@ -240,66 +237,61 @@
     </div>
 
     <h5 class="coupontitle"> {{ 'HAVE_COUPON_QUESTION' | translate}}</h5>
-    <div class="couponrow">      
+    <div class="couponrow">
       <ion-item lines="none">
-        <ion-input type="text" [(ngModel)]="coupon_code" 
-                   [placeholder]="'ENTER_COUPON_CODE' | translate"
-                   [readonly]="coupencodeRes?.is_couped_applied === 1">
+        <ion-input type="text" [(ngModel)]="coupon_code" [placeholder]="'ENTER_COUPON_CODE' | translate"
+          [readonly]="coupencodeRes?.is_couped_applied === 1">
         </ion-input>
-      
+
         <ion-button *ngIf="coupencodeRes?.is_couped_applied === 1" slot="end" fill="clear" (click)="removeCoupon()">
           <ion-icon name="trash-bin-outline"></ion-icon>
         </ion-button>
       </ion-item>
-      
-      <ion-button class="apply" (click)="applyCoupon()" 
-                  [disabled]="coupencodeRes?.is_couped_applied === 1">
+
+      <ion-button class="apply" (click)="applyCoupon()" [disabled]="coupencodeRes?.is_couped_applied === 1">
         {{ 'APPLY_BUTTON' | translate }}
       </ion-button>
     </div>
     <!-- Cashback Section Start -->
     <div *ngIf="cashBackRes?.is_cashback_applicable == 1 && selectedPaymentType != 'wallet-pay'">
       <h5 class="cashbacktitle">
-        {{ 'CASHBACK.TITLE' | translate }} 
+        {{ 'CASHBACK.TITLE' | translate }}
         <img src="assets/img/cashback-black.png" alt="{{ 'CASHBACK.IMG_ALT' | translate }}">
       </h5>
 
       <p *ngIf="cashBackRes?.amount_type === 'fixed'">
-  <strong>{{ 'CASHBACK.QUALIFY' | translate }}</strong><br>
-  {{ 'CASHBACK.FIXED' | translate: { 
-        amount: (cashBackRes?.currency === 'LYD' 
-                  ? (lang === 'ar' ? (cashBackRes?.amount | number:'1.0-0') + ' د.ل' 
-                                   : 'LYD ' + (cashBackRes?.amount | number:'1.0-0')) 
-                  : (cashBackRes?.amount | currency: cashBackRes?.currency)) 
-      } 
-  }}
-</p>
+        <strong>{{ 'CASHBACK.QUALIFY' | translate }}</strong><br>
+        {{ 'CASHBACK.FIXED' | translate: {
+        amount: (cashBackRes?.currency === 'LYD'
+        ? (lang === 'ar' ? (cashBackRes?.amount | number:'1.0-0') + ' د.ل'
+        : 'LYD ' + (cashBackRes?.amount | number:'1.0-0'))
+        : (cashBackRes?.amount | currency: cashBackRes?.currency))
+        }
+        }}
+      </p>
 
-<p *ngIf="cashBackRes?.amount_type !== 'fixed'">
-  <strong>{{ 'CASHBACK.QUALIFY' | translate }}</strong><br>
-  {{ 'CASHBACK.PERCENTAGE' | translate: { 
-        percentage: cashBackRes?.percentage, 
-        amount: (cashBackRes?.currency === 'LYD' 
-                  ? (lang === 'ar' ? (cashBackRes?.amount | number:'1.0-0') + ' د.ل' 
-                                   : 'LYD ' + (cashBackRes?.amount | number:'1.0-0')) 
-                  : (cashBackRes?.amount | currency: cashBackRes?.currency)) 
-      } 
-  }}
-</p>
+      <p *ngIf="cashBackRes?.amount_type !== 'fixed'">
+        <strong>{{ 'CASHBACK.QUALIFY' | translate }}</strong><br>
+        {{ 'CASHBACK.PERCENTAGE' | translate: {
+        percentage: cashBackRes?.percentage,
+        amount: (cashBackRes?.currency === 'LYD'
+        ? (lang === 'ar' ? (cashBackRes?.amount | number:'1.0-0') + ' د.ل'
+        : 'LYD ' + (cashBackRes?.amount | number:'1.0-0'))
+        : (cashBackRes?.amount | currency: cashBackRes?.currency))
+        }
+        }}
+      </p>
 
     </div>
     <!-- Cashback Section End -->
 
 
-<ion-button
-  expand="block"
-  (click)="proceedForPayment()"
-  class="btn-green btn-payment"
-  [disabled]="isGooglePayProcessing">
-  {{ 'PAY_NOW' | translate }}
-</ion-button>
+    <ion-button expand="block" (click)="proceedForPayment()" class="btn-green btn-payment"
+      [disabled]="isGooglePayProcessing">
+      {{ 'PAY_NOW' | translate }}
+    </ion-button>
 
-    <h5 class="text-center dataheading" *ngIf="checkoutObj.isUnlimited ==false">
+    <h5 class="text-center dataheading is-color-title" *ngIf="checkoutObj.isUnlimited ==false">
       {{ 'HOW_MUCH_DATA' | translate }}
     </h5>
     <p class="text-center datatext" *ngIf="checkoutObj.isUnlimited ==false">

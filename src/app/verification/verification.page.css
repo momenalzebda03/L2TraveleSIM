@@ -1,8 +1,9 @@
 @charset "UTF-8";
 ion-header ion-toolbar ion-buttons ion-button {
+  --color: var(--theme-color-blue);
   margin-inline-start: 0;
   margin-inline-end: 0;
-  --box-shadow:none;
+  --box-shadow: none;
   margin-top: -20px;
 }
 ion-header ion-toolbar ion-buttons ion-button::part(native) {
@@ -18,7 +19,7 @@ ion-content {
 }
 
 .ion-padding {
-  --padding-top:10px;
+  --padding-top: 10px;
 }
 
 /* Custom styles for OTP input */
@@ -53,11 +54,11 @@ ion-list {
 }
 
 ion-item {
-  --inner-border-width:0 0 0 0;
+  --inner-border-width: 0 0 0 0;
   margin: 25px 0px 0px;
   --padding-start: 0;
   --inner-padding-end: 0;
-  --background:transparent;
+  --background: transparent;
 }
 ion-item ion-input {
   color: var(--theme-color-2);
@@ -73,14 +74,14 @@ ion-item ion-icon {
 }
 
 ion-button.btn-continue {
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
   margin: 55% 0px 0px;
 }
 
 ion-button.btn-resend {
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
   margin: 25px 0px 0px;
 }
 
@@ -221,7 +222,8 @@ ion-button.btn-resend {
   font-size: 10px;
   letter-spacing: 0.2px;
   font-weight: 600;
-  color: #333; /* darker than before */
+  color: #333;
+  /* darker than before */
 }
 
 /**************************************************************/

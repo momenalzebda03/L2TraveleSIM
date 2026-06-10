@@ -214,7 +214,7 @@ ion-card.value-data h4 {
   font-weight: 600;
 }
 ion-card.value-data .arrow {
-  color: var(--theme-color-1);
+  color: var(--theme-color-3);
 }
 
 .card-content-ios {

@@ -164,7 +164,7 @@ ion-card{
     .day{  color: var(--theme-color-2); }  
     .price{ color: var(--theme-color-2); }
     .info{ color: var(--theme-color-2); }
-    .arrow{ color: var(--theme-color-1); }
+    .arrow{ color: var(--theme-color-3); }
   }
 
   &.value-data{
@@ -173,7 +173,7 @@ ion-card{
     .info{ color:var(--theme-color-2); }
     .info span{ color: var(--theme-color-2);}
     h4{ font-weight: 600;}
-    .arrow{ color: var(--theme-color-1); }
+    .arrow{ color: var(--theme-color-3); }
   }
 
 }

@@ -21,7 +21,7 @@ p {
   margin: 0 0 15px;
   color: var(--theme-color-2);
   font-size: 15px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 .cardoption ion-radio img {
   width: 25px;
@@ -59,7 +59,7 @@ ion-radio::part(container) {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-radio::part(mark) {
   height: 53%;
@@ -120,14 +120,14 @@ ion-row ion-col p {
 }
 
 ion-card {
-  --background:var(--card-bg);
+  --background: var(--card-bg);
   --color: var(--theme-color-2);
   margin-inline: 0;
   box-shadow: none;
   border-radius: 16px;
   padding: 20px;
   margin: 0 0px 10px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-card h5 {
   margin: 10px 0;

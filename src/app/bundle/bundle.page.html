@@ -28,35 +28,35 @@
 
   <div class="container">
     <div class="datacontainer">
-      <h3 class="valueplan" *ngIf="isDataPlan">{{ 'VALUE_INTERNET_PLANS_TITLE' | translate }}</h3>
+      <h3 class="valueplan is-color-title" *ngIf="isDataPlan">{{ 'VALUE_INTERNET_PLANS_TITLE' | translate }}</h3>
       <ion-card class="value-data" *ngFor="let bundleItem of nonUnlimitedBundles">
         <ion-row (click)="gotoSummary(bundleItem, false)">
           <ion-col size="8">
-            <p class="data">
+            <p class="data is-color-title">
               {{ 'DATA_PLAN' | translate:{ size: bundleItem.dataAmount / 1000 } }}
             </p>
 
           </ion-col>
           <ion-col size="4">
-            <p class="price text-right">
+            <p class="price text-right is-color-title">
               <ng-container *ngIf="bundleItem.is_cashback_applicable == 1">
                 <img src="assets/img/cashback.png" alt="Cashback">
               </ng-container>
-             <!-- LYD -->
-          <span *ngIf="currencyCode === 'LYD'">
-            <ng-container *ngIf="lang === 'ar'; else lydEn">
-              {{ bundleItem.price | number:'1.0-0' }} د.ل
-            </ng-container>
+              <!-- LYD -->
+              <span *ngIf="currencyCode === 'LYD'">
+                <ng-container *ngIf="lang === 'ar'; else lydEn">
+                  {{ bundleItem.price | number:'1.0-0' }} د.ل
+                </ng-container>
 
-            <ng-template #lydEn>
-              LYD&nbsp;{{ bundleItem.price | number:'1.0-0' }}
-            </ng-template>
-          </span>
+                <ng-template #lydEn>
+                  LYD&nbsp;{{ bundleItem.price | number:'1.0-0' }}
+                </ng-template>
+              </span>
 
-          <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
-            {{ bundleItem.price | currency:currencyCode }}
-          </span>
+              <!-- Other currencies -->
+              <span *ngIf="currencyCode !== 'LYD'">
+                {{ bundleItem.price | currency:currencyCode }}
+              </span>
 
 
             </p>
@@ -76,36 +76,37 @@
 
 
       <h3 *ngIf="isDataPlan && unlimitedBundles.length > 0">{{ 'UNLIMITED_DAILY_PASSES_TITLE' | translate }}</h3>
-      <ion-card class="mega-data" *ngFor="let bundleItem of unlimitedBundles" (click)="gotoSummary(bundleItem, true)">
+      <ion-card class="mega-data is-color-title" *ngFor="let bundleItem of unlimitedBundles"
+        (click)="gotoSummary(bundleItem, true)">
         <ion-row>
           <ion-col size="8">
-           <p class="day">
-              {{ bundleItem.duration > 1 
-                  ? ('UNLIMITED_DAY_PASS_PLURAL' | translate:{ duration: bundleItem.duration }) 
-                  : ('UNLIMITED_DAY_PASS_SINGULAR' | translate:{ duration: bundleItem.duration }) 
+            <p class="day is-color-title">
+              {{ bundleItem.duration > 1
+              ? ('UNLIMITED_DAY_PASS_PLURAL' | translate:{ duration: bundleItem.duration })
+              : ('UNLIMITED_DAY_PASS_SINGULAR' | translate:{ duration: bundleItem.duration })
               }}
             </p>
           </ion-col>
           <ion-col size="4">
-            <p class="price text-right">
+            <p class="price text-right is-color-title">
               <ng-container *ngIf="bundleItem.is_cashback_applicable == 1">
                 <img src="assets/img/cashback.png" alt="Cashback">
               </ng-container>
               <!-- LYD -->
-          <span *ngIf="currencyCode === 'LYD'">
-            <ng-container *ngIf="lang === 'ar'; else lydEn">
-              {{ bundleItem.price | number:'1.0-0' }} د.ل
-            </ng-container>
+              <span *ngIf="currencyCode === 'LYD'">
+                <ng-container *ngIf="lang === 'ar'; else lydEn">
+                  {{ bundleItem.price | number:'1.0-0' }} د.ل
+                </ng-container>
 
-            <ng-template #lydEn>
-              LYD&nbsp;{{ bundleItem.price | number:'1.0-0' }}
-            </ng-template>
-          </span>
+                <ng-template #lydEn>
+                  LYD&nbsp;{{ bundleItem.price | number:'1.0-0' }}
+                </ng-template>
+              </span>
 
-          <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
-            {{ bundleItem.price | currency:currencyCode }}
-          </span>
+              <!-- Other currencies -->
+              <span *ngIf="currencyCode !== 'LYD'">
+                {{ bundleItem.price | currency:currencyCode }}
+              </span>
             </p>
           </ion-col>
         </ion-row>

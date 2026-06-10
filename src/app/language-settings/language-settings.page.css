@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -44,7 +41,7 @@ ion-radio::part(container) {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: var(--border-color);
+  border-color: var(--theme-color-blue);
 }
 ion-radio::part(mark) {
   height: 53%;
@@ -54,7 +51,7 @@ ion-radio.radio-checked {
   color: var(--theme-color-2);
 }
 ion-radio.radio-checked::part(container) {
-  background: var(--theme-color-3);
+  background: var(--theme-color-blue);
   border-color: var(--theme-color-3);
 }
 ion-radio.radio-checked::part(mark) {
@@ -63,12 +60,12 @@ ion-radio.radio-checked::part(mark) {
 
 ion-radio {
   --color: var(--theme-color-2);
-  --color-checked:var(--theme-color-2);
-  border: 1px solid var(--border-color) !important;
+  --color-checked: var(--theme-color-2);
+  border: 1px solid var(--blue-bg-card) !important;
 }
 
 .language {
-  background-color: var(--theme-color-3);
+  background-color: var(--theme-color-blue);
   padding: 3px 6px;
   border-radius: 4px;
   color: var(--color-white);

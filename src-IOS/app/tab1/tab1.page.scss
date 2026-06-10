@@ -190,7 +190,7 @@ ion-segment{
     --background:transparent;
     --background-checked:transparent;
     --color:rgba(17,32,66,0.5);
-    --color-checked:var(--theme-color-1);
+    --color-checked:var(--theme-color-3);
     --indicator-height:0;
     border-radius: 0px;  
     min-height: 40px;  
@@ -224,7 +224,7 @@ ion-segment{
           .active{ display: inline-block; }
       }    
       &::before{
-          position: absolute; z-index: 11; left: 0; right: 0; bottom: 0; background: var(--theme-color-1); height: 4px; content: ""; border-radius: 10px 10px 0 0; 
+          position: absolute; z-index: 11; left: 0; right: 0; bottom: 0; background: var(--theme-color-3); height: 4px; content: ""; border-radius: 10px 10px 0 0; 
           width: 140px; margin: 0 auto;
       } 
       &::after{

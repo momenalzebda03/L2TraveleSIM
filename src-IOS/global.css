@@ -140,7 +140,7 @@ ion-header ion-toolbar ion-title p {
 }
 ion-header ion-toolbar ion-buttons ion-button {
   font-size: 22px;
-  color: var(--theme-color-1);
+  color: var(--theme-color-blue);
   display: inline-block;
 }
 ion-header ion-toolbar ion-buttons ion-button.button-clear {
@@ -516,7 +516,7 @@ ion-alert .alert-radio-inner.sc-ion-alert-md {
 }
 
 ion-accordion.accordion ion-item ion-icon {
-  color: var(--theme-color-2);
+  color: var(--theme-color-3);
 }
 
 .country-modal > .ion-page {

@@ -1,9 +1,9 @@
 ion-header ion-toolbar {
-  --min-height:150px;
+  --min-height: 150px;
   height: 120px;
 }
 ion-header ion-toolbar.ios {
-  --min-height:150px;
+  --min-height: 150px;
 }
 ion-header ion-toolbar ion-title.ios {
   padding-inline: 25px;
@@ -14,10 +14,11 @@ ion-header ion-toolbar [slot=end] {
   margin-inline-end: 15px;
 }
 ion-header ion-toolbar ion-buttons ion-button {
+  --color: var(--theme-color-blue);
   display: inline-block;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  --box-shadow:none;
+  --box-shadow: none;
   margin-top: -20px;
 }
 ion-header ion-toolbar ion-buttons ion-button::part(native) {
@@ -32,7 +33,7 @@ ion-header ion-toolbar ion-buttons ion-button img {
 }
 
 ion-content {
-  --background:#fff;
+  --background: #fff;
 }
 
 .list-md {
@@ -44,9 +45,9 @@ ion-list {
   padding: 0;
 }
 ion-list ion-item {
-  --inner-border-width:0 0 0 0;
+  --inner-border-width: 0 0 0 0;
   margin: 0 0 15px;
-  --background:var(--input-bg);
+  --background: var(--input-bg);
   border: 1px solid var(--border-color-check);
   --min-height: 46px;
 }
@@ -67,8 +68,8 @@ a {
 }
 
 ion-button.btn-login {
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
   margin: 25px 0px 10px;
 }
 
@@ -107,12 +108,12 @@ ion-row.checkrow ion-col ion-checkbox {
 ion-checkbox {
   color: var(--theme-color-2);
   font-size: 15px;
-  --border-width:1px;
-  --border-color:var(--theme-color-2);
-  --checkbox-background:transparent;
-  --checkbox-background-checked:var(--theme-color-2);
-  --border-color-checked:var(--theme-color-2);
-  --checkmark-color:var(--theme-color-3);
+  --border-width: 1px;
+  --border-color: var(--theme-color-2);
+  --checkbox-background: transparent;
+  --checkbox-background-checked: var(--theme-color-2);
+  --border-color-checked: var(--theme-color-2);
+  --checkmark-color: var(--theme-color-3);
   --checkmark-width: 4;
   --checkbox-background-checked: transparent;
   --border-color-checked: transparent;

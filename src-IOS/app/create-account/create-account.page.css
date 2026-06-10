@@ -17,6 +17,7 @@ ion-header ion-toolbar [slot=end] {
   margin-inline-end: 15px;
 }
 ion-header ion-toolbar ion-buttons ion-button {
+  --color: var(--theme-color-blue);
   display: inline-block;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -50,6 +51,7 @@ ion-item {
   --inner-border-width:0 0 0 0;
   margin: 0 0 12px;
   --background:var(--input-bg);
+  border: 1px solid var(--theme-color-2);
   --min-height: 46px;
 }
 ion-item:last-child {
@@ -193,7 +195,7 @@ ion-item {
   --min-height: 56px;
   --color:var(--theme-color-2);
   margin: 0 0 15px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 
 ion-checkbox {

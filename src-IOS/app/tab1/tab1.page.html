@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      <h3>
+      <h3 class="is-color-title">
        {{'INTERNET_PLANS_PAGE_TITLE' | translate }}
       </h3>
     </ion-title>
@@ -99,7 +99,7 @@
 
       <!-- new code -->
       <div class="topup" *ngIf="bundleTopupAgain.length >0">
-        <h4>{{ 'top_up_again' | translate }}</h4>
+        <h4 class="is-color-title">{{ 'top_up_again' | translate }}</h4>
 
         <ion-card *ngFor="let topupItem of bundleTopupAgain ; let i = index">
           <ion-row class="d-flex" (click)="gotoDetails(topupItem,'topup')">

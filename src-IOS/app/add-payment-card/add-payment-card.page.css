@@ -1,7 +1,10 @@
 ion-header ion-toolbar {
-  --min-height:150px;
+  --min-height: 150px;
   height: 180px;
   height: auto;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  --color: var(--theme-color-blue) !important;
 }
 ion-header ion-toolbar ion-buttons {
   margin-top: -20px;
@@ -20,10 +23,10 @@ ion-list {
   padding: 0;
 }
 ion-list ion-item {
-  --inner-border-width:0 0 0 0;
+  --inner-border-width: 0 0 0 0;
   margin: 0 0 20px;
-  --background: rgba(255,255,255,1);
-  border: 1px solid var(--theme-color-2);
+  --background: var(--input-bg);
+  border: 1px solid var(--theme-gray-broder);
 }
 ion-list ion-item:last-child {
   margin: 0 0 0px;
@@ -51,12 +54,12 @@ ion-row.checkrow ion-col ion-checkbox {
 ion-checkbox {
   color: var(--theme-color-2);
   font-size: 15px;
-  --border-width:1px;
-  --border-color:var(--theme-color-2);
-  --checkbox-background:transparent;
-  --checkbox-background-checked:var(--theme-color-2);
-  --border-color-checked:var(--theme-color-2);
-  --checkmark-color:var(--theme-color-2);
+  --border-width: 1px;
+  --border-color: var(--theme-color-2);
+  --checkbox-background: transparent;
+  --checkbox-background-checked: var(--theme-color-2);
+  --border-color-checked: var(--theme-color-2);
+  --checkmark-color: var(--theme-color-2);
   --checkmark-width: 4;
   --checkbox-background-checked: transparent;
   --border-color-checked: transparent;
@@ -82,8 +85,8 @@ ion-row ion-col {
 }
 
 ion-card {
-  --background:var(--card-bg);
-  --color: rgba(17,32,66,0.5);
+  --background: var(--card-bg);
+  --color: rgba(17, 32, 66, 0.5);
   margin-inline: 0;
   box-shadow: none;
   border-radius: 16px;
@@ -182,7 +185,7 @@ swiper-container::part(bullet) {
 
 ion-radio {
   --color: var(--theme-color-2);
-  --color-checked:var(--theme-color-2);
+  --color-checked: var(--theme-color-2);
 }
 ion-radio::part(container) {
   background: var(--theme-gray);

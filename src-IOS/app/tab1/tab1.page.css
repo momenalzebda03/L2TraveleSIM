@@ -211,7 +211,7 @@ ion-segment ion-segment-button {
   --background:transparent;
   --background-checked:transparent;
   --color:rgba(17,32,66,0.5);
-  --color-checked:var(--theme-color-1);
+  --color-checked:var(--theme-color-3);
   --indicator-height:0;
   border-radius: 0px;
   min-height: 40px;
@@ -259,7 +259,7 @@ ion-segment ion-segment-button.segment-button-checked::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: var(--theme-color-1);
+  background: var(--theme-color-3);
   height: 4px;
   content: "";
   border-radius: 10px 10px 0 0;

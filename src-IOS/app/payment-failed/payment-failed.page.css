@@ -6,7 +6,7 @@ ion-content::after {
   top: 0;
   bottom: 0;
   content: "";
-  background: url("../../assets/img/payment-fail.png") no-repeat center center/cover;
+  background: url("../../assets/img/bg-payment.png") no-repeat center center/cover;
 }
 
 h3 {
@@ -27,9 +27,11 @@ p {
   height: 47%;
 }
 
+ion-button {
+  --background: var(--button-primary-bg);
+}
 ion-button.button-outline {
   --color: #fff;
-  --border-color: #fff;
 }
 
 /**************************************************************/

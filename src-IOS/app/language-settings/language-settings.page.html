@@ -13,16 +13,17 @@
   </ion-toolbar>
   <ion-toolbar class="titlebar">
     <ion-title>
-      <h3>{{ 'LANGUAGE_SETTINGS' | translate }}</h3>
+      <h3 class="is-color-title">{{ 'LANGUAGE_SETTINGS' | translate }}</h3>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  
+
   <h4>{{ 'SELECT_LANGUAGE' | translate }}</h4>
-  <ion-radio-group [(ngModel)]="selectedLanguage"  (ionChange)="changeLanguage($event)"  *ngFor="let langItem of langugaeList">
+  <ion-radio-group [(ngModel)]="selectedLanguage" (ionChange)="changeLanguage($event)"
+    *ngFor="let langItem of langugaeList">
     <ion-radio value="{{langItem.value}}">
       <span class="language">{{langItem.text}}</span> {{langItem.long_text}}
     </ion-radio>
@@ -52,7 +53,7 @@
       <ion-button (click)="gotoTab5()" class="selected">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
   </ion-toolbar>

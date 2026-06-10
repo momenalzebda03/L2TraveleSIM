@@ -7,7 +7,7 @@ ion-header ion-toolbar ion-title {
   font-size: 20px;
 }
 ion-header ion-toolbar ion-buttons ion-button {
-  color: var(--theme-color-2);
+  color: var(--theme-color-blue);
 }
 
 .sharebox {
@@ -39,7 +39,7 @@ ion-header ion-toolbar ion-buttons ion-button {
 }
 
 ion-button.btn-share {
-  --background: var( --button-primary-bg);
+  --background: var(--button-primary-bg);
   --background-activated: var(--button-primary-bg);
   --color: #fff;
   --padding-start: 10px;

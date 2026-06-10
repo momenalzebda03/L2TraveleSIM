@@ -3,7 +3,7 @@
 }
 
 ion-content{
-    --background:rgba(17,32,66,0.5);
+    --background:#00000080;
 
     &::after{
         position: fixed; z-index: -1; left: 0; right: 0; top:0; bottom: 0; content: "";
@@ -40,11 +40,11 @@ p{
     margin: 10px 0 15px;
 
     &.button-outline{
-        --border-color: var(--button-secondary-bg);
+        --border-color: var(--theme-color-3);
         --color:#fff;
-        --background-color: var(--button-secondary-bg);
-        --background: var(--button-secondary-bg);
-        --background-activated: var(--button-secondary-bg);
+        --background-color: var(--theme-color-3);
+        --background: var(--theme-color-3);
+        --background-activated: var(--theme-color-3);
     }
 
     &.plans{

@@ -1,9 +1,9 @@
 ion-header ion-toolbar {
-  --min-height:150px;
+  --min-height: 150px;
   height: 120px;
 }
 ion-header ion-toolbar.ios {
-  --min-height:150px;
+  --min-height: 150px;
 }
 ion-header ion-toolbar ion-title {
   text-align: left;
@@ -21,6 +21,7 @@ ion-header ion-toolbar [slot=end] {
   margin-inline-end: 15px;
 }
 ion-header ion-toolbar ion-buttons ion-button {
+  --color: var(--theme-color-blue);
   display: inline-block;
   margin-inline-start: 0;
   margin-inline-end: 0;
@@ -37,18 +38,18 @@ ion-header ion-toolbar ion-buttons ion-button.ios {
 }
 
 ion-content {
-  --background:#fff;
+  --background: #fff;
 }
 
 ion-button.btn-signin {
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
   margin: 0 0px 0px;
 }
 
 ion-button.btn-signup {
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
   margin: 25px 0px 0px;
 }
 

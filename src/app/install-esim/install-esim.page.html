@@ -3,7 +3,7 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3 [innerHTML]="'ACTIVATE_TITLE' | translate">
+        <h3 [innerHTML]="'ACTIVATE_TITLE' | translate" class="is-color-title">
         </h3>
       </ion-title>
       <ion-buttons slot="end">
@@ -21,9 +21,9 @@
 
     <ion-toolbar class="segmentbar">
       <ion-segment value="install" [(ngModel)]="selectedSegment">
-       <ion-segment-button value="install">
-        <ion-label> {{ 'DIRECT_INSTALL_LABEL' | translate }} </ion-label>
-      </ion-segment-button> 
+        <ion-segment-button value="install">
+          <ion-label> {{ 'DIRECT_INSTALL_LABEL' | translate }} </ion-label>
+        </ion-segment-button>
         <ion-segment-button value="qrcode">
           <ion-label> {{ 'QR_CODE' | translate }} </ion-label>
         </ion-segment-button>
@@ -35,52 +35,52 @@
   </ion-header>
 
 
-<div class="ion-padding">
-  <div class="segment-panel" [ngSwitch]="selectedSegment">
+  <div class="ion-padding">
+    <div class="segment-panel" [ngSwitch]="selectedSegment">
 
-    <div *ngSwitchCase="'install'">
+      <div *ngSwitchCase="'install'">
 
-      <h4>{{ 'ESIM_INSTALL_STEP1_TITLE' | translate }}</h4>
+        <h4 class="is-color-title">{{ 'ESIM_INSTALL_STEP1_TITLE' | translate }}</h4>
 
-      <p>{{ 'ESIM_INSTALL_NOTE' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_NOTE' | translate }}</p>
 
-      <p>{{ 'ESIM_INSTALL_TAP_BUTTON' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_TAP_BUTTON' | translate }}</p>
 
-      <ion-button (click)="directInstallOption()" expand="block" class="btn-green">
-        {{ 'INSTALL_ESIM_BUTTON' | translate }}
-      </ion-button>
+        <ion-button (click)="directInstallOption()" expand="block" class="custome-btn btn-green">
+          {{ 'INSTALL_ESIM_BUTTON' | translate }}
+        </ion-button>
 
-      <ion-card class="create-apn">
-        <p>
-          <strong>{{ 'WARNING' | translate }}</strong>
-          {{ 'ESIM_INSTALL_WARNING' | translate }}
-        </p>
-      </ion-card>
+        <ion-card class="create-apn">
+          <p>
+            <strong>{{ 'WARNING' | translate }}</strong>
+            {{ 'ESIM_INSTALL_WARNING' | translate }}
+          </p>
+        </ion-card>
 
-      <h6 style="margin-top:20px;">
-        {{ 'ESIM_INSTALL_AFTER_TAP' | translate }}
-      </h6>
+        <h6 style="margin-top:20px;">
+          {{ 'ESIM_INSTALL_AFTER_TAP' | translate }}
+        </h6>
 
-      <p>{{ 'ESIM_INSTALL_STEP1' | translate }}</p>
-      <p>{{ 'ESIM_INSTALL_STEP2' | translate }}</p>
-      <p>{{ 'ESIM_INSTALL_STEP3' | translate }}</p>
-      <p>{{ 'ESIM_INSTALL_STEP4' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_STEP1' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_STEP2' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_STEP3' | translate }}</p>
+        <p>{{ 'ESIM_INSTALL_STEP4' | translate }}</p>
 
-      <br>
+        <br>
 
-      <h4>{{ 'ESIM_ENABLE_DATA_TITLE' | translate }}</h4>
+        <h4 class="is-color-title">{{ 'ESIM_ENABLE_DATA_TITLE' | translate }}</h4>
 
-      <h6>{{ 'ESIM_ENABLE_AFTER_INSTALL' | translate }}</h6>
+        <h6>{{ 'ESIM_ENABLE_AFTER_INSTALL' | translate }}</h6>
 
-      <p>{{ 'ESIM_ENABLE_STEP1' | translate }}</p>
-      <p>{{ 'ESIM_ENABLE_STEP2' | translate }}</p>
-      <p>{{ 'ESIM_ENABLE_STEP3' | translate }}</p>
-      <p>{{ 'ESIM_ENABLE_STEP4' | translate }}</p>
-      <p>{{ 'ESIM_ENABLE_STEP5' | translate }}</p>
+        <p>{{ 'ESIM_ENABLE_STEP1' | translate }}</p>
+        <p>{{ 'ESIM_ENABLE_STEP2' | translate }}</p>
+        <p>{{ 'ESIM_ENABLE_STEP3' | translate }}</p>
+        <p>{{ 'ESIM_ENABLE_STEP4' | translate }}</p>
+        <p>{{ 'ESIM_ENABLE_STEP5' | translate }}</p>
 
-    </div>
+      </div>
 
-        <div *ngSwitchCase="'qrcode'">
+      <div *ngSwitchCase="'qrcode'">
 
 
         <p class="qrlink">
@@ -187,7 +187,7 @@
       <ion-button (click)="gotoTab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
   </ion-toolbar>

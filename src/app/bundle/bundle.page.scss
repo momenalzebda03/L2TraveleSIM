@@ -168,7 +168,7 @@ ion-card{
     .day{  color: var(--theme-color-2); }  
     .price{ color: var(--theme-color-2); }
     .info{ color: var(--theme-color-2); }
-    .arrow{ color: var(--theme-color-1); }
+    .arrow{ color: var(--theme-color-3); }
   }
 
   &.value-data{
@@ -177,7 +177,7 @@ ion-card{
     .info{ color:var(--theme-color-2); }
     .info span{ color: var(--theme-color-2);}
     h4{ font-weight: 600;}
-    .arrow{ color: var(--theme-color-1); }
+    .arrow{ color: var(--theme-color-3); }
   }
 
 }
@@ -266,7 +266,7 @@ and (-webkit-min-device-pixel-ratio: 2){
   ion-card{ margin: 0 0 15px;}
   ion-card .day { font-size: 27px;  }
   ion-card .info { font-size: 16px; line-height: 18px; }
-  ion-card .arrow { font-size: 24px;  }
+  ion-card .arrow { font-size: 24px; }
   ion-card .data { font-size: 27px; }
   ion-card .price img{ width: 26px; }
 

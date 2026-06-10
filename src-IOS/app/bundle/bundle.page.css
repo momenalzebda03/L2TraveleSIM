@@ -200,7 +200,7 @@ ion-card.mega-data .info {
   color: var(--theme-color-2);
 }
 ion-card.mega-data .arrow {
-  color: var(--theme-color-1);
+  color: var(--theme-color-3);
 }
 ion-card.value-data .data {
   color: var(--theme-color-2);
@@ -219,7 +219,7 @@ ion-card.value-data h4 {
   font-weight: 600;
 }
 ion-card.value-data .arrow {
-  color: var(--theme-color-1);
+  color: var(--theme-color-3);
 }
 
 .card-content-ios {

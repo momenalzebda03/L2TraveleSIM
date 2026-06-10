@@ -13,19 +13,19 @@ ion-header ion-toolbar [slot=end] {
 }
 ion-header ion-toolbar ion-buttons ion-button {
   margin-top: -20px;
-  color: var(--theme-color-1);
+  color: var(--theme-color-blue);
 }
 ion-header ion-toolbar.segmentbar {
   --min-height: 60px;
   height: 85px;
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
 }
 ion-header ion-toolbar.textbar {
   --min-height: 100px;
   height: auto;
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
 }
 ion-header ion-toolbar.textbar p {
   color: var(--theme-color-2);
@@ -43,11 +43,11 @@ ion-segment {
   margin-top: 0px;
 }
 ion-segment ion-segment-button {
-  --background:transparent;
-  --background-checked:transparent;
-  --color:rgba(17,32,66,0.5);
-  --color-checked:var(--theme-color-2);
-  --indicator-height:0;
+  --background: transparent;
+  --background-checked: transparent;
+  --color: rgba(17, 32, 66, 0.5);
+  --color-checked: var(--theme-color-3);
+  --indicator-height: 0;
   border-radius: 0px;
   min-height: 40px;
   padding: 0 10px;
@@ -92,7 +92,7 @@ ion-segment ion-segment-button.segment-button-checked::before {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  background: var(--theme-color-1);
+  background: var(--theme-color-3);
   height: 4px;
   content: "";
   border-radius: 10px 10px 0 0;
@@ -106,7 +106,8 @@ ion-segment ion-segment-button.segment-button-checked::after {
   right: 0;
   bottom: 0;
   top: 0px;
-  content: ""; /*width: 140px;*/
+  content: "";
+  /*width: 140px;*/
   margin: 0 auto;
 }
 ion-segment ion-segment-button {
@@ -195,7 +196,7 @@ ion-card .information p {
   font-size: 13px;
 }
 ion-card.create-apn {
-  background-color: var(--theme-color-3);
+  background-color: var(--theme-color-blue);
   text-align: center;
   padding: 20px 25px 25px;
   color: #fff;
@@ -231,7 +232,7 @@ ion-button.btn-apnstep {
   margin: 15px 0 15px;
   --background: var(--theme-color-2);
   --background-activated: var(--theme-color-2);
-  --color:#fff;
+  --color: #fff;
 }
 
 /**************************************************************/
@@ -320,4 +321,10 @@ ion-button.btn-apnstep {
     font-size: 25px;
     line-height: 32px;
   }
+}
+.custome-btn {
+  --background: transparent !important;
+  border: 2px solid var(--theme-color-blue);
+  border-radius: 12px;
+  --color: var(--theme-color-blue);
 }/*# sourceMappingURL=install-esim.page.css.map */
