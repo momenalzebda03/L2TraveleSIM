@@ -1,0 +1,231 @@
+ion-header ion-toolbar {
+  --min-height:90px;
+}
+ion-header ion-toolbar.ios {
+  --min-height:90px;
+}
+ion-header ion-toolbar ion-title {
+  padding-inline: 20px;
+  text-align: left;
+  color: #fff;
+  font-size: 22px; /*line-height:20px; padding-top: 5px;*/
+}
+ion-header ion-toolbar ion-title small {
+  font-size: 13px;
+  display: block;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 15px;
+}
+ion-header ion-toolbar ion-buttons ion-button img {
+  width: 28px;
+}
+ion-header ion-toolbar ion-buttons ion-button span {
+  position: absolute;
+  right: -5px;
+  top: -5px;
+  z-index: 1;
+  background-color: #d8322b;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  --color:#fff;
+  border-radius: 4px;
+  display: inline-block;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  --box-shadow:none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -15px;
+}
+ion-header ion-toolbar ion-buttons ion-button::part(native) {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+ion-content ion-header ion-toolbar {
+  --background:tranasparent;
+  height: 132px;
+}
+.overlay-bottom {
+  position: fixed;
+  z-index: 111;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 160px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 100%);
+  pointer-events: none;
+}
+
+.contentmiddle {
+  height: calc(100% - 137px);
+  margin-top: 0px;
+  background-color: #fff;
+  padding: 20px 20px 0;
+  clip-path: polygon(100% 18px, 100% 100%, 0% 100%, 0% 0%, calc(100% - 18px) 0%);
+  color: #000;
+  border-radius: 6px 6px 0 0;
+}
+
+/**************/
+ion-card {
+  --background:#e6e7e7;
+  --color:#222;
+  border: 1px solid #d1d3d4;
+  margin-inline: 0;
+  box-shadow: none;
+  border-radius: 6px;
+  padding: 15px;
+  margin: 5px 0 15px;
+  clip-path: polygon(100% 12px, 100% 100%, 0% 100%, 0% 0%, calc(100% - 12px) 0%);
+}
+ion-card::after {
+  width: 20px;
+  height: 20px;
+  right: -11px;
+  top: -12px;
+  content: "";
+  background-color: #d1d3d4;
+  position: absolute;
+  z-index: 11;
+  transform: rotateZ(45deg);
+}
+ion-card h5 {
+  font-family: "camptonbold";
+  margin: 10px 0 0;
+}
+ion-card p {
+  margin: 5px 0;
+}
+ion-card .data p {
+  margin: 15px 0 0;
+  font-size: 12px;
+}
+
+.card-content-ios {
+  padding-top: 0;
+}
+
+ion-row ion-col {
+  padding: 0;
+}
+ion-row ion-col.right {
+  text-align: right;
+}
+
+.country {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  display: inline-block;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.country img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.countryname {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "camptonbold";
+  font-size: 16px;
+}
+
+.introductory {
+  padding: 8px 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #d8322b;
+  color: #fff;
+  font-size: 13px;
+  clip-path: polygon(100% 10px, 100% 100%, 0% 100%, 0% 0%, calc(100% - 10px) 0%);
+}
+
+/*******/
+.notebox {
+  background-color: #f9e0df;
+  border: 1px solid #e5736f;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #000;
+  margin: 0 0 15px;
+}
+.notebox span {
+  font-family: "camptonbold";
+  color: #d8322b;
+}
+.notebox strong {
+  font-family: "camptonbold";
+}
+.notebox ion-button {
+  border: 1px solid #e5736f;
+  --background: #fff;
+  --color: #d8322b;
+  border-radius: 4px;
+  display: inline-block;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  --box-shadow: none;
+  margin: 0px;
+  height: 38px;
+  --padding-start: 8px;
+  --padding-end: 8px;
+  font-size: 13px;
+  text-transform: inherit;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.datascroll {
+  height: calc(100% - 80px);
+  overflow-y: auto;
+}
+
+.datascroll.withoutnotebox {
+  height: 100% !important;
+}
+
+/******************* No record */
+.no-record {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+.no-record h3 {
+  color: #777;
+  font-size: 24px;
+}
+.no-record img {
+  width: 180px;
+  display: inline-block;
+  opacity: 0.6;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****//*# sourceMappingURL=esim-all.page.css.map */

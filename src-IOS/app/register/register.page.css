@@ -1,0 +1,136 @@
+/*This is old travel roam page*/
+ion-header ion-toolbar {
+  --background:#2d3e50;
+  border-radius: 0 0 50px 0;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  height: 170px;
+}
+ion-header ion-toolbar::part(open) .toolbar-background {
+  opacity: 1;
+}
+ion-header ion-toolbar ion-radio-group ion-radio {
+  --color: #fff;
+  --color-checked:#fff;
+  background: #607285;
+  margin: 5px;
+  padding: 12px 15px;
+  border-radius: 30px;
+}
+ion-header ion-toolbar ion-radio-group ion-radio.radio-checked {
+  background: #ff7c22;
+}
+ion-header ion-toolbar ion-radio-group ion-radio.radio-label-placement-start .label-text-wrapper {
+  margin-inline: 0px 10px;
+}
+ion-header ion-toolbar ion-radio-group ion-radio .native-wrapper {
+  opacity: 0;
+}
+ion-header.ios .header-background {
+  backdrop-filter: inherit;
+}
+ion-header h2 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+ion-header h5 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+ion-content {
+  --background:#fff;
+}
+ion-content .topcorner {
+  position: fixed;
+  z-index: 11;
+  left: 0;
+  top: 170px;
+  width: 50px;
+  height: 50px; /*background: #2d3e50;*/
+}
+ion-content .topcorner div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 50px 0 0 0;
+  background: #fff;
+}
+
+ion-list {
+  margin: 25px 30px 20px;
+  padding: 0px 0px;
+}
+ion-list ion-item {
+  margin: 0 0 15px;
+  border-radius: 30px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+}
+ion-list ion-item ion-input {
+  color: #444;
+}
+ion-list ion-item [slot=start] {
+  margin-inline-end: 15px;
+}
+ion-list ion-item span img {
+  width: 22px;
+  opacity: 0.3;
+  display: inline-block;
+  vertical-align: middle;
+}
+ion-list ion-item:last-child {
+  margin: 0 0 0px;
+}
+
+.sc-ion-input-md-h:not(.legacy-input) {
+  min-height: 48px;
+}
+
+.sc-ion-input-ios-h:not(.legacy-input) {
+  min-height: 48px;
+}
+
+.terms {
+  margin: 10px 30px;
+  position: relative;
+  padding-left: 30px;
+}
+.terms ion-checkbox {
+  position: absolute;
+  left: 0;
+  top: 2px;
+}
+.terms a {
+  color: #ff7c22;
+}
+
+.ios .terms {
+  padding-left: 40px;
+}
+
+.signup {
+  text-align: center;
+  margin: 5px 30px 20px;
+}
+.signup ion-button {
+  margin: 0px auto;
+  --box-shadow: none;
+  --background:#ff7c22;
+  --color:#fff;
+  text-transform: inherit;
+  font-size: 18px;
+  letter-spacing: 0;
+  height: 48px;
+  display: inline-block;
+  min-width: 140px;
+  --background-activated:#ff7c22;
+  --background-hover:#ff7c22;
+}
+.signup ion-button.ios {
+  height: 46px;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****//*# sourceMappingURL=register.page.css.map */

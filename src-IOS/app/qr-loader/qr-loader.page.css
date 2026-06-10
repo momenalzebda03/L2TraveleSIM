@@ -1,0 +1,17 @@
+.message-container {
+  font-size: 15px;
+  color: #000;
+  margin: 10px 20px 0;
+  text-align: center;
+}
+.message-container p {
+  color: #000;
+}
+
+.qr-loading {
+  text-align: center;
+  padding: 15px 10px 0px;
+}
+.qr-loading img {
+  width: 160px;
+}/*# sourceMappingURL=qr-loader.page.css.map */

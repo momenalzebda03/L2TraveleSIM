@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-     <h3>{{ 'HAVE_WE_MET_TITLE' | translate }}</h3>
-     <p>{{ 'LOGIN_OR_CREATE_ACCOUNT_DESCRIPTION' | translate }}</p>
+     <h3 class="is-color-title">{{ 'HAVE_WE_MET_TITLE' | translate }}</h3>
+     <p class="is-color-title">{{ 'LOGIN_OR_CREATE_ACCOUNT_DESCRIPTION' | translate }}</p>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" (click)="gotoBack()">
@@ -15,7 +15,7 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   
   <div class="ftel-logo">
-    <img src="assets/img/L2-Logo-vertical.png" alt="">
+    <img src="assets/img/L2-Logo-vertical.svg" alt="">
   </div>
 
   <!-- <div class="topspace">&nbsp;</div> -->
@@ -25,7 +25,7 @@
   </ion-button>
 
   <div class="orbox">
-    <span>{{ 'OR' | translate }}</span>
+    <span class="is-color-title">{{ 'OR' | translate }}</span>
   </div>
 
   <ion-button expand="block" class="button-outline btn-signup" (click) ="gotoRegister()">

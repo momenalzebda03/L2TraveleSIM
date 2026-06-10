@@ -1,0 +1,116 @@
+@charset "UTF-8";
+ion-header ion-toolbar {
+  --min-height: 50px;
+  height: 50px;
+}
+
+ion-content {
+  color: var(--theme-content-bg);
+}
+
+p {
+  color: var(--theme-color-2);
+  text-align: center;
+  margin: 10px 0 20px;
+  font-size: 14px;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--theme-color-1);
+}
+
+.modal-desc {
+  text-align: center;
+  font-size: 16px;
+  color: var(--theme-color-1);
+  line-height: 1.5;
+}
+
+.btn-div {
+  display: flex; /* ✅ important */
+  gap: 10px; /* space between buttons */
+  justify-content: space-between;
+}
+
+.btn-div ion-button {
+  flex: 1; /* ✅ equal width */
+  --border-radius: 8px;
+  height: 48px;
+  font-size: 15px;
+  margin: 0; /* remove default spacing */
+}
+
+.btn-div {
+  text-align: center;
+}
+.btn-div ion-button {
+  --border-radius:8px;
+  height: 48px;
+  font-size: 17px;
+}
+.btn-div .btn-green {
+  font-weight: 300;
+  --color:#fff;
+}
+.btn-div .btn-delete {
+  font-weight: 500;
+}
+.btn-div ion-button.btn-delete.button-outline {
+  --color: #fff;
+  --background:var(--theme-color-2);
+}
+.btn-div ion-button.btn-delete {
+  --color: #fff;
+  --background:var(--theme-color-2);
+}
+
+.device-modal {
+  text-align: center;
+}
+
+.modal-title {
+  margin: 8px 0 12px;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--theme-color-1);
+  line-height: 1.3;
+}
+
+.modal-description {
+  margin: 0 auto 24px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.btn-div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-div ion-button {
+  flex: 1;
+  min-height: 44px;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****/
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  p {
+    margin: 15px 0 30px;
+    font-size: 21px;
+  }
+  .btn-div ion-button {
+    width: 350px;
+    height: 58px;
+    font-size: 24px;
+  }
+}/*# sourceMappingURL=confirm-continue.page.css.map */

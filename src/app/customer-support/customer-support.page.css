@@ -1,0 +1,97 @@
+ion-header ion-toolbar {
+  height: 95px;
+}
+ion-header ion-toolbar ion-title .ftel-logo {
+  width: 160px;
+  margin: 7px 0px 0px;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 5px;
+}
+ion-header ion-toolbar.titlebar {
+  --min-height: 40px;
+  height: 80px;
+}
+
+ion-content {
+  --background: #fff;
+}
+
+.list-md {
+  background: transparent;
+}
+
+ion-list {
+  margin: 0px 0px 0;
+  padding: 0 0;
+}
+ion-list ion-item {
+  --inner-border-width:0 0 0 0;
+  margin: 0 0 12px;
+  --background:var(--input-bg);
+  border: 1px solid var(--border-color) !important;
+}
+ion-list ion-item ion-input {
+  color: var(--theme-color-2);
+}
+ion-list ion-item ion-textarea {
+  color: var(--theme-color-2);
+  min-height: 150px;
+}
+ion-list ion-item ion-icon {
+  color: var(--theme-color-2);
+  font-size: 20px;
+  cursor: pointer;
+}
+ion-list ion-item.textarea {
+  --background:var(--input-bg);
+}
+
+ion-checkbox {
+  font-weight: 100;
+  color: var(--theme-color-2);
+  font-size: 15px;
+  --border-width:1px;
+  --border-color:var(--theme-color-2);
+  --checkbox-background:transparent;
+  --checkbox-background-checked:var(--theme-color-2);
+  --border-color-checked:var(--theme-color-2);
+  --checkmark-color:var(--theme-color-2);
+  --checkmark-width: 4;
+  --checkbox-background-checked: transparent;
+  --border-color-checked: transparent;
+}
+ion-checkbox::part(label) {
+  margin-inline: 8px 0;
+  white-space: normal;
+}
+ion-checkbox::part(container) {
+  width: 22px;
+  height: 22px;
+}
+
+ion-button.ben-send {
+  margin: 0px 0 0;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****/
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  ion-header ion-toolbar {
+    height: 110px;
+  }
+  ion-header ion-toolbar.titlebar ion-title h3 {
+    line-height: 56px;
+  }
+  ion-header ion-toolbar ion-title .ftel-logo {
+    width: 260px;
+  }
+  ion-header ion-toolbar.titlebar {
+    --min-height:40px;
+    height: 120px;
+  }
+  ion-list ion-item ion-textarea {
+    min-height: 220px;
+    font-size: 23px;
+  }
+}/*# sourceMappingURL=customer-support.page.css.map */

@@ -579,11 +579,11 @@ setDefaultCurrencyAndLanguage() {
      this.fetchCountryData();
   
     // Check notification settings and navigate
-    if (!authToken && (!isNotiSettingAllowed || isNotiSettingAllowed === '')) {
-      this.navController.navigateRoot('start');
-    } else {
-      this.navController.navigateRoot('home-search');
-    }
+    // if (!authToken && (!isNotiSettingAllowed || isNotiSettingAllowed === '')) {
+    //   this.navController.navigateRoot('start');
+    // } else {
+    //   this.navController.navigateRoot('home-search');
+    // }
   
     // Initialize push notifications if accepted
     if (isNotiSettingAllowed === 'yes') {

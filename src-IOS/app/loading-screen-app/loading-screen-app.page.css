@@ -1,0 +1,23 @@
+/* src/app/components/loading-screen/loading-screen.component.scss */
+ion-content {
+  --background: transparent;
+}
+
+ion-spinner.custom-spinner {
+  --padding-start: 0;
+  --padding-end: 0;
+  --width: 40px;
+  --height: 40px;
+  --stroke-width: 3px;
+  --color: var(--ion-color-primary); /* Adjust the color as needed */
+}
+
+ion-label.custom-label {
+  font-size: 16px;
+  margin-top: 8px;
+  color: #0d0d20; /* Adjust the color as needed */
+  text-align: center;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****//*# sourceMappingURL=loading-screen-app.page.css.map */

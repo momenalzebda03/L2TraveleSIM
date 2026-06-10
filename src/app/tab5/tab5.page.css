@@ -1,0 +1,240 @@
+ion-header ion-toolbar {
+  height: 95px;
+  --background:transparent;
+}
+ion-header ion-toolbar ion-title .ftel-logo {
+  width: 160px;
+  margin: 12px 0px 0px;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 15px;
+  margin-top: 10px;
+}
+ion-header ion-toolbar .filter[slot=end] {
+  margin-inline-end: 0px;
+  margin-top: 10px;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  position: relative;
+  height: auto;
+  margin: 0 0 5px;
+}
+ion-header ion-toolbar ion-buttons ion-button img {
+  width: 22px;
+  display: inline-block;
+}
+ion-header ion-toolbar ion-buttons ion-button span {
+  position: absolute;
+  z-index: 11;
+  right: -6px;
+  top: -5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--theme-color-1);
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 18px;
+}
+ion-header ion-toolbar .bell {
+  position: relative;
+}
+ion-header ion-toolbar .bell img {
+  width: 22px;
+  display: inline-block;
+}
+ion-header ion-toolbar .bell .notification {
+  position: absolute;
+  z-index: 11;
+  top: -5px;
+  right: -6px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--theme-color-1);
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Inter";
+  font-weight: 700;
+  line-height: 18px;
+}
+ion-header ion-toolbar.titlebar {
+  --min-height: 70px; /*height: 120px;*/
+  height: auto;
+}
+ion-header ion-toolbar.titlebar ion-title h3 {
+  line-height: 34px;
+}
+
+ion-content {
+  --background: #fff;
+}
+
+.topbox {
+  width: 100%;
+  padding-bottom: 10px;
+}
+.topbox ion-item {
+  margin: 0px 5px 0px;
+  --background: transparent;
+  color: #fff;
+  --inner-border-width: 0 0 0 0 !important;
+  --padding-start: 15px;
+}
+.topbox ion-item ion-avatar {
+  width: 50px;
+  height: 50px;
+}
+.topbox ion-item [slot=start] {
+  margin-inline-end: 10px;
+  margin-bottom: 0;
+}
+.topbox ion-item ion-label h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.container {
+  position: relative;
+  color: #fff;
+  padding: 0px 20px 20px;
+  /*
+  &::after{
+      position: absolute; z-index: 111; left: 0; right: 0; top: -20px; background-color: #fff; height: 20px; border-radius: 12px 12px 0 0; content: "";
+  }*/
+}
+
+.list-md {
+  background: transparent;
+}
+
+ion-list {
+  margin: 0 0 0;
+  padding: 0 0 0;
+}
+
+ion-item {
+  margin: 0 0 8px;
+  --min-height:20px;
+  --padding-start: 0px;
+  --inner-padding-end: 0px;
+  --background:transparent;
+}
+ion-item ion-label {
+  color: var(--theme-color-2);
+  font-size: 17px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+ion-item span {
+  color: var(--theme-color-2);
+}
+ion-item [slot=end] {
+  color: var(--theme-color-2);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 18px;
+}
+ion-item ion-icon[slot] {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ion-item::part(detail-icon) {
+  display: none;
+}
+ion-item.deleteacc ion-label {
+  color: #d8322b;
+}
+
+.btn-log {
+  padding: 10px 0 0;
+}
+.btn-log ion-button {
+  margin: 0 0 15px;
+}
+.btn-log ion-button.btn-chat {
+  margin: 0 0 15px;
+}
+/* src/styles.css or component-specific CSS */
+#webWidget {
+  display: none !important;
+}
+
+#launcher {
+  display: none !important;
+}
+
+/* Hide Zendesk chat widgets */
+iframe[title="Close message"] {
+  display: none !important;
+}
+
+iframe[title="Message from company"] {
+  display: none !important;
+}
+
+iframe[title="Number of unread messages"] {
+  display: none !important;
+}
+
+/*********************************************************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****/
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  .container { /*height: calc(100% - 350px);*/ }
+  ion-header ion-toolbar {
+    height: auto;
+  }
+  ion-header ion-toolbar.titlebar ion-title h3 {
+    line-height: 56px;
+  }
+  ion-header ion-toolbar ion-title .ftel-logo {
+    width: 260px;
+  }
+  ion-header ion-toolbar ion-buttons ion-button img {
+    width: 38px;
+  }
+  ion-header ion-toolbar ion-buttons ion-button span {
+    top: -7px;
+    right: -7px;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    line-height: 28px;
+  }
+  ion-header ion-toolbar [slot=end] {
+    margin-inline-end: 20px;
+    margin-top: 10px;
+  }
+  ion-item {
+    margin: 0 0 10px;
+    --padding-start: 5px;
+    --inner-padding-end: 5px;
+  }
+  ion-item ion-label {
+    font-size: 25px;
+  }
+  .btn-log ion-button.btn-chat {
+    margin: 0 0 20px;
+  }
+  .topbox ion-item ion-avatar {
+    width: 75px;
+    height: 75px;
+  }
+  .topbox ion-item ion-label h2 {
+    font-size: 45px;
+  }
+  .topbox ion-item {
+    --padding-start: 25px;
+    margin: -30px 5px 0px;
+  }
+}
+/**************************************************************/
+/***** small devices ****/
+/***************/
+/***************/
+/***************//*# sourceMappingURL=tab5.page.css.map */

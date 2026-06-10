@@ -1,0 +1,324 @@
+ion-header ion-toolbar {
+  height: auto;
+}
+ion-header ion-toolbar ion-title {
+  padding-inline-end: 0;
+}
+ion-header ion-toolbar ion-title h3 {
+  font-size: 28px;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 5px;
+  margin-top: -10px;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  margin-top: -20px;
+  color: var(--theme-color-1);
+}
+ion-header ion-toolbar.segmentbar {
+  --min-height: 60px;
+  height: 85px;
+  --padding-start:20px;
+  --padding-end:20px;
+}
+ion-header ion-toolbar.textbar {
+  --min-height: 80px;
+  height: auto;
+  --padding-start:20px;
+  --padding-end:20px;
+}
+ion-header ion-toolbar.textbar p {
+  color: var(--theme-color-2);
+  font-size: 13px;
+  margin: 0 0;
+}
+
+ion-content {
+  --background: #fff;
+}
+
+ion-segment {
+  justify-content: center;
+  position: relative;
+  margin-top: 0px;
+}
+ion-segment ion-segment-button {
+  --background:transparent;
+  --background-checked:transparent;
+  --color:rgba(17,32,66,0.5);
+  --color-checked:var(--theme-color-2);
+  --indicator-height:0;
+  border-radius: 0px;
+  min-height: 40px;
+  padding: 0 10px;
+  min-width: 120px;
+  margin-right: 0px;
+  position: relative;
+  flex: inherit;
+  margin: 0;
+  text-transform: capitalize;
+}
+ion-segment ion-segment-button ion-label {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+ion-segment ion-segment-button ion-label img {
+  width: 16px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+ion-segment ion-segment-button ion-label .normal {
+  display: inline-block;
+}
+ion-segment ion-segment-button ion-label .active {
+  display: none;
+}
+ion-segment ion-segment-button::part(native) {
+  padding-inline-start: 5px;
+  padding-inline-end: 5px;
+}
+ion-segment ion-segment-button.segment-button-checked ion-label .normal {
+  display: none;
+}
+ion-segment ion-segment-button.segment-button-checked ion-label .active {
+  display: inline-block;
+}
+ion-segment ion-segment-button.segment-button-checked::before {
+  position: absolute;
+  z-index: 11;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--theme-color-1);
+  height: 4px;
+  content: "";
+  border-radius: 10px 10px 0 0;
+  width: 140px;
+  margin: 0 auto;
+}
+ion-segment ion-segment-button.segment-button-checked::after {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0px;
+  content: ""; /*width: 140px;*/
+  margin: 0 auto;
+}
+ion-segment ion-segment-button {
+  padding: 0 0;
+}
+ion-segment ion-segment-button ion-label {
+  font-size: 14px;
+}
+
+.qrcode {
+  margin: 0px auto 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  width: 240px;
+  height: 240px;
+  overflow: hidden;
+  border: 1px solid var(--theme-color-2);
+}
+.qrcode img {
+  width: 100%;
+  height: 100%;
+}
+
+.qrlink {
+  margin: 0 0 10px;
+  text-align: center;
+}
+.qrlink a {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--theme-color-2);
+}
+
+h2 {
+  color: var(--theme-color-2);
+}
+
+h4 {
+  font-weight: 700;
+  color: var(--theme-color-2);
+  font-size: 20px;
+  margin: 0 0 15px;
+}
+
+h6 {
+  color: var(--theme-color-2);
+  margin: 0 0 15px;
+}
+
+p {
+  color: var(--theme-color-2);
+  font-size: 14px;
+}
+
+ion-card {
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 0 0px;
+  padding: 5px 0;
+  box-shadow: none;
+}
+ion-card ion-row {
+  border-bottom: 1px solid var(--theme-gray);
+}
+ion-card ion-row ion-col {
+  padding: 10px 25px;
+  color: #fff;
+  font-size: 12px;
+}
+ion-card ion-row ion-col span {
+  font-weight: 700;
+}
+ion-card ion-row:last-child {
+  border-bottom: none;
+}
+ion-card ion-icon {
+  font-size: 26px;
+  color: var(--text-white);
+  display: inline-block;
+  margin-top: 7px;
+}
+ion-card .information p {
+  margin: 0px 0;
+  color: var(--text-white);
+  font-size: 13px;
+}
+ion-card.create-apn {
+  background-color: var(--theme-color-3);
+  text-align: center;
+  padding: 20px 25px 25px;
+  color: #fff;
+  margin: 20px 0 20px;
+}
+ion-card.create-apn h4 {
+  margin: 0 0 10px;
+  color: #fff;
+}
+ion-card.create-apn p {
+  margin: 0 0 0;
+  color: #fff;
+}
+ion-card.create-apn ion-icon {
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  margin-top: 0px;
+  vertical-align: middle;
+}
+ion-card.card-manual {
+  margin: 20px 0;
+  background-color: var(--theme-color-3);
+  color: var(--text-white);
+}
+
+.segment-panel {
+  margin-top: -10px;
+}
+
+ion-button.add-apn {
+  margin: 20px 0px 15px;
+}
+ion-button.btn-apnstep {
+  margin: 15px 0 15px;
+  --background: var(--theme-color-2);
+  --background-activated: var(--theme-color-2);
+  --color:#fff;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****/
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+  ion-header ion-toolbar {
+    --min-height: 180px;
+    height: 150px;
+  }
+  ion-header ion-toolbar ion-title h3 {
+    font-size: 48px;
+  }
+  ion-header ion-toolbar [slot=end] {
+    margin-top: -20px;
+  }
+  ion-header ion-toolbar.segment {
+    height: 90px;
+  }
+  ion-segment ion-segment-button ion-label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    line-height: 28px;
+  }
+  ion-segment ion-segment-button.segment-button-checked::before {
+    width: 200px;
+  }
+  ion-segment ion-segment-button.segment-button-checked::after {
+    width: 190px;
+  }
+  ion-header ion-toolbar.textbar {
+    --min-height: 110px;
+    height: 110px;
+    height: auto;
+  }
+  ion-header ion-toolbar.textbar p {
+    font-size: 19px;
+    margin: 15px 15px;
+  }
+  h4 {
+    font-size: 30px;
+    margin: 25px 0 15px;
+  }
+  p {
+    font-size: 21px;
+  }
+  ion-card.create-apn {
+    padding: 30px 30px 30px;
+    margin: 20px 0 20px;
+  }
+  ion-card.create-apn ion-icon {
+    font-size: 45px;
+  }
+  ion-card {
+    padding: 10px 0;
+  }
+  ion-card ion-row ion-col {
+    padding: 15px 25px;
+    font-size: 19px;
+  }
+  ion-card ion-icon {
+    font-size: 40px;
+  }
+  ion-button.add-apn {
+    margin: 20px 0px 22px;
+  }
+  .qrlink {
+    margin: 0 0 15px;
+  }
+  .qrlink a {
+    font-size: 18px;
+  }
+  .qrcode {
+    width: 300px;
+    height: 300px;
+  }
+  ion-card .information p {
+    font-size: 19px;
+  }
+}
+/**************************************************************/
+/***** small devices ****/
+@media only screen and (max-width: 380px) {
+  ion-header ion-toolbar ion-title h3 {
+    font-size: 25px;
+    line-height: 32px;
+  }
+}/*# sourceMappingURL=install-esim.page.css.map */

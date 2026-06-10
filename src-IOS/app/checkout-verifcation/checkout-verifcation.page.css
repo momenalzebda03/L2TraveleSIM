@@ -1,0 +1,115 @@
+ion-header ion-toolbar {
+  border-radius: 24px 24px 0 0;
+  clip-path: inherit;
+}
+ion-header ion-toolbar.ios {
+  --min-height:50px;
+}
+ion-header ion-toolbar ion-title {
+  font-size: 20px;
+  white-space: normal;
+  padding-inline: 30px;
+  padding-top: 20px;
+}
+ion-header ion-toolbar ion-title.ios {
+  text-align: left;
+  height: auto;
+  font-weight: normal;
+  padding-inline: 20px;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 25px;
+}
+ion-header ion-toolbar [slot=end].ios {
+  margin-inline-end: 20px;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  --background: #fff;
+  --color:var(--theme-color-1);
+  border-radius: 4px;
+  display: inline-block;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  --box-shadow:none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 15px;
+}
+ion-header ion-toolbar ion-buttons ion-button.ios {
+  margin-top: 10px;
+}
+ion-header ion-toolbar ion-buttons ion-button::part(native) {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+ion-content {
+  --background:#fff;
+}
+
+.page-padding {
+  padding: 0px 30px 15px;
+}
+
+ion-row {
+  margin: 0 7px;
+}
+ion-row ion-col.right {
+  text-align: right;
+}
+ion-row ion-col a {
+  font-size: 13px;
+  color: #d8322b;
+}
+
+.btn-verify {
+  text-align: center;
+  margin: 15px 0 0;
+}
+.btn-verify ion-button {
+  --background: #000;
+  --background-activated: #000;
+  --color: #fff;
+  --padding-start: 20px;
+  --padding-end: 20px;
+  margin: 0;
+  --box-shadow:none;
+}
+
+ion-item {
+  --inner-border-width:0 0 0 0;
+  margin: 10px 0px 0px;
+  --padding-start:0;
+  --inner-padding-end:0;
+}
+ion-item ion-input {
+  color: #fff;
+}
+
+.sc-ion-input-md-h:not(.legacy-input) {
+  min-height: 44px;
+}
+
+/* Custom styles for OTP input */
+.otp-input {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.otp-input input {
+  width: calc(25% - 20px);
+  text-align: center;
+  font-size: 24px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin: 1px 10px;
+  padding: 10px;
+}
+
+.otp-input input:focus {
+  border-color: #d8322b;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****//*# sourceMappingURL=checkout-verifcation.page.css.map */

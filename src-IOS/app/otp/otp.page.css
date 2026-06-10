@@ -1,0 +1,91 @@
+ion-header {
+  box-shadow: none;
+}
+ion-header ion-toolbar {
+  --background:#fff;
+}
+ion-header ion-toolbar [slot=end] {
+  margin-inline-end: 25px;
+}
+ion-header ion-toolbar ion-buttons ion-button {
+  --background: #fff;
+  --color:#000;
+  border-radius: 4px;
+  display: inline-block;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  --box-shadow:none;
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -15px;
+}
+ion-header ion-toolbar ion-buttons ion-button::part(native) {
+  padding-inline-start: 10px;
+  padding-inline-end: 10px;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 70px 14px 10px;
+  text-align: center;
+}
+
+h5 {
+  margin: 0 14px 10px;
+  font-size: 17px;
+  text-align: center;
+}
+
+p {
+  margin: 0 14px 10px;
+  font-size: 14px;
+}
+
+ion-list {
+  margin: 40px 40px 0;
+  padding: 0;
+}
+ion-list ion-item {
+  border-radius: 6px;
+  --inner-border-width:0 0 0 0;
+  margin: 0 0 20px;
+  --background:#e6e7e7;
+}
+ion-list ion-item ion-input {
+  color: #777;
+}
+ion-list ion-item ion-icon {
+  color: #777;
+}
+
+a {
+  font-family: "camptonbold";
+  color: #d8322b;
+}
+
+.sc-ion-input-md-h:not(.legacy-input) {
+  min-height: 44px;
+}
+
+.btn-view-bundle {
+  margin: 20px 14px 10px;
+  text-align: center;
+}
+.btn-view-bundle ion-button {
+  display: inline-block;
+  width: 250px;
+  --background:#000;
+  --background-activated:#000;
+  --color:#fff;
+  --padding-start:20px;
+  --padding-end:20px;
+}
+
+ion-row ion-col ion-input {
+  text-align: center;
+}
+
+/**************************************************************/
+/***** iPad 11, iPad Pro, iPad mini ****//*# sourceMappingURL=otp.page.css.map */

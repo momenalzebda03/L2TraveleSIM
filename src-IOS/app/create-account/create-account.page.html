@@ -3,8 +3,8 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3>{{ 'CREATE_ACCOUNT_TITLE' | translate }}</h3>
-        <p>{{ 'CREATE_ACCOUNT_SUBTITLE' | translate }}</p>
+        <h3 class="is-color-title">{{ 'CREATE_ACCOUNT_TITLE' | translate }}</h3>
+        <p class="is-color-title">{{ 'CREATE_ACCOUNT_SUBTITLE' | translate }}</p>
       </ion-title>
       <ion-buttons slot="end">
         <ion-button fill="clear" (click)="gotoBack()">
@@ -170,12 +170,12 @@
     </ion-button>
 
     <div class="orbox">
-      <span>{{ 'CREATE_ACCOUNT_OR_SIGN_IN' | translate }}</span>
+      <span class="is-color-title">{{ 'CREATE_ACCOUNT_OR_SIGN_IN' | translate }}</span>
     </div>
 
   <div class="social">
     <ion-button (click)="loginWithGoogle()" fill="outline">
-    <img src="assets/img/google1.png" alt="Google Login" />
+    <img src="assets/img/google1.svg" alt="Google Login" />
   </ion-button>
       <ion-button (click)="signInWithAppleFun()" fill="outline"><ion-icon name="logo-apple"></ion-icon></ion-button>
       <!--<ion-button (click)="loginWithFacebook()" fill="outline"><ion-icon name="logo-facebook"></ion-icon></ion-button>-->
