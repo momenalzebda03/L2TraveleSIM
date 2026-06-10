@@ -1,0 +1,25 @@
+import { Component, OnInit } from '@angular/core';
+import { NavController, ModalController } from '@ionic/angular';
+@Component({
+  selector: 'app-confirm-continue',
+  templateUrl: './confirm-continue.page.html',
+  styleUrls: ['./confirm-continue.page.scss'],
+})
+export class ConfirmContinuePage implements OnInit {
+
+  constructor( private modalCtrl: ModalController, private navController: NavController) { }
+
+  ngOnInit() {
+ 
+  }
+
+  onCancel() {
+  this.modalCtrl.dismiss(false); // ❌ user cancels
+}
+
+onContinue() {
+  this.modalCtrl.dismiss(true); // ✅ user continues
+}
+
+
+}

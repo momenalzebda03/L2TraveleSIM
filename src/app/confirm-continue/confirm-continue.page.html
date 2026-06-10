@@ -1,0 +1,22 @@
+<ion-content [fullscreen]="true" class="ion-padding device-modal">
+
+  <h5 class="modal-title">
+    {{ 'DEVICE_COMPATIBILITY_TITLE' | translate }}
+  </h5>
+
+  <p
+    class="modal-description"
+    [innerHTML]="'DEVICE_COMPATIBILITY_DESC_1' | translate">
+  </p>
+
+  <div class="btn-div">
+    <ion-button fill="outline"  (click)="onCancel()">
+      {{ 'Cancel_text' | translate }}
+    </ion-button>
+
+    <ion-button  class="btn-green" (click)="onContinue()">
+      {{ 'CONTINUE' | translate }}
+    </ion-button>
+  </div>
+
+</ion-content>
