@@ -2,15 +2,18 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <h3 class="is-color-title">{{ 'PAYMENT_TITLE' | translate }} </h3>
-        <p class="is-color-title">{{ 'CHOOSE_HOW_TO_PAY_DESCRIPTION' | translate }}</p>
-      </ion-title>
-      <ion-buttons slot="end">
-        <ion-button fill="clear" (click)="gotoBack()">
-          <ion-icon name="arrow-back-circle-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      <div class="is-column">
+        <ion-buttons slot="end">
+          <ion-button fill="clear" (click)="gotoBack()">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
+          </ion-button>
+        </ion-buttons>
+        <ion-title>
+          <h3 class="is-color-title">{{ 'PAYMENT_TITLE' | translate }} </h3>
+          <p class="is-color-title">{{ 'CHOOSE_HOW_TO_PAY_DESCRIPTION' | translate }}</p>
+        </ion-title>
+      </div>
     </ion-toolbar>
   </ion-header>
 
@@ -21,9 +24,9 @@
         <h2>{{ 'Top_up' | translate }}</h2>
       </ion-col>
       <ion-col class="ion-text-right">
-        <h3 class="is-color-title"> 
-          
-           <!-- LYD -->
+        <h3 class="is-color-title">
+
+          <!-- LYD -->
           <span *ngIf="checkoutObj.currency === 'LYD'">
             <ng-container *ngIf="lang === 'ar'; else lydEn">
               {{ checkoutObj.amount | number:'1.0-0' }} د.ل
@@ -38,7 +41,7 @@
           <span *ngIf="checkoutObj.currency !== 'LYD'">
             {{ checkoutObj.amount | currency:checkoutObj.currency }}
           </span>
-         </h3>
+        </h3>
       </ion-col>
     </ion-row>
 
@@ -52,8 +55,8 @@
           <img src="assets/img/credit-card-dark.png" alt="">{{ 'CREDIT_DEBIT' | translate }}
         </ion-radio>
 
-           <!-- this is new row for t-lync -->
-        <ion-radio  [value]="'tlync'">
+        <!-- this is new row for t-lync -->
+        <ion-radio [value]="'tlync'">
           <img src="assets/img/tlynclogoblack.png" alt="">{{ 't-lync' | translate }}
         </ion-radio>
         <!-- this is new row for t-lync  end -->
@@ -62,8 +65,7 @@
     </div>
 
     <div class="card-slider" *ngIf="selectedPaymentType === 'credit-debit' && cardList.length > 0">
-      <swiper-container (slidechange)="swiperSlideChanged($event)" [freeMode]="true" [loop]="false"
-        [pagination]="true">
+      <swiper-container (slidechange)="swiperSlideChanged($event)" [freeMode]="true" [loop]="false" [pagination]="true">
         <swiper-slide>
           <ion-card *ngFor="let cardItem of cardList; let i = index" (click)="cartOpt(i, cardItem)">
             <div class="innerrow">
@@ -110,13 +112,10 @@
       </swiper-container>
     </div>
 
-<ion-button
-  (click)="proceedForPayment()"
-  expand="block"
-  class="btn-green btn-payment"
-  [disabled]="selectedPaymentType === 'google-pay' && isGooglePayProcessing">
-  {{ 'PAY_NOW' | translate }}
-</ion-button>
+    <ion-button (click)="proceedForPayment()" expand="block" class="btn-green btn-payment"
+      [disabled]="selectedPaymentType === 'google-pay' && isGooglePayProcessing">
+      {{ 'PAY_NOW' | translate }}
+    </ion-button>
   </div>
 
 </ion-content>

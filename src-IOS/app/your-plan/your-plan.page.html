@@ -5,14 +5,17 @@
 
       <ion-header>
         <ion-toolbar>
-          <ion-title>
-            <p>{{ 'YOUR_PLAN' | translate }}</p>
-          </ion-title>
-          <ion-buttons slot="end">
-            <ion-button fill="clear" (click)="gotoBack()">
-              <ion-icon name="arrow-back-circle-outline"></ion-icon>
-            </ion-button>
-          </ion-buttons>
+          <div class="is-column">
+            <ion-buttons slot="end">
+              <ion-button fill="clear" (click)="gotoBack()">
+                <ion-icon name="arrow-back-circle-outline"></ion-icon>
+                <!-- <img src="assets/img/cross.png" alt=""> -->
+              </ion-button>
+            </ion-buttons>
+            <ion-title>
+              <p>{{ 'YOUR_PLAN' | translate }}</p>
+            </ion-title>
+          </div>
         </ion-toolbar>
       </ion-header>
 
@@ -47,7 +50,7 @@
         </ion-col>
 
         <ion-col size="9" class="text-left" *ngIf="bundleDatas.isUnlimited != true">
-          <h3>{{ bundleDatas.dataamount }}  {{'GB' | translate }}</h3>
+          <h3>{{ bundleDatas.dataamount }} {{'GB' | translate }}</h3>
           <h5>{{ 'VALUE_DATA_PLAN' | translate }}</h5>
         </ion-col>
       </ion-row>

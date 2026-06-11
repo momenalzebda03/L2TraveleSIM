@@ -2,16 +2,17 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <img class="ftel-logo" src="assets/img/L2-logobranded.png" alt="">
-      </ion-title>
-      <ion-buttons slot="end">
+      <div class="is-column">
         <ion-buttons slot="end">
           <ion-button fill="clear" (click)="gotoBack()">
             <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
           </ion-button>
         </ion-buttons>
-      </ion-buttons>
+        <ion-title>
+          <img class="ftel-logo" src="assets/img/L2-logobranded.png" alt="">
+        </ion-title>
+      </div>
     </ion-toolbar>
     <ion-toolbar class="titlebar">
       <ion-title>
@@ -30,13 +31,13 @@
             <img [src]="profileObj.profile_image" />
             <ion-icon name="add-outline"></ion-icon>
           </ion-avatar>
-           <ion-label>{{'update_profile_image_limit' | translate}}</ion-label>
+          <ion-label>{{'update_profile_image_limit' | translate}}</ion-label>
         </ion-item>
         <ion-button *ngIf="!isDeletedImg" fill="clear" (click)="gotoDeletepic()">
           <img src="assets/img/cross-dark.png" alt="">
         </ion-button>
       </div>
-      
+
 
       <ion-item lines="none">
         <ion-input type="text" (ionInput)="validateName($event, 'first')" autocapitalize="on"
@@ -53,7 +54,7 @@
           placeholder="{{ 'EMAIL_ADDRESS' | translate }}"></ion-input>
       </ion-item>
 
-          <ion-item lines="none" *ngIf="profileObj.country_name != null && profileObj.country_name != ''">
+      <ion-item lines="none" *ngIf="profileObj.country_name != null && profileObj.country_name != ''">
         <ion-input readonly type="text" [(ngModel)]="profileObj.country_name"
           placeholder="{{ 'Country_residence' | translate }}"></ion-input>
       </ion-item>

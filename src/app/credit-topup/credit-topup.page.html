@@ -2,16 +2,19 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <h3 class="is-color-title">{{ 'Top_up' | translate }}</h3>
-        <p class="is-color-title">{{ 'Choose_how_much_credit' | translate }}</p>
-      </ion-title>
+      <div class="is-column">
+        <ion-buttons slot="end">
+          <ion-button fill="clear" (click)="gotoBack()">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
+          </ion-button>
+        </ion-buttons>
+        <ion-title>
+          <h3 class="is-color-title">{{ 'Top_up' | translate }}</h3>
+          <p class="is-color-title">{{ 'Choose_how_much_credit' | translate }}</p>
+        </ion-title>
 
-      <ion-buttons slot="end">
-        <ion-button fill="clear" (click)="gotoBack()">
-          <ion-icon name="arrow-back-circle-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      </div>
 
     </ion-toolbar>
   </ion-header>
@@ -59,18 +62,11 @@
 
         <ion-item>
 
-          <ion-select
-            label="{{ 'Choose_amount' | translate }}"
-            [(ngModel)]="customAmount"
-            (ionChange)="onDropdownSelect()"
-            [okText]="'OK_BUTTON' | translate"
-            [cancelText]="'CANCEL_BUTTON' | translate"
-          >
+          <ion-select label="{{ 'Choose_amount' | translate }}" [(ngModel)]="customAmount"
+            (ionChange)="onDropdownSelect()" [okText]="'OK_BUTTON' | translate"
+            [cancelText]="'CANCEL_BUTTON' | translate">
 
-            <ion-select-option
-              *ngFor="let amt of topupAMTNewList"
-              [value]="amt.value"
-            >
+            <ion-select-option *ngFor="let amt of topupAMTNewList" [value]="amt.value">
 
               <ng-container *ngIf="currencyCode === 'LYD'; else otherDrop">
 

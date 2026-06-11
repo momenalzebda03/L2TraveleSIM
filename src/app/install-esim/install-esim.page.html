@@ -2,15 +2,18 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <h3 [innerHTML]="'ACTIVATE_TITLE' | translate" class="is-color-title">
-        </h3>
-      </ion-title>
-      <ion-buttons slot="end">
-        <ion-button fill="clear" (click)="gotoBack()">
-          <ion-icon name="arrow-back-circle-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      <div class="is-column">
+        <ion-buttons slot="end">
+          <ion-button fill="clear" (click)="gotoBack()">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
+          </ion-button>
+        </ion-buttons>
+        <ion-title>
+          <h3 [innerHTML]="'ACTIVATE_TITLE' | translate" class="is-color-title">
+          </h3>
+        </ion-title>
+      </div>
     </ion-toolbar>
 
     <ion-toolbar class="textbar">

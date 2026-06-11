@@ -1,26 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-     <h3 class="is-color-title">{{ 'HAVE_WE_MET_TITLE' | translate }}</h3>
-     <p class="is-color-title">{{ 'LOGIN_OR_CREATE_ACCOUNT_DESCRIPTION' | translate }}</p>
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button fill="clear" (click)="gotoBack()">
-        <ion-icon name="arrow-back-circle-outline"></ion-icon>
-      </ion-button>
-    </ion-buttons>
+    <div class="is-column">
+      <ion-buttons slot="end">
+        <ion-button fill="clear" (click)="gotoBack()">
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          <!-- <img src="assets/img/cross.png" alt=""> -->
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        <h3 class="is-color-title">{{ 'HAVE_WE_MET_TITLE' | translate }}</h3>
+        <p class="is-color-title">{{ 'LOGIN_OR_CREATE_ACCOUNT_DESCRIPTION' | translate }}</p>
+      </ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-  
+
   <div class="ftel-logo">
     <img src="assets/img/L2-Logo-vertical.svg" alt="">
   </div>
 
   <!-- <div class="topspace">&nbsp;</div> -->
 
-  <ion-button expand="block" class="btn-green btn-signin" (click) ="gotoLogin()">
+  <ion-button expand="block" class="btn-green btn-signin" (click)="gotoLogin()">
     {{ 'SIGN_IN' | translate }}
   </ion-button>
 
@@ -28,10 +31,10 @@
     <span class="is-color-title">{{ 'OR' | translate }}</span>
   </div>
 
-  <ion-button expand="block" class="button-outline btn-signup" (click) ="gotoRegister()">
+  <ion-button expand="block" class="button-outline btn-signup" (click)="gotoRegister()">
     {{ 'SIGN_UP' | translate }}
-  </ion-button>  
-  
+  </ion-button>
+
 </ion-content>
 
 
@@ -39,7 +42,7 @@
   <ion-toolbar>
 
     <div class="tabmenu">
-      <ion-button (click)="gotoHomeSearch()"  class="selected">
+      <ion-button (click)="gotoHomeSearch()" class="selected">
         <img class="normal" src="assets/img/icons/location.png" alt="">
         <img class="active" src="assets/img/icons/location-yellow.png" alt="">
       </ion-button>
@@ -57,7 +60,7 @@
       <ion-button (click)="gotoTab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
   </ion-toolbar>

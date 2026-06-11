@@ -2,19 +2,22 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <img class="ftel-logo" src="assets/img/L2-logobranded.png" alt="">
-      </ion-title>
-      <ion-buttons slot="end">
-        <ion-button fill="clear" (click)="gotoBack()">
-          <ion-icon name="arrow-back-circle-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+      <div class="is-column">
+        <ion-buttons slot="end">
+          <ion-button fill="clear" (click)="gotoBack()">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
+          </ion-button>
+        </ion-buttons>
+        <ion-title>
+          <img class="ftel-logo" src="assets/img/L2-logobranded.png" alt="">
+        </ion-title>
+      </div>
     </ion-toolbar>
     <ion-toolbar class="titlebar">
       <ion-title>
         <h3 class="is-color-title">
-         {{'ABOUT_US' | translate}}
+          {{'ABOUT_US' | translate}}
         </h3>
       </ion-title>
     </ion-toolbar>
@@ -48,7 +51,7 @@
         <img class="active" src="assets/img/icons/scan-yellow.png" alt="">
       </ion-button>
 
-       <ion-button (click)="gotoMarketPlace()">
+      <ion-button (click)="gotoMarketPlace()">
         <img class="normal" src="assets/img/icons/shop.png" alt="">
         <img class="active" src="assets/img/icons/shop-yellow.png" alt="">
       </ion-button>
@@ -56,10 +59,10 @@
       <ion-button (click)="gotoTab5()" class="selected">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
 
-   
+
   </ion-toolbar>
 </ion-footer>

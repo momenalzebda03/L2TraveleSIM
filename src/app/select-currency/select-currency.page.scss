@@ -45,7 +45,7 @@ ion-radio{
 
   &::part(container){ 
     background: var(--theme-gray); width: 24px; height: 24px; border-radius: 50%; 
-    border-color: var(--border-color);
+    border-color: var(--border-color-check);
   } 
 
   &::part(mark){ height: 53%; background: var(--theme-color-2);}
@@ -65,7 +65,7 @@ ion-radio{
 ion-radio{
     --color: var(--theme-color-2);
     --color-checked:var(--theme-color-2);
-    border: 1px solid var(--border-color) !important;
+    border: 1px solid var(--border-color-check) !important;
 }
 
 .currency{
