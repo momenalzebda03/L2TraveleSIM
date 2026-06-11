@@ -26,7 +26,11 @@ allprojects {
 
 configurations.all {
     resolutionStrategy {
-        force 'org.bouncycastle:bcprov-jdk18on:1.78'
+        eachDependency { details ->
+            if (details.requested.group == 'org.bouncycastle') {
+                details.useVersion '1.78'
+            }
+        }
     }
 }
 
