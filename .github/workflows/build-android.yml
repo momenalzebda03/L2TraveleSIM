@@ -1,38 +1,31 @@
 name: Build Android APK
-
 on:
   push:
     branches:
       - main
-
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
-
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
       - run: npm install --legacy-peer-deps
-
       - run: npm run build
-
       - uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: temurin
-
       - run: npx cap sync android
-
+      - name: Fix Stripe CardUtils import
+        run: |
+          sed -i 's/import com.stripe.android.util.CardUtils;/import com.stripe.android.CardUtils;/g' \
+          android/capacitor-cordova-android-plugins/src/main/java/com/zyramedia/cordova/stripe/CordovaStripe.java
       - run: chmod +x android/gradlew
-
       - run: |
           cd android
           ./gradlew assembleDebug --no-build-cache --refresh-dependencies --stacktrace -x test
-
       - uses: actions/upload-artifact@v4
         with:
           name: app-debug
