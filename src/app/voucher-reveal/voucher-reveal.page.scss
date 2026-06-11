@@ -26,6 +26,19 @@ ion-header{
     display: block; min-height: 48%;
 }
 
+.bg-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    top: 0;
+    left: 0;
+}
+
+.is-index {
+    z-index: 1;
+}
+
 ion-content{ 
     --background: url("../../assets/img/voucher-reveal-1.png") no-repeat center center / cover;  
 }
@@ -70,8 +83,7 @@ p{
         margin: 0 4px 0px;  
         font-weight: 400; 
         min-height: 32px;
-        --background:var(--theme-color-1); 
-        --color: white ; 
+        --background:white; 
         // border: 1px solid var(--theme-color-1); 
         font-size: 13px;
         text-align: center;
@@ -85,11 +97,11 @@ p{
     margin: 0px 0 15px;
 
     &.button-outline{
-        --border-color: var(--button-secondary-bg);
+        --border-color: var(--theme-color-3);
         --color:#fff;
-        --background-color: var(--button-secondary-bg);
-        --background: var(--button-secondary-bg);
-        --background-activated: var(--button-secondary-bg);
+        --background-color: var(--theme-color-3);
+        --background: var(--theme-color-3);
+        --background-activated: var(--theme-color-3);
     }
 
     &.plans{

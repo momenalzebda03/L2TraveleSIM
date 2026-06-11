@@ -3,7 +3,7 @@
   <div class="topbox">&nbsp;    
   </div>
 
-  <div class="content-wrapper ion-padding" *ngIf="voucherResult.type == 'bundle_purchase'">
+  <div class="content-wrapper ion-padding is-index" *ngIf="voucherResult.type == 'bundle_purchase'">
     <h3 class="text-center">
       {{ 'SUCCESS'  | translate}}  
     </h3>
@@ -28,6 +28,8 @@
       <img src="assets/img/icons/location-white.png" alt=""> {{ 'GO_TO_ESIMS'  | translate}} 
     </ion-button>
   </div>
+
+      <div class="bg-screen"></div>
 
   <div class="content-wrapper ion-padding" *ngIf="voucherResult.type == 'voucher_topup'">
     <h3 class="text-center">

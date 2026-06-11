@@ -26,6 +26,16 @@ ion-header{
     display: block; min-height: 48%;
 }
 
+.bg-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0104189d;
+    top: 0;
+    left: 0;
+}
+
+
 ion-content{ 
     --background: url("../../assets/img/voucher.png") no-repeat center center / cover;  
 }
@@ -53,13 +63,12 @@ p{
     font-size: 16px;
 }
 ion-item{
-    --background: var(--theme-color-1);
-    border: 2px solid var(--theme-color-1);
+    --background: white;
+    border: 2px solid white;
     border-radius: 14px;
     margin: 0 0 15px;
 
     ion-input{
-        color: #fff;
         text-align: center;
     }
 }

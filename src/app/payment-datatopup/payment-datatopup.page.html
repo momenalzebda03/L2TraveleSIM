@@ -3,13 +3,13 @@
   <ion-header>
     <ion-toolbar>
       <ion-title>
-        <h3>{{ 'PAYMENT_TITLE' | translate }}</h3>
-        <p>
+        <h3 class="is-color-title">{{ 'PAYMENT_TITLE' | translate }}</h3>
+        <p class="is-color-title">
           {{ 'CHOOSE_PAYMENT_METHOD' | translate }}
         </p>
       </ion-title>
       <ion-chip slot="end" [ngClass]="getWalletClass()"> <!-- LYD -->
-          <span *ngIf="currencyCode === 'LYD'">
+          <span *ngIf="currencyCode === 'LYD'" class="is-color-title">
             <ng-container *ngIf="lang === 'ar'; else lydEn">
               {{ walletBalance | number:'1.0-0' }} د.ل
             </ng-container>
@@ -20,7 +20,7 @@
           </span>
 
           <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
+          <span *ngIf="currencyCode !== 'LYD'" class="is-color-title">
             {{ walletBalance | currency:currencyCode }}
           </span></ion-chip>
       <ion-buttons slot="end">

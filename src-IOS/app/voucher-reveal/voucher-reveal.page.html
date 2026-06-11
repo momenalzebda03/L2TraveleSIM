@@ -29,7 +29,9 @@
     </ion-button>
   </div>
 
-  <div class="content-wrapper ion-padding" *ngIf="voucherResult.type == 'voucher_topup'">
+    <div class="bg-screen"></div>
+
+  <div class="content-wrapper ion-padding is-index" *ngIf="voucherResult.type == 'voucher_topup'">
     <h3 class="text-center">
       {{ 'SUCCESS'  | translate}}  
     </h3>

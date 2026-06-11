@@ -1,44 +1,60 @@
-
-
 <ion-content class="ion-padding" [fullscreen]="true">
- 
-  <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-     <h3>{{ 'L2_TRAVEL_SIM_MARKETPLACE' | translate }}</h3>
-     <p>{{ 'comming_soon' | translate }}</p> 
-    </ion-title>
 
-  </ion-toolbar>
-</ion-header>
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title>
+        <h3 class="is-color-title">{{ 'L2_TRAVEL_SIM_MARKETPLACE' | translate }}</h3>
+        <p class="is-color-title">{{ 'comming_soon' | translate }}</p>
+      </ion-title>
+
+    </ion-toolbar>
+  </ion-header>
 
   <div class="loungepassbox">
-    <div class="airport">
-      <img src="assets/img/airport-lounge.png" alt="">
+    <div class="box-ariport">
+      <div class="airport">
+        <img src="assets/img/airport-lounge.png" alt="">
+      </div>
     </div>
     <h3>{{ 'Airport_lounge_pass' | translate }}</h3>
     <p>{{ 'comming_soon' | translate }}</p>
   </div>
 
-  
+
   <div class="datacontainer">
     <div class="datablock">
-      <img src="assets/img/accessories-offer.png" alt="">
+      <div class="box-ariport">
+        <div class="bg-icons">
+          <img src="assets/img/accessories-offer.png" alt="">
+        </div>
+      </div>
       <h4>{{ 'L2_ACCESSORIES_OFFER' | translate }}</h4>
       <p>{{ 'comming_soon' | translate }}</p>
     </div>
     <div class="datablock">
-      <img src="assets/img/travel-insurance.png" alt="">
+      <div class="box-ariport">
+        <div class="bg-icons">
+          <img src="assets/img/travel-insurance.png" alt="">
+        </div>
+      </div>
       <h4>{{ 'AS_TRAVEL_INSURANCE' | translate }}</h4>
       <p>{{ 'comming_soon' | translate }}</p>
     </div>
     <div class="datablock">
-      <img src="assets/img/broadband.png" alt="">
+      <div class="box-ariport">
+        <div class="bg-icons">
+          <img src="assets/img/broadband.png" alt="">
+        </div>
+      </div>
       <h4>{{ 'AS_BROADBAND_SERVICE' | translate }}</h4>
       <p>{{ 'comming_soon' | translate }}</p>
     </div>
     <div class="datablock">
-      <img src="assets/img/health-insurance.png" alt="">
+      <div class="box-ariport">
+        <div class="bg-icons">
+          <img src="assets/img/health-insurance.png" alt="">
+        </div>
+      </div>
       <h4>{{ 'HEALTH_INSURANCE' | translate }}</h4>
       <p>{{ 'comming_soon' | translate }}</p>
     </div>
@@ -69,9 +85,7 @@
       <ion-button (click)="gototab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
   </ion-toolbar>
 </ion-footer>
-
- 
