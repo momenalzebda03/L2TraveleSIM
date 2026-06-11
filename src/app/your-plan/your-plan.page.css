@@ -160,7 +160,7 @@ ion-content::after {
 }
 
 .inactive {
-  color: var(--theme-color-3);
+  color: red;
 }
 
 .active-inactive {
@@ -234,7 +234,7 @@ ion-button.btn-plan {
 
 .progress .value,
 .progress .days-left {
-  fill: var(--theme-color-2);
+  fill: var(--theme-color-blue);
   text-anchor: middle;
 }
 

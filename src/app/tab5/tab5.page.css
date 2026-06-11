@@ -1,9 +1,8 @@
 ion-header ion-toolbar {
-  height: 95px;
   --background:transparent;
 }
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 12px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -160,6 +159,10 @@ ion-item.deleteacc ion-label {
 .btn-log ion-button.btn-chat {
   margin: 0 0 15px;
 }
+.btn-log ion-button.button-outline {
+  --color: var(--theme-color-blue);
+}
+
 /* src/styles.css or component-specific CSS */
 #webWidget {
   display: none !important;

@@ -323,6 +323,7 @@ export class ProfilePage implements OnInit {
       this.loadingScreen.dismissLoading();
     }, 300); */
     this.locale = window.localStorage.getItem("L2TraveleSIM_language") || 'en';
+    
     this.zendeskService.loadZendesk(this.locale);
   }
 

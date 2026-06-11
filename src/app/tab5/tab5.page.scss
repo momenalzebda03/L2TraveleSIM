@@ -1,10 +1,9 @@
 ion-header{
     ion-toolbar{
-        height: 95px;
         --background:transparent;
         ion-title{
             .ftel-logo{
-                width: 160px;
+                width: 120px;
                 margin:12px 0px 0px;
             }
         }
@@ -137,7 +136,7 @@ ion-item{
         margin: 0 0 15px;
     }
     &.button-outline {
-        // --color: #fff;
+        --color: var(--theme-color-blue);
         // --border-color: #fff;
       }
   }

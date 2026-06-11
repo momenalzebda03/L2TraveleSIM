@@ -18,7 +18,7 @@
   <div class="contentmiddle">
     <ion-row>
       <ion-col size="9">
-        <h3>Payment History</h3>
+        <h3 class="is-color-title">Payment History</h3>
       </ion-col>
       <ion-col size="3" class="right close">
         <ion-button fill="clear" (click)="gotoBack()">
@@ -29,7 +29,7 @@
 
     <div class="no-record" *ngIf="isData == false && paymentList.length == 0">
       <img src="assets/img/nopaymenthistory.png" alt="">
-      <h3>No Payment history</h3>
+      <h3 class="is-color-title">No Payment history</h3>
     </div>
 
     <div *ngIf="isData == false && paymentList.length>0" class="paymenthistory">
@@ -58,12 +58,12 @@
               </span> {{getCountryName(paymentItem.bundle_name)}}</h5>
           </ion-col>
           <ion-col class="right">
-            <h5>-{{ paymentItem.amount | currency:paymentItem.currency_symbol}} </h5>
+            <h5 class="is-color-title">-{{ paymentItem.amount | currency:paymentItem.currency_symbol}} </h5>
           </ion-col>
         </ion-row>
         <ion-row>
           <ion-col class="left data">
-            <p>{{datefilter(paymentItem.date) }} </p>
+            <p class="is-color-title">{{datefilter(paymentItem.date) }} </p>
           </ion-col>
           <ion-col class="right data">
             <p *ngIf="paymentItem.payment_method == 'Visa' || paymentItem.payment_method == 'MasterCard' "><img

@@ -44,6 +44,7 @@ ion-button.btn-logout {
   --padding-start:20px;
   --padding-end:20px;
   margin: 15px 0px 0px;
+  --color: var(--theme-color-blue);
 }
 
 .orbox {

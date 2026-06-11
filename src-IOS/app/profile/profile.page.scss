@@ -1,10 +1,9 @@
 ion-header{
     ion-toolbar{
-        height: 95px;
         --background:transparent;
         ion-title{
             .ftel-logo{
-                width: 160px;
+                width: 120px;
                 margin:12px 0px 0px;
             }
         }
@@ -128,7 +127,7 @@ ion-segment{
       --background:transparent;
       --background-checked:transparent;
       --color:rgba(17,32,66,0.5);
-      --color-checked:var(--theme-color-2);
+      --color-checked:var(--theme-color-3);
       --indicator-height:0;
       border-radius: 0px;  
       min-height: 44px;  
@@ -162,7 +161,7 @@ ion-segment{
             .active{ display: inline-block; }
         }    
         &::before{
-            position: absolute; z-index: 11; left: 0; right: 0; bottom: 0; background: var(--theme-color-1); height: 3px; content: ""; border-radius: 10px 10px 0 0; 
+            position: absolute; z-index: 11; left: 0; right: 0; bottom: 0; background: var(--theme-color-3); height: 3px; content: ""; border-radius: 10px 10px 0 0; 
             width: 90px; margin: 0 auto;
         }    
       } 
@@ -221,7 +220,7 @@ ion-button{
     margin: 0 0 15px;
 
     &.button-outline{
-
+--color: var(--theme-color-blue)
     }
 }
 

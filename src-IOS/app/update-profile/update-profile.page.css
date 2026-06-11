@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -80,7 +77,7 @@ ion-checkbox {
   --checkbox-background:transparent;
   --checkbox-background-checked:var(--theme-color-2);
   --border-color-checked:var(--theme-color-2);
-  --checkmark-color:var(--theme-color-3);
+  --checkmark-color:var(--theme-color-blue);
   --checkmark-width: 4;
   --checkbox-background-checked: transparent;
   --border-color-checked: transparent;

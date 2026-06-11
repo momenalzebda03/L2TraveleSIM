@@ -247,8 +247,8 @@ ion-segment ion-segment-button ion-label {
   margin-right: 10px;
   height: 200px;
   border-radius: 16px;
-  background: var(--input-bg);
-  border: 1px solid var(--border-color) !important;
+  background: var(--theme-green);
+  border: 1px solid var(--border-color-check) !important;
   padding: 10px 10px 45px 10px;
 }
 .countrybox img {
@@ -278,7 +278,7 @@ ion-segment ion-segment-button ion-label {
   right: 10px;
   bottom: 10px;
   font-size: 18px;
-  color: var(--theme-color-1);
+  color: var(--theme-color-3);
 }
 .countrybox::after {
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.3) 100%);
@@ -378,8 +378,8 @@ ion-card .data p {
   position: relative;
   margin: 3px 3px;
   height: 52px;
-  background: var(--input-bg);
-  border: 1px solid var(--border-color) !important;
+  background: var(--theme-green);
+  border: 1px solid var(--border-color-check) !important;
 }
 .selcountrybox .country {
   width: 44px;
@@ -499,7 +499,7 @@ ion-item.region-row .detail .info {
 ion-item.region-row .detail .arrow {
   text-align: right;
   font-size: 16px;
-  color: var(--theme-color-1);
+  color: var(--theme-color-3);
 }
 ion-item.region-row .countryname {
   font-size: 15px;

@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 12px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -16,7 +13,7 @@ ion-header ion-toolbar ion-buttons ion-button {
   display: inline-block;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  --box-shadow:none;
+  --box-shadow: none;
 }
 ion-header ion-toolbar ion-buttons ion-button::part(native) {
   padding-inline-start: 10px;
@@ -34,7 +31,7 @@ ion-content {
 }
 
 .ion-padding {
-  --padding-top:10px;
+  --padding-top: 10px;
 }
 
 h5 {
@@ -67,9 +64,9 @@ ion-accordion-group ion-accordion {
 }
 ion-accordion-group ion-accordion ion-item {
   --border-width: 0px 0px 0px 0px;
-  --background:var(--item-bg);
-  --min-height:60px;
-  border: 1px solid var(--border-color) !important;
+  --background: var(--item-bg);
+  --min-height: 60px;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-accordion-group ion-accordion ion-item ion-label {
   font-size: 15px;
@@ -80,12 +77,14 @@ ion-accordion-group ion-accordion ion-item ion-icon {
   font-size: 18px;
 }
 ion-accordion-group ion-accordion ion-item::part(native) {
-  background: var(--input-bg); /*border: 1px solid var(--item-border);*/
+  background: var(--input-bg);
+  /*border: 1px solid var(--item-border);*/
   color: #fff;
   border-radius: 10px;
 }
 ion-accordion-group ion-accordion.accordion-expanded ion-item::part(native) {
-  background: var(--input-bg); /*border: 1px solid var(--theme-color-2);*/
+  background: var(--input-bg);
+  /*border: 1px solid var(--theme-color-2);*/
 }
 ion-accordion-group ion-accordion.accordion-expanded ion-item ion-label {
   color: var(--theme-color-2);
@@ -133,7 +132,7 @@ ion-accordion-group ion-accordion .ion-padding ul li {
 .checkrow ion-item {
   --padding-start: 10px;
   --inner-padding-end: 0px;
-  --background-hover-opacity:0;
+  --background-hover-opacity: 0;
 }
 .checkrow ion-item ion-label {
   white-space: normal;
@@ -149,12 +148,12 @@ ion-checkbox {
   font-weight: 100;
   color: var(--theme-gray);
   font-size: 15px;
-  --border-width:1px;
-  --border-color:var(--theme-color-2);
-  --checkbox-background:transparent;
-  --checkbox-background-checked:var(--theme-color-2);
-  --border-color-checked:var(--theme-color-2);
-  --checkmark-color:var(--theme-color-2);
+  --border-width: 1px;
+  --border-color: var(--theme-color-2);
+  --checkbox-background: transparent;
+  --checkbox-background-checked: var(--theme-color-2);
+  --border-color-checked: var(--theme-color-2);
+  --checkmark-color: var(--theme-color-2);
   --checkmark-width: 4;
   --checkbox-background-checked: transparent;
   --border-color-checked: transparent;

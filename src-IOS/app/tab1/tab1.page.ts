@@ -60,238 +60,232 @@ export class Tab1Page {
     }
   }
 
-  blankArr:any=[]; 
+  blankArr: any = [];
 
-  async gotoPurchasedBundlesREF()
-{
-this.apiService.gotoPurchasedBundles(this.token).then((res: any) => {
-  if (res.code == 200) {
-    console.log(res.data.data.length);
-    if (res.data.data.length > 0) {
-      try {
-        // Retrieve data from localStorage
-        const bundlesString = JSON.stringify(res.data.data);
-        this.storageBundles = bundlesString ? JSON.parse(bundlesString) : [];
-  
-        // Check if the parsed storageBundles is a valid array
-        if (Array.isArray(this.storageBundles) && this.storageBundles.length > 0) {
-          // Clear the lists before populating
+  async gotoPurchasedBundlesREF() {
+    this.apiService.gotoPurchasedBundles(this.token).then((res: any) => {
+      if (res.code == 200) {
+        console.log(res.data.data.length);
+        if (res.data.data.length > 0) {
+          try {
+            // Retrieve data from localStorage
+            const bundlesString = JSON.stringify(res.data.data);
+            this.storageBundles = bundlesString ? JSON.parse(bundlesString) : [];
+
+            // Check if the parsed storageBundles is a valid array
+            if (Array.isArray(this.storageBundles) && this.storageBundles.length > 0) {
+              // Clear the lists before populating
+              this.bundleActiveList = [];
+              this.bundleInactiveList = [];
+              this.bundleTopupAgain = [];
+              this.bundleExpiredList = [];
+
+              // Categorize the bundles based on profile_status
+              this.storageBundles.forEach((bundle: any) => {
+                switch (bundle.profile_status) {
+                  case "Expired":
+                    this.bundleExpiredList.push(bundle);
+                    break;
+                  case "Inactive":
+                    this.bundleInactiveList.push(bundle);
+                    break;
+                  case "Active":
+                    this.bundleActiveList.push(bundle);
+                    break;
+                  case "Topup":
+                    this.bundleTopupAgain.push(bundle);
+                    break;
+                }
+              });
+
+              console.log(this.bundleActiveList.length);
+              console.log(this.bundleTopupAgain.length);
+              console.log(this.bundleInactiveList.length);
+              console.log(this.bundleExpiredList.length);
+
+
+              // Set data availability flags
+              this.isDataAvailActive = this.bundleActiveList.length > 0 || this.bundleTopupAgain.length > 0;
+              this.isDataAvailInActive = this.bundleInactiveList.length > 0 || this.bundleExpiredList.length > 0;
+
+              // Default to 'inactive' segment if no active data is available
+              const savedSegment = sessionStorage.getItem('selectedSegment');
+              if (savedSegment) {
+                this.selectedSegment = savedSegment;
+                sessionStorage.removeItem('selectedSegment'); // Clear the storage after retrieval
+              } else {
+                this.selectedSegment = this.isDataAvailActive ? 'active' : 'inactive';
+              }
+            } else {
+              // If no bundles are found, reset flags and lists
+              this.resetBundleData();
+            }
+          } catch (error) {
+            console.error("Error fetching bundles from localStorage:", error);
+            this.resetBundleData();
+          }
+        } else {
+          console.log("Hi I m here");
           this.bundleActiveList = [];
           this.bundleInactiveList = [];
           this.bundleTopupAgain = [];
           this.bundleExpiredList = [];
-  
-          // Categorize the bundles based on profile_status
-          this.storageBundles.forEach((bundle: any) => {
-            switch (bundle.profile_status) {
-              case "Expired":
-                this.bundleExpiredList.push(bundle);
-                break;
-              case "Inactive":
-                this.bundleInactiveList.push(bundle);
-                break;
-              case "Active":
-                this.bundleActiveList.push(bundle);
-                break;
-              case "Topup":
-                this.bundleTopupAgain.push(bundle);
-                break;
-            }
-          });
-
-          console.log(this.bundleActiveList.length);
-          console.log(this.bundleTopupAgain.length);
-          console.log(this.bundleInactiveList.length );
-          console.log(this.bundleExpiredList.length );
-
-  
-          // Set data availability flags
-          this.isDataAvailActive = this.bundleActiveList.length > 0 || this.bundleTopupAgain.length > 0;
-          this.isDataAvailInActive = this.bundleInactiveList.length > 0 || this.bundleExpiredList.length > 0;
-  
-          // Default to 'inactive' segment if no active data is available
-          const savedSegment = sessionStorage.getItem('selectedSegment');
-          if (savedSegment) {
-            this.selectedSegment = savedSegment;
-            sessionStorage.removeItem('selectedSegment'); // Clear the storage after retrieval
-          } else {
-            this.selectedSegment = this.isDataAvailActive ? 'active' : 'inactive';
-          }
-        } else {
-          // If no bundles are found, reset flags and lists
-          this.resetBundleData();
+          this.isDataAvailActive = false;
+          this.isDataAvailInActive = false;
         }
-      } catch (error) {
-        console.error("Error fetching bundles from localStorage:", error);
-        this.resetBundleData();
+      } else {
+        //   this.loadingScreen.dismissLoading();
       }
-    }else
-    {
-      console.log("Hi I m here");
+    }).catch(err => {
+      //this.loadingScreen.dismissLoading();
       this.bundleActiveList = [];
       this.bundleInactiveList = [];
       this.bundleTopupAgain = [];
       this.bundleExpiredList = [];
       this.isDataAvailActive = false;
       this.isDataAvailInActive = false;
-    }
-  }else
-  {
- //   this.loadingScreen.dismissLoading();
+
+    })
   }
-}).catch(err => {
-  //this.loadingScreen.dismissLoading();
-  this.bundleActiveList = [];
-  this.bundleInactiveList = [];
-  this.bundleTopupAgain = [];
-  this.bundleExpiredList = [];
-  this.isDataAvailActive = false;
-  this.isDataAvailInActive = false;
 
-})
-}
 
-  
 
-  async gotoPurchasedBundles()
-{
-await this.loadingScreen.presentLoading();
-this.apiService.gotoPurchasedBundles(this.token).then((res: any) => {
-  if (res.code == 200) {
-    this.loadingScreen.dismissLoading();
-    console.log(res.data.data.length);
-    if (res.data.data.length > 0) {
-      try {
-        // Retrieve data from localStorage
-        const bundlesString = JSON.stringify(res.data.data);
-        this.storageBundles = bundlesString ? JSON.parse(bundlesString) : [];
-  
-        // Check if the parsed storageBundles is a valid array
-        if (Array.isArray(this.storageBundles) && this.storageBundles.length > 0) {
-          // Clear the lists before populating
+  async gotoPurchasedBundles() {
+    await this.loadingScreen.presentLoading();
+    this.apiService.gotoPurchasedBundles(this.token).then((res: any) => {
+      if (res.code == 200) {
+        this.loadingScreen.dismissLoading();
+        console.log(res.data.data.length);
+        if (res.data.data.length > 0) {
+          try {
+            // Retrieve data from localStorage
+            const bundlesString = JSON.stringify(res.data.data);
+            this.storageBundles = bundlesString ? JSON.parse(bundlesString) : [];
+
+            // Check if the parsed storageBundles is a valid array
+            if (Array.isArray(this.storageBundles) && this.storageBundles.length > 0) {
+              // Clear the lists before populating
+              this.bundleActiveList = [];
+              this.bundleInactiveList = [];
+              this.bundleTopupAgain = [];
+              this.bundleExpiredList = [];
+
+              // Categorize the bundles based on profile_status
+              this.storageBundles.forEach((bundle: any) => {
+                switch (bundle.profile_status) {
+                  case "Expired":
+                    this.bundleExpiredList.push(bundle);
+                    break;
+                  case "Inactive":
+                    this.bundleInactiveList.push(bundle);
+                    break;
+                  case "Active":
+                    this.bundleActiveList.push(bundle);
+                    break;
+                  case "Topup":
+                    this.bundleTopupAgain.push(bundle);
+                    break;
+                }
+              });
+
+              console.log(this.bundleActiveList.length);
+              console.log(this.bundleTopupAgain.length);
+              console.log(this.bundleInactiveList.length);
+              console.log(this.bundleExpiredList.length);
+
+
+              // Set data availability flags
+              this.isDataAvailActive = this.bundleActiveList.length > 0 || this.bundleTopupAgain.length > 0;
+              this.isDataAvailInActive = this.bundleInactiveList.length > 0 || this.bundleExpiredList.length > 0;
+
+              // Default to 'inactive' segment if no active data is available
+              const savedSegment = sessionStorage.getItem('selectedSegment');
+              if (savedSegment) {
+                this.selectedSegment = savedSegment;
+                sessionStorage.removeItem('selectedSegment'); // Clear the storage after retrieval
+              } else {
+                this.selectedSegment = this.isDataAvailActive ? 'active' : 'inactive';
+              }
+            } else {
+              // If no bundles are found, reset flags and lists
+              this.resetBundleData();
+            }
+          } catch (error) {
+            console.error("Error fetching bundles from localStorage:", error);
+            this.resetBundleData();
+          }
+        } else {
+          console.log("Hi I m here");
           this.bundleActiveList = [];
           this.bundleInactiveList = [];
           this.bundleTopupAgain = [];
           this.bundleExpiredList = [];
-  
-          // Categorize the bundles based on profile_status
-          this.storageBundles.forEach((bundle: any) => {
-            switch (bundle.profile_status) {
-              case "Expired":
-                this.bundleExpiredList.push(bundle);
-                break;
-              case "Inactive":
-                this.bundleInactiveList.push(bundle);
-                break;
-              case "Active":
-                this.bundleActiveList.push(bundle);
-                break;
-              case "Topup":
-                this.bundleTopupAgain.push(bundle);
-                break;
-            }
-          });
-
-          console.log(this.bundleActiveList.length);
-          console.log(this.bundleTopupAgain.length);
-          console.log(this.bundleInactiveList.length );
-          console.log(this.bundleExpiredList.length );
-
-  
-          // Set data availability flags
-          this.isDataAvailActive = this.bundleActiveList.length > 0 || this.bundleTopupAgain.length > 0;
-          this.isDataAvailInActive = this.bundleInactiveList.length > 0 || this.bundleExpiredList.length > 0;
-  
-          // Default to 'inactive' segment if no active data is available
-          const savedSegment = sessionStorage.getItem('selectedSegment');
-          if (savedSegment) {
-            this.selectedSegment = savedSegment;
-            sessionStorage.removeItem('selectedSegment'); // Clear the storage after retrieval
-          } else {
-            this.selectedSegment = this.isDataAvailActive ? 'active' : 'inactive';
-          }
-        } else {
-          // If no bundles are found, reset flags and lists
-          this.resetBundleData();
+          this.isDataAvailActive = false;
+          this.isDataAvailInActive = false;
         }
-      } catch (error) {
-        console.error("Error fetching bundles from localStorage:", error);
-        this.resetBundleData();
+      } else {
+        this.loadingScreen.dismissLoading();
       }
-    }else
-    {
-      console.log("Hi I m here");
+    }).catch(err => {
+      this.loadingScreen.dismissLoading();
       this.bundleActiveList = [];
       this.bundleInactiveList = [];
       this.bundleTopupAgain = [];
       this.bundleExpiredList = [];
       this.isDataAvailActive = false;
       this.isDataAvailInActive = false;
-    }
-  }else
-  {
-    this.loadingScreen.dismissLoading();
+
+    })
   }
-}).catch(err => {
-  this.loadingScreen.dismissLoading();
-  this.bundleActiveList = [];
-  this.bundleInactiveList = [];
-  this.bundleTopupAgain = [];
-  this.bundleExpiredList = [];
-  this.isDataAvailActive = false;
-  this.isDataAvailInActive = false;
 
-})
-}
 
-  
- 
+
   storageBundles: any = [];
 
-  
+
   hasLoadedOnce = false;
 
-ionViewDidEnter() {
-  const savedSegment = sessionStorage.getItem('L2TraveleSIM_selectedSegment');
-  if (savedSegment) {
-    this.selectedSegment = savedSegment;
-    sessionStorage.removeItem('L2TraveleSIM_selectedSegment');
-  } else {
-    this.selectedSegment = 'active';
-  }
-
-  if (window.localStorage.getItem("L2TraveleSIM_auth_token") == null) {
-    this.isLogin = false;
-    this.isDataAvailActive = false;
-    this.isDataAvailInActive = false;
-  } else {
-    this.isLogin = true;
-    this.isDataAvailActive = true;
-    this.isDataAvailInActive = true;
-
-    if (!this.hasLoadedOnce) {
-      console.log("API calling first time only");
-      this.token = window.localStorage.getItem("L2TraveleSIM_auth_token");
-      this.getNotificationList();
-      this.gotoPurchasedBundles();
-      this.hasLoadedOnce = true;
+  ionViewDidEnter() {
+    const savedSegment = sessionStorage.getItem('L2TraveleSIM_selectedSegment');
+    if (savedSegment) {
+      this.selectedSegment = savedSegment;
+      sessionStorage.removeItem('L2TraveleSIM_selectedSegment');
     } else {
-         console.log(this.bundleActiveList.length);
-          console.log(this.bundleTopupAgain.length);
-          console.log(this.bundleInactiveList.length );
-          console.log(this.bundleExpiredList.length );
-    this.gotoPurchasedBundlesREF();
-      console.log("Skip API calls on back navigation");
+      this.selectedSegment = 'active';
+    }
+
+    if (window.localStorage.getItem("L2TraveleSIM_auth_token") == null) {
+      this.isLogin = false;
+      this.isDataAvailActive = false;
+      this.isDataAvailInActive = false;
+    } else {
+      this.isLogin = true;
+      this.isDataAvailActive = true;
+      this.isDataAvailInActive = true;
+
+      if (!this.hasLoadedOnce) {
+        console.log("API calling first time only");
+        this.token = window.localStorage.getItem("L2TraveleSIM_auth_token");
+        this.getNotificationList();
+        this.gotoPurchasedBundles();
+        this.hasLoadedOnce = true;
+      } else {
+        console.log(this.bundleActiveList.length);
+        console.log(this.bundleTopupAgain.length);
+        console.log(this.bundleInactiveList.length);
+        console.log(this.bundleExpiredList.length);
+        this.gotoPurchasedBundlesREF();
+        console.log("Skip API calls on back navigation");
+      }
     }
   }
-}
 
   ngOnInit() {
-   this.bundleActiveList = [];
+    this.bundleActiveList = [];
     this.bundleInactiveList = [];
     this.bundleExpiredList = [];
     this.bundleTopupAgain = [];
-    
+
   }
 
   // Helper function to reset lists and flags
@@ -334,7 +328,7 @@ ionViewDidEnter() {
     return this.translate.instant(`ZONES.${zones}`)
   }
 
-  
+
   gotoNoti() {
     let navigationExtras: NavigationExtras = {
       state: {
@@ -401,8 +395,7 @@ ionViewDidEnter() {
     this.navCtrl.navigateRoot('home-search');
   }
 
-  gotoMarketPlace()
-  {
+  gotoMarketPlace() {
     this.navCtrl.navigateRoot('marketplace');
   }
 
@@ -414,10 +407,10 @@ ionViewDidEnter() {
     this.navCtrl.navigateRoot('tab4');
   }
   gotoTab5() {
-if(window.localStorage.getItem('L2TraveleSIM_auth_token')== null || window.localStorage.getItem('L2TraveleSIM_auth_token')== '') 
-this.navCtrl.navigateRoot('tab5');
-else
-this.navCtrl.navigateRoot('profile');
+    if (window.localStorage.getItem('L2TraveleSIM_auth_token') == null || window.localStorage.getItem('L2TraveleSIM_auth_token') == '')
+      this.navCtrl.navigateRoot('tab5');
+    else
+      this.navCtrl.navigateRoot('profile');
   }
   //End of common footers
 }

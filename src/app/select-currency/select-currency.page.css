@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -68,7 +65,7 @@ ion-radio {
 }
 
 .currency {
-  background-color: var(--theme-color-3);
+  background-color: var(--theme-color-blue);
   padding: 3px 6px;
   border-radius: 4px;
   color: var(--color-white);

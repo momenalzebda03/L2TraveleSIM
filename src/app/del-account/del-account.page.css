@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -38,7 +35,7 @@ ion-list ion-item {
   --inner-border-width:0 0 0 0;
   margin: 0 0 20px;
   --background: var(--input-bg);
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-list ion-item:last-child {
   margin: 0 0 0px;

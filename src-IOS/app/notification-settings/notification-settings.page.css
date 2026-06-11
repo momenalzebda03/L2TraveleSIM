@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -51,8 +48,8 @@ h4 {
 }
 
 ion-toggle {
-  --handle-background: var(--theme-color-3);
-  --track-background-checked: var(--theme-color-3);
+  --handle-background: var(--theme-color-blue);
+  --track-background-checked: var(--theme-color-blue);
   --handle-background-checked: #fff;
   padding: 0 8px;
   --handle-height: 23px;

@@ -1,8 +1,8 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      <h3>{{ 'TITLE_LOGOUT' | translate }}</h3>
-      <p>{{ 'MESSAGE_LOGOUT' | translate }}</p>
+      <h3 class="is-color-title">{{ 'TITLE_LOGOUT' | translate }}</h3>
+      <p class="is-color-title">{{ 'MESSAGE_LOGOUT' | translate }}</p>
     </ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" (click)="gotoBack()">
@@ -21,7 +21,7 @@
   </ion-button>
 
   <div class="orbox">
-    <span>OR</span>
+    <span class="is-color-title">OR</span>
   </div>
 
   <ion-button expand="block" class="button-outline btn-logout" (click)="closePopover(true)">

@@ -17,7 +17,7 @@
           <ion-button fill="clear" *ngIf="notiCount == 0" (click)="gotoNoti()">
             <img src="assets/img/icons/bell-dark.png" alt="">
           </ion-button>
-          
+
           <ion-button fill="clear" *ngIf="notiCount > 0" (click)="gotoNoti()">
             <img src="assets/img/icons/bell-dark.png" alt="">
             <span>{{notiCount}}</span>
@@ -36,15 +36,16 @@
 
     <ion-item>
       <ion-avatar slot="start" *ngIf="tokenValue != 0">
-        <img  [src]="tempDetails.profile_image" />
+        <img [src]="tempDetails.profile_image" />
       </ion-avatar>
 
       <ion-avatar slot="start" *ngIf="tokenValue == 0">
-        <img  [src]="tokenValue == 0 ? 'assets/img/no-user.png' : ''" />
+        <img [src]="tokenValue == 0 ? 'assets/img/no-user.png' : ''" />
       </ion-avatar>
 
       <ion-label>
-        <h2>{{ 'HEY' | translate }} {{ tempDetails.first_name == '' || tempDetails.first_name == null ? ('TRVELLER' | translate) : tempDetails.first_name+'!' }}</h2>
+        <h2 class="is-color-title">{{ 'HEY' | translate }} {{ tempDetails.first_name == '' || tempDetails.first_name == null ? ('TRVELLER' |
+          translate) : tempDetails.first_name+'!' }}</h2>
       </ion-label>
     </ion-item>
 
@@ -64,7 +65,7 @@
         <ion-item lines="none" routerLink="/tab4">
           <ion-label>{{ 'PAYMENT_HISTORY' | translate }}</ion-label>
         </ion-item>
-       <ion-item lines="none" (click)="gotoHelpCenter()">
+        <ion-item lines="none" (click)="gotoHelpCenter()">
           <ion-label>{{ 'help_center' | translate }}</ion-label>
         </ion-item>
         <ion-item lines="none" (click)="gotoCustomerSupport()">
@@ -78,8 +79,8 @@
         </ion-item>
         <ion-item lines="none" (click)="gotoLanguageSettings()">
           <ion-label>{{ 'CHOOSE_LANGUAGE' | translate }}</ion-label>
-        </ion-item> 
-   <ion-item lines="none" (click)="gotoeSIMcompatiability()">
+        </ion-item>
+        <ion-item lines="none" (click)="gotoeSIMcompatiability()">
           <ion-label>{{ 'esim_check_compatibility' | translate }}</ion-label>
         </ion-item>
         <ion-item lines="none" (click)="gotoPrivacy()">
@@ -92,27 +93,27 @@
           <ion-label>{{ 'ABOUT_US' | translate }}</ion-label>
         </ion-item>
 
-        <ion-item lines="none" >
+        <ion-item lines="none">
           <ion-label (click)="errorMSGModal()">{{ 'App_info' | translate }} </ion-label>
         </ion-item>
-        
+
       </ion-list>
 
     </div>
 
     <div class="btn-log">
-      <ion-button expand="block" class="btn-green btn-chat"  *ngIf="tokenValue == 0" lines="none" (click)="login()">
+      <ion-button expand="block" class="btn-green btn-chat" *ngIf="tokenValue == 0" lines="none" (click)="login()">
         {{ 'SIGN_IN_TO_YOUR_ACCOUNT' | translate }}
       </ion-button>
-      <ion-button expand="block" class="btn-green btn-chat"  lines="none" (click)="openZendeskChat()">
+      <ion-button expand="block" class="btn-green btn-chat" lines="none" (click)="openZendeskChat()">
         {{ 'CHAT_WITH_SUPPORT' | translate }}
-      </ion-button> 
-      <ion-button expand="block" fill="outline" class="btn-chat" *ngIf="tokenValue == 0"  (click)="createAccount()">
+      </ion-button>
+      <ion-button expand="block" fill="outline" class="btn-chat" *ngIf="tokenValue == 0" (click)="createAccount()">
         {{ 'SIGN_UP_WITH_CODE' | translate }}
       </ion-button>
-      <ion-button expand="block" fill="outline" class="btn-chat" *ngIf="tokenValue != 0"  (click)="logout()">
+      <ion-button expand="block" fill="outline" class="btn-chat" *ngIf="tokenValue != 0" (click)="logout()">
         {{ 'LOGOUT_OF_YOUR_ACCOUNT' | translate }}
-      </ion-button>    
+      </ion-button>
     </div>
 
   </div>
@@ -123,7 +124,7 @@
   <ion-toolbar>
 
     <div class="tabmenu">
-      <ion-button  routerLink="/home-search">
+      <ion-button routerLink="/home-search">
         <img class="normal" src="assets/img/icons/location.png" alt="">
         <img class="active" src="assets/img/icons/location-yellow.png" alt="">
       </ion-button>
@@ -141,9 +142,9 @@
       <ion-button class="selected" (click)="gotoTab5()">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
-    
+
   </ion-toolbar>
 </ion-footer>

@@ -124,7 +124,7 @@ export class YourPlanPage implements OnInit {
     }
   }
 
-    //Call API for data balance 
+  //Call API for data balance 
     this.getCurrentPackage(this.bundleDatas.iccid);
   }
 

@@ -11,7 +11,7 @@
   </ion-toolbar>
   <ion-toolbar class="titlebar">
     <ion-title>
-      <h3>
+      <h3 class="is-color-title">
         {{ 'TITLE_NOTIFICATIONS' | translate }}
       </h3>
     </ion-title>
@@ -26,11 +26,11 @@
 
   <ion-row class="note-item" *ngFor="let notiItem of notificationlist; let i = index">
     <ion-col size="9">
-      <h4>{{ notiItem.notification.title }}</h4>
+      <h4 class="is-color-title">{{ notiItem.notification.title }}</h4>
       <p [innerHTML]="notiItem.notification.description"></p>
     </ion-col>
     <ion-col size="3" class="text-right">
-      <span class="date">{{ modifyDate(notiItem.notification.created_at) }}</span>
+      <span class="date is-color-title">{{ modifyDate(notiItem.notification.created_at) }}</span>
     </ion-col>
   </ion-row>
 </ion-content>

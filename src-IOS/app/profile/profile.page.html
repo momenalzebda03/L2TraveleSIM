@@ -80,17 +80,17 @@
         <h2 *ngIf="!isWalletLoading">
            <!-- LYD -->
           <span *ngIf="currencyCode === 'LYD'">
-            <ng-container *ngIf="lang === 'ar'; else lydEn">
+            <ng-container *ngIf="lang === 'ar'; else lydEn" class="is-color-title">
               {{ walletBalance | number:'1.0-0' }} د.ل
             </ng-container>
 
-            <ng-template #lydEn>
+            <ng-template #lydEn class="is-color-title">
               LYD&nbsp;{{ walletBalance| number:'1.0-0' }}
             </ng-template>
           </span>
 
           <!-- Other currencies -->
-          <span *ngIf="currencyCode !== 'LYD'">
+          <span *ngIf="currencyCode !== 'LYD'" class="is-color-title">
             {{ walletBalance | currency:currencyCode }}
           </span>
 
@@ -202,7 +202,7 @@
 
            <div class="nohistory" *ngIf="!isCreditHistory">
             <img src="assets/img/noactive-bundle.png" alt="">
-            <p>
+            <p class="is-color-title">
               {{ 'no_credit_history'  | translate}}
             </p>
           </div>
@@ -211,18 +211,18 @@
       <!-- credit end -->
 
       <!-- referrals start -->
-      <div class="referrals" *ngSwitchCase="'referrals'">
+      <div class="referrals" *ngSwitchCase="'referrals'" class="is-color-title">
        <!-- Positive balance -->
-<h2 *ngIf="refer_balance > 0">
+<h2 *ngIf="refer_balance > 0" class="is-color-title">
 
   <!-- LYD -->
-  <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyPlus">
+  <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyPlus" class="is-color-title">
 
-    <ng-container *ngIf="lang === 'ar'; else lydEnPlus">
+    <ng-container *ngIf="lang === 'ar'; else lydEnPlus" class="is-color-title">
       +{{ refer_balance }} د.ل
     </ng-container>
 
-    <ng-template #lydEnPlus>
+    <ng-template #lydEnPlus class="is-color-title">
       +LYD&nbsp;{{ refer_balance }}
     </ng-template>
 
@@ -236,7 +236,7 @@
 </h2>
 
 <!-- Zero or negative balance -->
-<h2 *ngIf="refer_balance <= 0">
+<h2 *ngIf="refer_balance <= 0" class="is-color-title">
 
   <!-- LYD -->
   <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrency">

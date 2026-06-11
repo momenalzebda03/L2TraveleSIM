@@ -121,7 +121,7 @@ ion-content{
   color:#01A949;
 }
 .inactive{
-  color: var(--theme-color-3);
+  color: red;
 }
 .active-inactive{
   text-align: center; margin: 15px 0 0;
@@ -180,7 +180,7 @@ ion-button{
 }
 .progress .value, 
 .progress .days-left {
-  fill: var(--theme-color-2);
+  fill: var(--theme-color-blue);
   text-anchor: middle;
 }
 .progress .value{ 

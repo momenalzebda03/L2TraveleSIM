@@ -30,6 +30,7 @@ ion-header {
 
     ion-buttons {
       ion-button {
+
         // position: relative; height: auto; --padding-top:5px;
         img {
           width: 28px;
@@ -40,7 +41,7 @@ ion-header {
           right: -5px;
           top: -5px;
           z-index: 1;
-          background-color: #d8322b;
+          background-color: var(--theme-color-blue);
           width: 20px;
           height: 20px;
           border-radius: 50%;
@@ -105,7 +106,7 @@ ion-header {
         text-align: center;
         color: #fff;
         font-size: 10px;
-        background-color: #d8322b;
+        background-color: var(--theme-color-blue);
         top: -5px;
         right: -10px;
         line-height: 18px;
@@ -162,7 +163,7 @@ ion-row {
     display: inline-block;
     margin: 0px -5px 0 0;
     min-height: 20px;
-    font-size:20px;
+    font-size: 20px;
   }
 }
 
@@ -182,7 +183,7 @@ ion-item {
   --padding-inline-end: 12px;
 
   .currency {
-    background-color: #d8322b;
+    background-color: var(--theme-color-blue);
     padding: 5px;
     border-radius: 4px;
     color: #fff;
@@ -216,17 +217,6 @@ ion-item {
 
 /**************************************************************/
 /***** iPad 11, iPad Pro, iPad mini ****/
-@media only screen 
-and (min-device-width: 768px) 
-and (min-device-height: 1024px) 
-// and (max-device-width: 1024px) 
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) // and (max-device-width: 1024px) 
 // and (max-device-height: 1366px) 
-and (-webkit-min-device-pixel-ratio: 2){
-
-
- 
-
-
-
-
-}
+and (-webkit-min-device-pixel-ratio: 2) {}

@@ -1,8 +1,5 @@
-ion-header ion-toolbar {
-  height: 95px;
-}
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 120px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {
@@ -29,11 +26,11 @@ ion-row ion-col.right {
 }
 
 .close ion-button {
-  --color:#fff;
+  --color: #fff;
   display: inline-block;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  --box-shadow:none;
+  --box-shadow: none;
   width: 32px;
   height: 32px;
   display: inline-block;
@@ -51,9 +48,9 @@ ion-accordion-group ion-accordion {
   font-size: 15px;
 }
 ion-accordion-group ion-accordion ion-item {
-  --background:var(--item-bg);
-  --min-height:60px;
-  border: 1px solid var(--border-color) !important;
+  --background: var(--item-bg);
+  --min-height: 60px;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-accordion-group ion-accordion ion-item ion-label {
   font-size: 15px;
@@ -64,12 +61,14 @@ ion-accordion-group ion-accordion ion-item ion-icon {
   font-size: 18px;
 }
 ion-accordion-group ion-accordion ion-item::part(native) {
-  background: var(--input-bg); /*border: 1px solid var(--item-border);*/
+  background: var(--input-bg);
+  /*border: 1px solid var(--item-border);*/
   color: #fff;
   border-radius: 10px;
 }
 ion-accordion-group ion-accordion.accordion-expanded ion-item::part(native) {
-  background: var(--input-bg); /*border: 1px solid var(--theme-color-2);*/
+  background: var(--input-bg);
+  /*border: 1px solid var(--theme-color-2);*/
 }
 ion-accordion-group ion-accordion.accordion-expanded ion-item ion-label {
   color: var(--theme-color-2);

@@ -13,7 +13,7 @@
   </ion-toolbar>
   <ion-toolbar class="titlebar">
     <ion-title>
-      <h3>
+      <h3 class="is-color-title">
         {{ 'DELETE_ACCOUNT_TEXT' | translate }}
       </h3>
     </ion-title>
@@ -32,7 +32,7 @@
       <ion-input type="text" placeholder="{{ 'TYPE_DELETE' | translate }}" [(ngModel)]="confirmationText"></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button expand="block" class="button-outline btn-delete" (click)="confirmDeletion()">
+  <ion-button expand="block" class="btn-green" (click)="confirmDeletion()">
     {{ 'DELETE_ACCOUNT_BUTTON' | translate }}
   </ion-button>
 </ion-content>
