@@ -4,8 +4,8 @@ ion-header ion-toolbar ion-buttons {
   margin-inline-start: 0;
 }
 ion-header ion-toolbar ion-buttons ion-button {
-  --padding-start:0;
-  --padding-end:0;
+  --padding-start: 0;
+  --padding-end: 0;
   margin: 0;
 }
 ion-header ion-toolbar ion-chip[slot=end] {
@@ -17,16 +17,16 @@ ion-header ion-toolbar ion-chip[slot=end] {
   min-height: 26px;
 }
 ion-header ion-toolbar ion-chip[slot=end].primary {
-  --background:var(--theme-color-1);
-  --color:#fff;
+  --background: var(--theme-color-1);
+  --color: #fff;
 }
 ion-header ion-toolbar ion-chip[slot=end].secondary {
-  --background:var(--theme-color-1);
-  --color:#fff;
+  --background: var(--theme-color-1);
+  --color: #fff;
 }
 ion-header ion-toolbar ion-chip[slot=end].tertiary {
-  --background:var(--theme-color-1);
-  --color:#fff;
+  --background: var(--theme-color-1);
+  --color: #fff;
 }
 ion-header ion-toolbar ion-title p {
   font-size: 16px;
@@ -54,14 +54,14 @@ p {
 }
 
 ion-card {
-  --background:var(--card-bg);
+  --background: var(--card-bg);
   --color: var(--theme-color-2);
   margin-inline: 0;
   box-shadow: none;
   border-radius: 16px;
   padding: 20px;
   margin: 0 0px 10px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-card h5 {
   margin: 10px 0;
@@ -167,7 +167,7 @@ swiper-container::part(bullet) {
   margin: 0 0 15px;
   color: var(--theme-color-2);
   font-size: 15px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 .cardoption ion-radio img {
   width: 25px;
@@ -184,14 +184,14 @@ swiper-container::part(bullet) {
 
 ion-radio {
   --color: var(--theme-color-2);
-  --color-checked:var(--theme-color-2);
+  --color-checked: var(--theme-color-2);
 }
 ion-radio::part(container) {
   background: var(--theme-gray);
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: var(--border-color);
+  border-color: var(--border-color-check);
 }
 ion-radio::part(mark) {
   height: 53%;
@@ -238,7 +238,7 @@ ion-row ion-col p {
 }
 
 h2 {
-  color: var(--theme-color-2);
+  color: var(--theme-color-blue);
   font-weight: 800;
   font-size: 32px;
   margin: 0 0 0;
@@ -373,11 +373,11 @@ ion-checkbox {
   font-weight: 400;
   color: var(--theme-color-2);
   font-size: 14px;
-  --border-width:1px;
+  --border-width: 1px;
   --border-color: var(--border-color-check);
-  --checkbox-background-checked:var(--theme-color-3);
-  --border-color-checked:var(--theme-color-3);
-  --checkmark-color:var(--theme-color-3);
+  --checkbox-background-checked: var(--theme-color-3);
+  --border-color-checked: var(--theme-color-3);
+  --checkmark-color: var(--theme-color-3);
   --checkmark-width: 4;
   --checkbox-background-checked: transparent;
   --border-color-checked: transparent;
@@ -408,17 +408,17 @@ ion-checkbox::part(container) {
 .couponrow ion-item {
   margin: 0 0 0 0;
   width: 100%;
-  --inner-padding-end:10px;
-  --padding-start:14px;
+  --inner-padding-end: 10px;
+  --padding-start: 14px;
   --background: var(--input-bg);
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 .couponrow ion-item ion-input {
   color: var(--theme-color-2);
 }
 .couponrow ion-item ion-button {
   margin: 0 0 0;
-  --color:#606AB8;
+  --color: #606AB8;
   height: auto;
 }
 .couponrow ion-item ion-button img {
@@ -456,7 +456,7 @@ ion-checkbox::part(container) {
 .buynewplan {
   padding: 5px;
   text-align: center;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
   border-radius: 10px;
   margin-top: 10px;
 }
@@ -534,8 +534,8 @@ ion-checkbox::part(container) {
     margin: 0 0 15px;
   }
   .couponrow ion-item {
-    --inner-padding-end:15px;
-    --padding-start:15px;
+    --inner-padding-end: 15px;
+    --padding-start: 15px;
   }
   .couponrow ion-item ion-input {
     color: #606AB8;

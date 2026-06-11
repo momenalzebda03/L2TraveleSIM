@@ -52,6 +52,11 @@ h3 {
   color: var(--theme-color-2);
 }
 
+.is-column {
+  display: flex;
+  flex-direction: column;
+}
+
 .is-color-title {
   color: var(--theme-color-blue) !important;
 }
@@ -126,7 +131,7 @@ ion-header {
 ion-header ion-toolbar {
   --background: #fff;
   --min-height: 150px;
-  height: 120px;
+  height: 130px;
 }
 ion-header ion-toolbar.ios {
   --min-height: 150px;

@@ -96,6 +96,7 @@ ion-button.add-card {
 }
 ion-button.btn-delete {
   margin: 12px 0px 0px;
+  --color: var(--theme-color-blue) ;
 }
 
 .profileupdate {

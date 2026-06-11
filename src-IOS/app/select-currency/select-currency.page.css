@@ -41,7 +41,7 @@ ion-radio::part(container) {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: var(--border-color);
+  border-color: var(--border-color-check);
 }
 ion-radio::part(mark) {
   height: 53%;

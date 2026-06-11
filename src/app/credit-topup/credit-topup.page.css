@@ -27,7 +27,7 @@ ion-radio {
   margin: 0 0 15px;
   color: var(--theme-color-2);
   font-size: 15px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-radio img {
   width: 25px;
@@ -43,7 +43,7 @@ ion-radio::part(container) {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  border-color: var(--border-color);
+  border-color: var(--border-color-check);
 }
 ion-radio::part(mark) {
   height: 53%;
@@ -160,7 +160,7 @@ ion-list {
 }
 ion-list ion-item {
   --background: var(--input-bg);
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-list ion-item ion-select {
   min-height: 56px;

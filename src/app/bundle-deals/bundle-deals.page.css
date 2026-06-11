@@ -226,7 +226,7 @@ ion-card.value-data .arrow {
 }
 
 .bestdeal {
-  background: var(--theme-color-blue);
+  background: linear-gradient(135deg, var(--theme-color-3), var(--theme-color-blue));
   color: #fff;
   padding: 8px 15px;
   margin: 0 10px 5px;

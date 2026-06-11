@@ -538,7 +538,7 @@ ion-checkbox::part(container) {
   height: auto;
 }
 .couponrow ion-button {
-  margin: 0 10px 0 10px;
+  margin-inline-start: 10px;
   height: 48px;
 }
 .couponrow ion-button::part(native) {

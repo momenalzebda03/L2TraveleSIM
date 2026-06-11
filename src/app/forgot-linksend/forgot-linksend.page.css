@@ -33,7 +33,7 @@ ion-header ion-toolbar ion-buttons ion-button.ios {
 }
 
 ion-content {
-  --background:rgba(17,32,66,0.5);
+  --background:#000000B2;
 }
 ion-content::after {
   position: fixed;

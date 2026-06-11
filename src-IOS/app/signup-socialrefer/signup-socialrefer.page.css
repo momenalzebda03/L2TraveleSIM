@@ -58,6 +58,10 @@ ion-button.btn-deal {
   --padding-end:20px;
   margin: 30px 0px 10px;
 }
+ion-button.button-outline {
+  --color: var(--theme-color-blue) ;
+}
+
 ion-content {
   --background:#fff;
 }

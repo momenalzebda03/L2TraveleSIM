@@ -57,6 +57,10 @@ ion-item {
   margin: 0 0 15px;
 }
 
+.button-outline {
+  --color: var(--theme-color-blue) ;
+}
+
 ion-button.btn-next {
   --padding-start:20px;
   --padding-end:20px;

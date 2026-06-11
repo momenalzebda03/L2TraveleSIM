@@ -1,5 +1,5 @@
 ion-content {
-  --background: transparent;
+  --background: #00000080;
 }
 ion-content::after {
   position: fixed;
@@ -9,7 +9,7 @@ ion-content::after {
   top: 0;
   bottom: 0;
   content: "";
-  background: url("../../assets/img/topup-success.png") no-repeat center center/cover;
+  background: url("../../assets/img/topup-success-page.png") no-repeat center center/cover;
 }
 
 h3 {
@@ -40,8 +40,8 @@ ion-button img {
 
 ion-button.button-outline {
   --color: #fff;
-  --border-color: var(--theme-color-1);
-  --background: var(--theme-color-1);
+  --border-color: var(--theme-color-3);
+  --background: var(--theme-color-3);
 }
 
 /**************************************************************/

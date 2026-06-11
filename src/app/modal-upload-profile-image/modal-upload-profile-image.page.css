@@ -13,7 +13,7 @@ ion-button {
   width: 50%;
 }
 ion-button.close {
-  --background:transparent;
+  --background: transparent;
   --color: var(--theme-color-1);
   font-size: 20px;
   font-weight: 600;
@@ -50,23 +50,29 @@ p {
 .btn-div {
   text-align: center;
 }
+.btn-div .btn-secondary {
+  --background: var(--theme-color-3);
+}
 .btn-div ion-button {
   display: inline-block;
   width: 200px;
-  --border-radius:8px;
+  --border-radius: 8px;
   height: 48px;
   font-size: 17px;
   font-weight: 500;
   margin: 0 0 10px;
 }
+.btn-div ion-button.button-outline {
+  --color: var(--theme-color-blue) ;
+}
 .btn-div .btn-back {
-  --background: var( --button-primary-bg);
+  --background: var(--button-primary-bg);
   --background-activated: var(--button-primary-bg);
   --background-hover: var(--button-primary-bg);
-  --color:#fff;
+  --color: #fff;
 }
 .btn-div .btn-delete {
-  --background: var( --button-primary-bg);
+  --background: var(--button-primary-bg);
   --background-activated: var(--button-primary-bg);
   --background-hover: var(--button-primary-bg);
   --color: #fff;

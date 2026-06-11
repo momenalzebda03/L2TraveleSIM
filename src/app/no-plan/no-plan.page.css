@@ -1,5 +1,5 @@
 ion-content {
-  --background:rgba(17,32,66,0.5);
+  --background:#00000080;
 }
 ion-content::after {
   position: fixed;
@@ -34,6 +34,7 @@ p {
 ion-button.button-outline {
   --color: #fff;
   --border-color: #fff;
+  --background: var(--theme-color-3) ;
 }
 
 /**************************************************************/

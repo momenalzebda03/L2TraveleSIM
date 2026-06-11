@@ -6,6 +6,7 @@ ion-header ion-toolbar ion-buttons ion-button {
   --color: #000;
   margin-inline-end: 10px;
   margin-top: 0px;
+  --background: var(--theme-color-3) ;
 }
 
 ion-card {
@@ -68,10 +69,10 @@ h5 {
   padding: 0 5px;
 }
 .iccid .btn-copy ion-button {
-  --color:#000;
-  --padding-start:3px;
-  --padding-end:3px
-  margin:0;
+  --color: #000;
+  --padding-start: 3px;
+  --padding-end: 3px margin:0;
+  --background: var(--theme-color-3) ;
 }
 
 .qrcode {
@@ -88,12 +89,12 @@ h5 {
   text-align: center;
 }
 .btn-download ion-button {
-  --background:#d8322b;
-  --background-activated:#d8322b;
-  --background-hover:#d8322b;
+  --background: var(--theme-color-3);
+  --background-activated: var(--theme-color-3);
+  --background-hover: var(--theme-color-3);
   display: inline-block;
   margin: 0 5px;
-  --border-radius:36px;
+  --border-radius: 36px;
   --padding-start: 15px;
   --padding-end: 15px;
   min-height: 42px;

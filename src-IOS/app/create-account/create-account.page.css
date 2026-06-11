@@ -1,5 +1,5 @@
 ion-header ion-toolbar {
-  --min-height:120px;
+  --min-height:25px;
   height: 120px;
 }
 ion-header ion-toolbar.ios {
