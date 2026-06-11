@@ -468,7 +468,7 @@ private validatePaymentCurrency(): boolean {
           );
 
           // Apple pay plugin native code started 
-          customStripePlugin.makePayment({ "amount": parseFloat(this.checkoutObj.amount), "countryCode": this.countryCode, "currency": this.currencyCode, "description": "L2 Travel SIM", "NosetupApplePay": this.noApplePaySetup, "api_key": this.service.stripePubliserKey, "client_secret": clientSecret, "payment_intent_id": paymentIntentId },
+          customStripePlugin.makePayment({ "amount": parseFloat(this.checkoutObj.amount), "countryCode": this.countryCode, "currency": this.currencyCode, "description": "L2 E-GO SIM", "NosetupApplePay": this.noApplePaySetup, "api_key": this.service.stripePubliserKey, "client_secret": clientSecret, "payment_intent_id": paymentIntentId },
             async (successResponse: any) => {
               //Success call back
               this.managingAppLogs(

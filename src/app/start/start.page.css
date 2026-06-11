@@ -11,6 +11,19 @@ ion-content {
   z-index: -2;
 }
 
+.is-index {
+  z-index: 1;
+}
+
+.bg-screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5019607843);
+  top: 0;
+  left: 0;
+}
+
 .videobackground video {
   width: 100%;
   height: 100%;
@@ -58,6 +71,10 @@ p {
 }
 
 .btn-go {
+  --background: var(--theme-color-3);
+  --background-activated: var(--theme-color-3);
+  --background-hover: var(--theme-color-3);
+  --color: var(--button-secondary-text);
   margin: 40px 0 0;
 }
 

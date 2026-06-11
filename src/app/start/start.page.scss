@@ -1,5 +1,5 @@
-ion-content{   
-    --background: url("../../assets/img/start-bg.png") no-repeat center center / cover;     
+ion-content {
+    --background: url("../../assets/img/start-bg.png") no-repeat center center / cover;
 }
 
 .videobackground {
@@ -11,6 +11,19 @@ ion-content{
     z-index: -2;
 }
 
+.is-index {
+    z-index: 1;
+}
+
+.bg-screen {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000080;
+    top: 0;
+    left: 0;
+}
+
 .videobackground video {
     width: 100%;
     height: 100%;
@@ -18,51 +31,67 @@ ion-content{
     pointer-events: none;
 }
 
-.content-wrapper{
+.content-wrapper {
     width: 100%;
     height: 100%;
     position: relative;
 
-    &::before{
-        position: fixed; z-index: -1; left: 0; right: 0; top: 0px; bottom: 0; content: "";;
+    &::before {
+        position: fixed;
+        z-index: -1;
+        left: 0;
+        right: 0;
+        top: 0px;
+        bottom: 0;
+        content: "";
+        ;
     }
 }
 
-.ftel-logo{
-    margin: 0 auto 0px; 
+.ftel-logo {
+    margin: 0 auto 0px;
     width: 190px;
-    
-    img{
+
+    img {
         width: 100%;
     }
 }
 
-h3{
-    color: #fff; 
+h3 {
+    color: #fff;
     font-size: 30px;
     line-height: 40px;
     margin: 40px 20px 0;
-    font-family: 'Roboto';  
+    font-family: 'Roboto';
     font-weight: 500;
 }
 
-p{
-    color: #fff; font-family: 'Roboto';  font-weight: 300;
+p {
+    color: #fff;
+    font-family: 'Roboto';
+    font-weight: 300;
 }
 
-.btn-go{
+.btn-go {
+    --background: var(--theme-color-3);
+    --background-activated: var(--theme-color-3);
+    --background-hover: var(--theme-color-3);
+    --color: var(--button-secondary-text);
     margin: 40px 0 0;
 }
 
-.signin{
+.signin {
     margin: 15px 0 0;
-    a{
-        text-decoration: underline; font-size: 15px; color: #fff;
+
+    a {
+        text-decoration: underline;
+        font-size: 15px;
+        color: #fff;
     }
 }
 
-.topbox{
-    min-height: 40%; 
+.topbox {
+    min-height: 40%;
 }
 
 
@@ -74,32 +103,38 @@ p{
 
 /**************************************************************/
 /***** iPad 11, iPad Pro, iPad mini ****/
-@media only screen 
-and (min-device-width: 768px) 
-and (min-device-height: 1024px) 
-// and (max-device-width: 1024px) 
+@media only screen and (min-device-width: 768px) and (min-device-height: 1024px) // and (max-device-width: 1024px) 
 // and (max-device-height: 1366px) 
-and (-webkit-min-device-pixel-ratio: 2){
+and (-webkit-min-device-pixel-ratio: 2) {
 
-    .topbox{
-        min-height: 38%; 
+    .topbox {
+        min-height: 38%;
     }
-    .ftel-logo{ margin: 0 auto 0px; width: 340px; }
-    h3 { font-size: 48px; line-height: 56px; margin: 50px 0 0; }
-    .btn-go  { margin: 50px 0 0; }
-    .signin{
-        a{
-           font-size: 22px;
+
+    .ftel-logo {
+        margin: 0 auto 0px;
+        width: 340px;
+    }
+
+    h3 {
+        font-size: 48px;
+        line-height: 56px;
+        margin: 50px 0 0;
+    }
+
+    .btn-go {
+        margin: 50px 0 0;
+    }
+
+    .signin {
+        a {
+            font-size: 22px;
         }
     }
 
 
 }
+
 /**************************************************************/
 /***** small devices ****/
-@media only screen and (max-width : 380px) {
-
-    
-    
-
-}
+@media only screen and (max-width : 380px) {}
