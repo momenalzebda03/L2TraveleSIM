@@ -2,16 +2,18 @@
 
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <h3 class="is-color-title">{{ 'LOGIN_TITLE' | translate }}</h3>
-        <p class="is-color-title">{{ 'LOGIN_SUBTITLE' | translate }}</p>
-      </ion-title>
-      <ion-buttons slot="end">
-        <ion-button fill="clear" (click)="gotoBack()">
-          <ion-icon name="arrow-back-circle-outline"></ion-icon>
-          <!-- <img src="assets/img/cross.png" alt=""> -->
-        </ion-button>
-      </ion-buttons>
+      <div class="is-column">
+        <ion-buttons slot="end">
+          <ion-button fill="clear" (click)="gotoBack()">
+            <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
+          </ion-button>
+        </ion-buttons>
+        <ion-title>
+          <h3 class="is-color-title">{{ 'LOGIN_TITLE' | translate }}</h3>
+          <p class="is-color-title">{{ 'LOGIN_SUBTITLE' | translate }}</p>
+        </ion-title>
+      </div>
     </ion-toolbar>
   </ion-header>
 
