@@ -240,7 +240,7 @@
        <div *ngIf="cashBackRes?.is_cashback_applicable == 1 && selectedPaymentType != 'wallet-pay'">
   <h5 class="cashbacktitle">
     {{ 'CASHBACK.TITLE' | translate }} 
-    <img src="assets/img/cashback.png" alt="{{ 'CASHBACK.IMG_ALT' | translate }}">
+    <img src="assets/img/cashback.png" alt="{{ 'CASHBACK.IMG_ALT' | translate }}" class="filter-image-1">
   </h5>
 
      <p *ngIf="cashBackRes?.amount_type === 'fixed'">
