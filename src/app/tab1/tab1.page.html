@@ -169,46 +169,52 @@
         <ion-card *ngFor="let inActiveItem of bundleInactiveList ; let i = index">
           <ion-row class="d-flex">
             <ion-col size="7" (click)="gotoDetails(inActiveItem,'inactive')">
-              <span class="countryname"
-                *ngIf="inActiveItem.type=='country'">{{convertintoCountryLang(inActiveItem.short_name_country)}}</span>
-              <span class="countryname"
-                *ngIf="inActiveItem.type!='country'">{{convertintoZoneLang(inActiveItem.short_name_country)}}</span><br>
-              <span class="days" *ngIf="inActiveItem.isUnlimited ==true">{{ inActiveItem.days}}</span>
-              <span class="days" *ngIf="inActiveItem.isUnlimited !=true">{{ inActiveItem.dataamount}} {{'GB' | translate
-                }}</span> <br>
-              <span class="voucher" *ngIf="inActiveItem.is_through_voucher ==1">{{'Voucher_Top_up' | translate}}</span>
+              <div class="flex-box">
+                <span (click)="gotoDetails(inActiveItem,'inactive')" class="country"><img
+                    *ngIf="inActiveItem.short_name_country =='LATAM' || inActiveItem.short_name_country =='latam' "
+                    src="assets/flags/la.svg" alt="">
+                  <img
+                    *ngIf="inActiveItem.short_name_country =='Europe+' || inActiveItem.short_name_country =='europe+'"
+                    src="assets/flags/eur.svg" alt="">
+                  <img *ngIf="inActiveItem.short_name_country =='Europe' || inActiveItem.short_name_country =='europe'"
+                    src="assets/flags/eur.svg" alt="">
+
+                  <img
+                    *ngIf="inActiveItem.short_name_country =='Europe Lite' || inActiveItem.short_name_country =='europe lite'"
+                    src="assets/flags/eur.svg" alt="">
+
+                  <img
+                    *ngIf="inActiveItem.short_name_country =='North America' || inActiveItem.short_name_country =='north america'"
+                    src="assets/flags/northam.svg" alt="">
+
+                  <img
+                    *ngIf="inActiveItem.short_name_country =='Middle East' || inActiveItem.short_name_country =='middle east'"
+                    src="assets/flags/middleast.svg" alt="">
+
+                  <img *ngIf="inActiveItem.short_name_country !='Europe' && inActiveItem.short_name_country !='europe' && inActiveItem.short_name_country !='Europe Lite' && inActiveItem.short_name_country !='europe lite' && inActiveItem.short_name_country !='Middle East' &&  inActiveItem.short_name_country !='middle east' 
+              && inActiveItem.short_name_country !='north america' && inActiveItem.short_name_country !='North America' &&
+              inActiveItem.short_name_country !='Europe+' && inActiveItem.short_name_country !='europe+' 
+              && inActiveItem.short_name_country !='LATAM' &&  inActiveItem.short_name_country !='latam' "
+                    src="assets/flags/{{inActiveItem.short_name_country | lowercase}}.svg" alt=""></span>
+                <div>
+                  <span class="countryname"
+                    *ngIf="inActiveItem.type=='country'">{{convertintoCountryLang(inActiveItem.short_name_country)}}</span>
+                  <span class="countryname"
+                    *ngIf="inActiveItem.type!='country'">{{convertintoZoneLang(inActiveItem.short_name_country)}}</span><br>
+                  <span class="days" *ngIf="inActiveItem.isUnlimited ==true">{{ inActiveItem.days}}</span>
+                  <span class="days" *ngIf="inActiveItem.isUnlimited !=true">{{ inActiveItem.dataamount}} {{'GB' |
+                    translate
+                    }}</span> <br>
+                  <span class="voucher" *ngIf="inActiveItem.is_through_voucher ==1">{{'Voucher_Top_up' |
+                    translate}}</span>
+                </div>
+              </div>
             </ion-col>
             <ion-col size="5" class="right">
               <span class="share" (click)="gotoShare(inActiveItem)"><img
                   src="assets/img/icons/download-black.png"></span>
               <span class="share" (click)="gotoInstallESIM(inActiveItem)"><img
                   src="assets/img/icons/barcode-icon.png"></span>
-
-              <span (click)="gotoDetails(inActiveItem,'inactive')" class="country"><img
-                  *ngIf="inActiveItem.short_name_country =='LATAM' || inActiveItem.short_name_country =='latam' "
-                  src="assets/flags/la.svg" alt="">
-                <img *ngIf="inActiveItem.short_name_country =='Europe+' || inActiveItem.short_name_country =='europe+'"
-                  src="assets/flags/eur.svg" alt="">
-                <img *ngIf="inActiveItem.short_name_country =='Europe' || inActiveItem.short_name_country =='europe'"
-                  src="assets/flags/eur.svg" alt="">
-
-                <img
-                  *ngIf="inActiveItem.short_name_country =='Europe Lite' || inActiveItem.short_name_country =='europe lite'"
-                  src="assets/flags/eur.svg" alt="">
-
-                <img
-                  *ngIf="inActiveItem.short_name_country =='North America' || inActiveItem.short_name_country =='north america'"
-                  src="assets/flags/northam.svg" alt="">
-
-                <img
-                  *ngIf="inActiveItem.short_name_country =='Middle East' || inActiveItem.short_name_country =='middle east'"
-                  src="assets/flags/middleast.svg" alt="">
-
-                <img *ngIf="inActiveItem.short_name_country !='Europe' && inActiveItem.short_name_country !='europe' && inActiveItem.short_name_country !='Europe Lite' && inActiveItem.short_name_country !='europe lite' && inActiveItem.short_name_country !='Middle East' &&  inActiveItem.short_name_country !='middle east' 
-              && inActiveItem.short_name_country !='north america' && inActiveItem.short_name_country !='North America' &&
-              inActiveItem.short_name_country !='Europe+' && inActiveItem.short_name_country !='europe+' 
-              && inActiveItem.short_name_country !='LATAM' &&  inActiveItem.short_name_country !='latam' "
-                  src="assets/flags/{{inActiveItem.short_name_country | lowercase}}.svg" alt=""></span>
             </ion-col>
           </ion-row>
         </ion-card>

@@ -83,17 +83,7 @@ ion-content {
 .container {
   position: relative;
   color: var(--theme-color-2);
-  padding: 0px 20px 10px;
-}
-.container::after {
-  position: absolute;
-  z-index: 111;
-  left: 0;
-  right: 0;
-  top: -20px;
-  height: 20px;
-  border-radius: 12px 12px 0 0;
-  content: "";
+  padding: 20px 20px 10px;
 }
 
 h3 {

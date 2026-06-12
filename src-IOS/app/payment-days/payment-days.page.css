@@ -54,8 +54,8 @@ p {
 }
 
 ion-card {
-  --background: var(--card-bg);
-  --color: var(--theme-color-2);
+  --background: var(--theme-color-blue);
+  --color: white;
   margin-inline: 0;
   box-shadow: none;
   border-radius: 16px;

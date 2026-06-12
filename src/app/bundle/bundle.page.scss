@@ -100,24 +100,12 @@ ion-header{
 
 .container{
   position: relative; 
-  color: #fff; 
-
-  &::after{
-    position: absolute; 
-    z-index: 111; 
-    left: 0; 
-    right: 0; 
-    top: -20px; 
-    background-color: #fff; 
-    height: 20px; 
-    border-radius: 12px 12px 0 0; 
-    content: "";
-  }
+  color: #fff;
 
   h3{
       font-size: 25px; 
       margin: 0  5px 10px; 
-      color: #ef413d;
+      color: var(--theme-color-blue);
       font-weight: 600;
 
       &.valueplan{
@@ -132,7 +120,7 @@ ion-header{
   }
 }
 .datacontainer{
-  padding:10px 15px;
+  padding:20px 15px;
 }
 
 ion-card{

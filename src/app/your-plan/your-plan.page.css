@@ -1,10 +1,10 @@
 ion-header ion-toolbar {
-  --min-height:150px;
+  --min-height: 150px;
   height: 100px;
-  --background:transparent;
+  --background: transparent;
 }
 ion-header ion-toolbar.ios {
-  --min-height:150px;
+  --min-height: 150px;
 }
 ion-header ion-toolbar ion-title {
   text-align: left;
@@ -35,6 +35,7 @@ ion-header ion-toolbar ion-buttons ion-button.ios {
 }
 
 ion-content {
+  --offset-bottom: 0px;
   --background: #fff;
 }
 
@@ -128,17 +129,6 @@ ion-content::after {
   color: #fff;
   padding: 10px 25px 20px;
 }
-.container::after {
-  position: absolute;
-  z-index: 111;
-  left: 0;
-  right: 0;
-  top: -20px;
-  background-color: #fff;
-  height: 20px;
-  border-radius: 12px 12px 0 0;
-  content: "";
-}
 
 .bundle-status {
   text-align: center;
@@ -160,7 +150,7 @@ ion-content::after {
 }
 
 .inactive {
-  color: red;
+  color: var(--theme-color-3);
 }
 
 .active-inactive {
@@ -257,12 +247,12 @@ ion-button.btn-plan {
 }
 
 linearGradient stop[offset="0%"] {
-  stop-color: #01A949;
+  stop-color: var(--theme-color-blue);
   stop-opacity: 1;
 }
 
 linearGradient stop[offset="100%"] {
-  stop-color: #F6001A;
+  stop-color: var(--theme-color-3);
   stop-opacity: 1;
 }
 
@@ -330,7 +320,7 @@ linearGradient stop[offset="100%"] {
     font-size: 24px;
   }
   .container {
-    padding: 10px 20px 15px;
+    padding: 30px 20px 15px;
   }
   ion-content::after {
     height: 60px;

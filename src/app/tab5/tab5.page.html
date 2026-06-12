@@ -9,17 +9,17 @@
 
         <ion-buttons class="filter" slot="end" *ngIf="tokenValue != 0">
           <ion-button fill="clear" (click)="gotoTab5()">
-            <img src="assets/img/icons/filter-yellow.png" alt="">
+            <img src="assets/img/icons/filter-yellow.png" alt="" class="filter-image-1">
           </ion-button>
         </ion-buttons>
 
         <ion-buttons slot="end">
           <ion-button fill="clear" *ngIf="notiCount == 0" (click)="gotoNoti()">
-            <img src="assets/img/icons/bell-dark.png" alt="">
+            <img src="assets/img/icons/bell-dark.png" alt="" class="filter-image-1">
           </ion-button>
 
           <ion-button fill="clear" *ngIf="notiCount > 0" (click)="gotoNoti()">
-            <img src="assets/img/icons/bell-dark.png" alt="">
+            <img src="assets/img/icons/bell-dark.png" alt="" class="filter-image-1">
             <span>{{notiCount}}</span>
           </ion-button>
         </ion-buttons>

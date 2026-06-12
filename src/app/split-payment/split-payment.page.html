@@ -1,13 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title >
-      <h3>{{ 'splitPayment' | translate }}</h3>
-    </ion-title>
-    <ion-buttons slot="end">
-      <ion-button fill="clear" (click)="closePopover()">
-        <ion-icon name="arrow-back-circle-outline"></ion-icon> 
-      </ion-button>
-    </ion-buttons>
+    <div class="is-column">
+      <ion-buttons slot="end">
+        <ion-button fill="clear" (click)="closePopover()">
+          <ion-icon name="arrow-back-circle-outline"></ion-icon>
+          <!-- <img src="assets/img/cross.png" alt=""> -->
+        </ion-button>
+      </ion-buttons>
+      <ion-title>
+        <h3 class="is-color-title">{{ 'splitPayment' | translate }}</h3>
+      </ion-title>
+    </div>
   </ion-toolbar>
 </ion-header>
 
@@ -15,68 +18,68 @@
 
   <div class="content">
 
-  <div class="splitpaymentbox">
-  <div class="amountrow">
-    <span>{{ 'totalAmount' | translate }}</span>
-    <span class="price">
-      <!-- LYD -->
-      <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyTotal">
-        <ng-container *ngIf="lang === 'ar'; else lydEnTotal">
-          {{ splitObj.total_amount }} د.ل
-        </ng-container>
-        <ng-template #lydEnTotal>
-          LYD&nbsp;{{ splitObj.total_amount }}
-        </ng-template>
-      </ng-container>
+    <div class="splitpaymentbox">
+      <div class="amountrow">
+        <span>{{ 'totalAmount' | translate }}</span>
+        <span class="price">
+          <!-- LYD -->
+          <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyTotal">
+            <ng-container *ngIf="lang === 'ar'; else lydEnTotal">
+              {{ splitObj.total_amount }} د.ل
+            </ng-container>
+            <ng-template #lydEnTotal>
+              LYD&nbsp;{{ splitObj.total_amount }}
+            </ng-template>
+          </ng-container>
 
-      <!-- Other currencies -->
-      <ng-template #otherCurrencyTotal>
-        {{ splitObj.total_amount | currency:currencyCode }}
-      </ng-template>
-    </span>
-  </div>
+          <!-- Other currencies -->
+          <ng-template #otherCurrencyTotal>
+            {{ splitObj.total_amount | currency:currencyCode }}
+          </ng-template>
+        </span>
+      </div>
 
-  <div class="amountrow">
-    <span>{{ 'walletBalance' | translate }}</span>
-    <span class="price">
-      - 
-      <!-- LYD -->
-      <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyWallet">
-        <ng-container *ngIf="lang === 'ar'; else lydEnWallet">
-          {{ splitObj.wallet_amount }} د.ل
-        </ng-container>
-        <ng-template #lydEnWallet>
-          LYD&nbsp;{{ splitObj.wallet_amount }}
-        </ng-template>
-      </ng-container>
+      <div class="amountrow">
+        <span>{{ 'walletBalance' | translate }}</span>
+        <span class="price">
+          -
+          <!-- LYD -->
+          <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyWallet">
+            <ng-container *ngIf="lang === 'ar'; else lydEnWallet">
+              {{ splitObj.wallet_amount }} د.ل
+            </ng-container>
+            <ng-template #lydEnWallet>
+              LYD&nbsp;{{ splitObj.wallet_amount }}
+            </ng-template>
+          </ng-container>
 
-      <!-- Other currencies -->
-      <ng-template #otherCurrencyWallet>
-        {{ splitObj.wallet_amount | currency:currencyCode }}
-      </ng-template>
-    </span>
-  </div>
+          <!-- Other currencies -->
+          <ng-template #otherCurrencyWallet>
+            {{ splitObj.wallet_amount | currency:currencyCode }}
+          </ng-template>
+        </span>
+      </div>
 
-  <div class="amountrow remaining">
-    <span>{{ 'remainingToPay' | translate }}</span>
-    <span class="price">
-      <!-- LYD -->
-      <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyRemaining">
-        <ng-container *ngIf="lang === 'ar'; else lydEnRemaining">
-          {{ splitObj.amt_from_other_payment }} د.ل
-        </ng-container>
-        <ng-template #lydEnRemaining>
-          LYD&nbsp;{{ splitObj.amt_from_other_payment }}
-        </ng-template>
-      </ng-container>
+      <div class="amountrow remaining">
+        <span>{{ 'remainingToPay' | translate }}</span>
+        <span class="price">
+          <!-- LYD -->
+          <ng-container *ngIf="currencyCode === 'LYD'; else otherCurrencyRemaining">
+            <ng-container *ngIf="lang === 'ar'; else lydEnRemaining">
+              {{ splitObj.amt_from_other_payment }} د.ل
+            </ng-container>
+            <ng-template #lydEnRemaining>
+              LYD&nbsp;{{ splitObj.amt_from_other_payment }}
+            </ng-template>
+          </ng-container>
 
-      <!-- Other currencies -->
-      <ng-template #otherCurrencyRemaining>
-        {{ splitObj.amt_from_other_payment | currency:currencyCode }}
-      </ng-template>
-    </span>
-  </div>
-</div>
+          <!-- Other currencies -->
+          <ng-template #otherCurrencyRemaining>
+            {{ splitObj.amt_from_other_payment | currency:currencyCode }}
+          </ng-template>
+        </span>
+      </div>
+    </div>
 
 
     <p class="select-method">
@@ -145,15 +148,12 @@
       </div>
 
 
-  </div>
+    </div>
 
-</div>
-<ion-button
-  expand="block"
-  class="btn-green btn-payment"
-  (click)="paySplitPayment()"
-  [disabled]="isSplitPaymentProcessing">
-  {{ 'PAY_NOW' | translate }}
-</ion-button>
+  </div>
+  <ion-button expand="block" class="btn-green btn-payment" (click)="paySplitPayment()"
+    [disabled]="isSplitPaymentProcessing">
+    {{ 'PAY_NOW' | translate }}
+  </ion-button>
 
 </ion-content>

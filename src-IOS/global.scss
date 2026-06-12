@@ -345,7 +345,7 @@ ion-footer {
 
         img {
           /*width: 18px;*/
-          height: 26px;
+          height: 36px;
         }
 
         img.normal {
@@ -533,7 +533,7 @@ ion-alert {
 
 .alert-button-group.sc-ion-alert-md {
   .alert-button.sc-ion-alert-md:first-child {
-    background-color: var(--theme-color-1);
+     background-color: var(--theme-color-3);
     color: #fff;
   }
 }
@@ -2708,4 +2708,12 @@ html[dir="ltr"] .otp-input ion-input .native-input {
 html[dir="rtl"] .countrybox .arrow {
   right: auto !important;
   left: 10px !important;
+}
+
+.filter-image {
+    filter: brightness(0) saturate(100%) invert(23%) sepia(89%) saturate(1200%) hue-rotate(201deg) brightness(95%) contrast(95%);
+}
+
+.filter-image-1 {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(50%) saturate(800%) hue-rotate(260deg) brightness(90%) contrast(90%);
 }

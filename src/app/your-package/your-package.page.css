@@ -279,12 +279,12 @@ ion-button.btn-plan {
 }
 
 linearGradient stop[offset="0%"] {
-  stop-color: #01A949;
+  stop-color: var(--theme-color-blue);
   stop-opacity: 1;
 }
 
 linearGradient stop[offset="100%"] {
-  stop-color: #F6001A;
+  stop-color: var(--theme-color-3);
   stop-opacity: 1;
 }
 

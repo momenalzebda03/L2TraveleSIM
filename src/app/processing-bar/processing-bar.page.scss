@@ -41,9 +41,9 @@ svg.radial-progress {
   }
   
   svg.radial-progress circle.bar--animated {
-    fill: #FD837F;
+    fill: var(--theme-color-3);
     stroke-dasharray: 219.91148575129;
-    stroke: var(--theme-color-1);
+    stroke: var(--theme-color-blue);
     stroke-dashoffset: 219.91148575129;
     stroke-width: 8px;
     stroke-linecap: round;

@@ -54,8 +54,8 @@ p {
 }
 
 ion-card {
-  --background: var(--card-bg);
-  --color: var(--theme-color-2);
+  --background: var(--theme-color-blue);
+  --color: white;
   margin-inline: 0;
   box-shadow: none;
   border-radius: 16px;
@@ -457,9 +457,9 @@ ion-row.dataneed.russian div small {
 }
 
 .status-btn.no {
-  background: #ff3b30;
-  color: #fff;
-  border: 1px solid rgba(255, 59, 48, 0.6);
+  background: rgba(255, 56, 60, 0.4);
+  color: #FF383C;
+  border: 1px solid #FF383C;
 }
 
 /* DESCRIPTION */

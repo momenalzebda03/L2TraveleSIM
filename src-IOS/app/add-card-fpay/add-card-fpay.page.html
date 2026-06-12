@@ -1,21 +1,22 @@
 <ion-content>
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        <img class="ftel-logo" src="assets/img/L2-logobranded.svg" alt="">
-      </ion-title>
-      <ion-buttons slot="end">
+      <div class="is-column">
         <ion-buttons slot="end">
           <ion-button fill="clear" (click)="goBack()">
             <ion-icon name="arrow-back-circle-outline"></ion-icon>
+            <!-- <img src="assets/img/cross.png" alt=""> -->
           </ion-button>
         </ion-buttons>
-      </ion-buttons>
+        <ion-title>
+          <img class="ftel-logo" src="assets/img/L2-logobranded.svg" alt="">
+        </ion-title>
+      </div>
     </ion-toolbar>
     <ion-toolbar class="titlebar">
       <ion-title>
-        <h3>{{ 'ADD_CARD_TITLE' | translate }}</h3>
-        <p>{{ 'ENTER_PAYMENT_DETAILS' | translate }}</p>
+        <h3 class="is-color-title">{{ 'ADD_CARD_TITLE' | translate }}</h3>
+        <p class="is-color-title">{{ 'ENTER_PAYMENT_DETAILS' | translate }}</p>
       </ion-title>
     </ion-toolbar>
   </ion-header>
@@ -25,7 +26,8 @@
 
       <ion-list>
         <ion-item lines="none">
-          <ion-input type="text" (ionInput)="validateName($event)"  autocapitalize="on" [(ngModel)]="creditCardObj.cardHolder"
+          <ion-input type="text" (ionInput)="validateName($event)" autocapitalize="on"
+            [(ngModel)]="creditCardObj.cardHolder"
             placeholder="{{ 'CARD_HOLDER_NAME_PLACEHOLDER' | translate }}"></ion-input>
         </ion-item>
 
@@ -35,13 +37,13 @@
 
         <ion-item lines="none">
           <div id="card-expiry-element" style="width: 100%;"> </div>
-      </ion-item>
+        </ion-item>
 
-      <ion-item lines="none">
+        <ion-item lines="none">
           <div id="card-cvc-element" style="width: 100%;"> </div>
-      </ion-item>
+        </ion-item>
 
-      <ion-row class="checkrow" *ngIf="tempDetails.fromPayment == true">
+        <ion-row class="checkrow" *ngIf="tempDetails.fromPayment == true">
           <ion-col>
             <ion-checkbox labelPlacement="end" [(ngModel)]="creditCardObj.isTermsSelected">
               {{ 'SAVE_CARD_DETAILS_QUESTION' | translate }}
@@ -81,9 +83,9 @@
       <ion-button (click)="gotoTab5()" class="selected">
         <img class="normal" src="assets/img/icons/user.png" alt="">
         <img class="active" src="assets/img/icons/user-yellow.png" alt="">
-      </ion-button>      
+      </ion-button>
     </div>
 
-    
+
   </ion-toolbar>
 </ion-footer>

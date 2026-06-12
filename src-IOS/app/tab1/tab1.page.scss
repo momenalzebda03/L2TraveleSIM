@@ -457,3 +457,9 @@ and (-webkit-min-device-pixel-ratio: 2){
     }
 
 }
+
+.flex-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

@@ -1,9 +1,8 @@
 ion-header ion-toolbar {
-  /*height: 145px;*/
   height: auto;
 }
 ion-header ion-toolbar ion-title .ftel-logo {
-  width: 160px;
+  width: 90px;
   margin: 7px 0px 0px;
 }
 ion-header ion-toolbar [slot=end] {

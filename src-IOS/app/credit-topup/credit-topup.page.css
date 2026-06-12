@@ -217,7 +217,7 @@ ion-button.btn-payment {
 }
 .orbox {
   margin: 25px 0px 25px;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--blue-bg-card);
   position: relative;
   font-family: "Inter";
 }

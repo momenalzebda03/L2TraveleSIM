@@ -19,17 +19,6 @@ ion-content {
   color: #fff;
   padding: 20px;
 }
-.container::after {
-  position: absolute;
-  z-index: 111;
-  left: 0;
-  right: 0;
-  top: -20px;
-  background-color: #fff;
-  height: 20px;
-  border-radius: 12px 12px 0 0;
-  content: "";
-}
 
 h3 {
   margin: -10px 0 0;

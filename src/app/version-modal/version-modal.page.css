@@ -28,10 +28,10 @@ p {
 }
 .updatenow ion-button {
   margin: 0 0;
-  --background: var( --button-primary-bg);
+  --background: var(--button-primary-bg);
   --background-activated: var(--button-primary-bg);
   --background-hover: var(--button-primary-bg);
-  --color:#fff;
+  --color: #fff;
   font-weight: 400;
   font-size: 14px;
   height: 44px;

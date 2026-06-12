@@ -572,4 +572,9 @@ ion-row ion-col.left h5 {
   .no-record img {
     width: 200px;
   }
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }/*# sourceMappingURL=tab1.page.css.map */

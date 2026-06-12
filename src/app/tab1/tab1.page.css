@@ -15,8 +15,8 @@ ion-header ion-toolbar [slot=end] {
 ion-header ion-toolbar.segment {
   --min-height: 60px;
   height: 85px;
-  --padding-start:20px;
-  --padding-end:20px;
+  --padding-start: 20px;
+  --padding-end: 20px;
 }
 ion-header ion-toolbar ion-buttons ion-button {
   position: relative;
@@ -68,7 +68,7 @@ ion-header ion-toolbar .bell .notification {
 }
 
 ion-content {
-  --background:#fff;
+  --background: #fff;
 }
 
 h5 {
@@ -116,10 +116,10 @@ h5 {
 .btn-data-bundle ion-button {
   display: inline-block;
   width: 250px;
-  --background:var(--theme-color-1);
-  --color:#fff;
-  --padding-start:20px;
-  --padding-end:20px ;
+  --background: var(--theme-color-1);
+  --color: #fff;
+  --padding-start: 20px;
+  --padding-end: 20px ;
 }
 
 .productbox {
@@ -151,7 +151,8 @@ h5 {
   font-family: "latomedium";
 }
 
-.prev, .next {
+.prev,
+.next {
   position: absolute;
   z-index: 111;
   top: 45%;
@@ -168,12 +169,13 @@ h5 {
   right: 5px;
 }
 
-ion-button.prev, ion-button.next {
+ion-button.prev,
+ion-button.next {
   --padding-start: 0px;
   --padding-end: 0px;
   --border-radius: 40px;
-  --background:#fff;
-  --box-shadow:none;
+  --background: #fff;
+  --box-shadow: none;
   width: 32px;
   height: 32px;
 }
@@ -208,11 +210,11 @@ ion-segment {
   margin-top: 20px;
 }
 ion-segment ion-segment-button {
-  --background:transparent;
-  --background-checked:transparent;
-  --color:rgba(17,32,66,0.5);
-  --color-checked:var(--theme-color-3);
-  --indicator-height:0;
+  --background: transparent;
+  --background-checked: transparent;
+  --color: rgba(17, 32, 66, 0.5);
+  --color-checked: var(--theme-color-3);
+  --indicator-height: 0;
   border-radius: 0px;
   min-height: 40px;
   padding: 0 10px;
@@ -273,7 +275,8 @@ ion-segment ion-segment-button.segment-button-checked::after {
   right: 0;
   bottom: 0;
   top: 0px;
-  content: ""; /*width: 140px;*/
+  content: "";
+  /*width: 140px;*/
   margin: 0 auto;
 }
 ion-segment ion-segment-button {
@@ -299,14 +302,14 @@ ion-segment ion-segment-button ion-label {
 
 /************/
 ion-card {
-  --background:var(--input-bg);
-  --color:var(--theme-color-2);
+  --background: var(--input-bg);
+  --color: var(--theme-color-2);
   margin-inline: 0;
   box-shadow: none;
   border-radius: 12px;
   padding: 10px 15px;
   margin: 0px 0 15px;
-  border: 1px solid var(--border-color) !important;
+  border: 1px solid var(--border-color-check) !important;
 }
 ion-card h5 {
   margin: 5px 0 0;
@@ -572,4 +575,9 @@ ion-row ion-col.left h5 {
   .no-record img {
     width: 200px;
   }
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }/*# sourceMappingURL=tab1.page.css.map */
