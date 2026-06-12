@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AboutusPageRoutingModule } from './aboutus-routing.module';
 
 import { AboutusPage } from './aboutus.page';
+import { TitleComponent } from 'src-IOS/title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { AboutusPage } from './aboutus.page';
     FormsModule,
     TranslateModule,
     IonicModule,
-    AboutusPageRoutingModule
+    AboutusPageRoutingModule,
+    TitleComponent
   ],
   declarations: [AboutusPage]
 })

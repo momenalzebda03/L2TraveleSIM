@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { AddCardFpayPageRoutingModule } from './add-card-fpay-routing.module';
 
 import { AddCardFpayPage } from './add-card-fpay.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { AddCardFpayPage } from './add-card-fpay.page';
     TranslateModule,
     FormsModule,
     IonicModule,
-    AddCardFpayPageRoutingModule
+    AddCardFpayPageRoutingModule,
+    TitleComponent
   ],
   declarations: [AddCardFpayPage]
 })

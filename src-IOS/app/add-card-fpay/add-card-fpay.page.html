@@ -1,25 +1,5 @@
 <ion-content>
-  <ion-header>
-    <ion-toolbar>
-      <div class="is-column">
-        <ion-buttons slot="end">
-          <ion-button fill="clear" (click)="goBack()">
-            <ion-icon name="arrow-back-circle-outline"></ion-icon>
-            <!-- <img src="assets/img/cross.png" alt=""> -->
-          </ion-button>
-        </ion-buttons>
-        <ion-title>
-          <img class="ftel-logo" src="assets/img/L2-logobranded.svg" alt="">
-        </ion-title>
-      </div>
-    </ion-toolbar>
-    <ion-toolbar class="titlebar">
-      <ion-title>
-        <h3 class="is-color-title">{{ 'ADD_CARD_TITLE' | translate }}</h3>
-        <p class="is-color-title">{{ 'ENTER_PAYMENT_DETAILS' | translate }}</p>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <app-title [title]="'ABOUT_US' | translate" [subTitle]="'ENTER_PAYMENT_DETAILS' | translate"></app-title>
 
   <div class="ion-padding">
     <div class="datascroll">

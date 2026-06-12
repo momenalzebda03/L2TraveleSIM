@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { TermsConditionsPageRoutingModule } from './terms-conditions-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { TermsConditionsPage } from './terms-conditions.page';
+import { TitleComponent } from 'src-IOS/title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { TermsConditionsPage } from './terms-conditions.page';
     TranslateModule,
     FormsModule,
     IonicModule,
-    TermsConditionsPageRoutingModule
+    TermsConditionsPageRoutingModule,
+    TitleComponent
   ],
   declarations: [TermsConditionsPage]
 })

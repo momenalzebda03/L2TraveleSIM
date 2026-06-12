@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { CompatibleDevicePageRoutingModule } from './compatible-device-routing.module';
 
 import { CompatibleDevicePage } from './compatible-device.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { CompatibleDevicePage } from './compatible-device.page';
     TranslateModule,
     FormsModule,
     IonicModule,
-    CompatibleDevicePageRoutingModule
+    CompatibleDevicePageRoutingModule,
+    TitleComponent
   ],
   declarations: [CompatibleDevicePage]
 })

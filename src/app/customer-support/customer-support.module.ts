@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { CustomerSupportPageRoutingModule } from './customer-support-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { CustomerSupportPage } from './customer-support.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { CustomerSupportPage } from './customer-support.page';
     FormsModule,
     TranslateModule,
     IonicModule,
-    CustomerSupportPageRoutingModule
+    CustomerSupportPageRoutingModule,
+    TitleComponent
   ],
   declarations: [CustomerSupportPage]
 })

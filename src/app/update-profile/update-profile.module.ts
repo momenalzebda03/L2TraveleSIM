@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { UpdateProfilePageRoutingModule } from './update-profile-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { UpdateProfilePage } from './update-profile.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,TranslateModule,
     IonicModule,
-    UpdateProfilePageRoutingModule
+    UpdateProfilePageRoutingModule,
+    TitleComponent
   ],
   declarations: [UpdateProfilePage]
 })

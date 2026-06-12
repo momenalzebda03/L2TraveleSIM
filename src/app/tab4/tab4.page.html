@@ -1,27 +1,6 @@
 <ion-content [fullscreen]="true">
 
-  <ion-header>
-    <ion-toolbar>
-      <div class="is-column">
-        <ion-buttons slot="end">
-          <ion-button fill="clear" (click)="gotoBack()">
-            <ion-icon name="arrow-back-circle-outline"></ion-icon>
-            <!-- <img src="assets/img/cross.png" alt=""> -->
-          </ion-button>
-        </ion-buttons>
-        <ion-title>
-          <img class="ftel-logo" src="assets/img/L2-logobranded.svg" alt="">
-        </ion-title>
-      </div>
-    </ion-toolbar>
-    <ion-toolbar class="titlebar">
-      <ion-title>
-        <h3 class="is-color-title">
-          {{ 'PAYMENT_HISTORY' | translate }}
-        </h3>
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
+<app-title [title]="'PAYMENT_HISTORY' | translate"></app-title>
 
   <div class="ion-padding">
 

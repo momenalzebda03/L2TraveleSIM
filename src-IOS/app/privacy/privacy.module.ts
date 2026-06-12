@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PrivacyPageRoutingModule } from './privacy-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { PrivacyPage } from './privacy.page';
+import { TitleComponent } from 'src-IOS/title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { PrivacyPage } from './privacy.page';
     TranslateModule,
     FormsModule,
     IonicModule,
-    PrivacyPageRoutingModule
+    PrivacyPageRoutingModule,
+    TitleComponent
   ],
   declarations: [PrivacyPage]
 })

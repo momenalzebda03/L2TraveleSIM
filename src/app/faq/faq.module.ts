@@ -7,6 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FaqPageRoutingModule } from './faq-routing.module';
 
 import { FaqPage } from './faq.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { FaqPage } from './faq.page';
     FormsModule,
     IonicModule,
     TranslateModule,
-    FaqPageRoutingModule
+    FaqPageRoutingModule,
+    TitleComponent
   ],
   declarations: [FaqPage]
 })

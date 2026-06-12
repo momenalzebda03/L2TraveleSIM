@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { SavedCardsPageRoutingModule } from './saved-cards-routing.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { SavedCardsPage } from './saved-cards.page';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { SavedCardsPage } from './saved-cards.page';
     TranslateModule,
     FormsModule,
     IonicModule,
-    SavedCardsPageRoutingModule
+    SavedCardsPageRoutingModule,
+    TitleComponent
   ],
   declarations: [SavedCardsPage]
 })

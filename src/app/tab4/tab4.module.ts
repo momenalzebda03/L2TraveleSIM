@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab4Page } from './tab4.page';
 import { TranslateModule } from '@ngx-translate/core';
 import { Tab4PageRoutingModule } from './tab4-routing.module';
+import { TitleComponent } from '../title/title.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,8 @@ import { Tab4PageRoutingModule } from './tab4-routing.module';
     CommonModule,
     FormsModule,
     TranslateModule,
-    Tab4PageRoutingModule
+    Tab4PageRoutingModule,
+    TitleComponent
   ],
   declarations: [Tab4Page]
 })
