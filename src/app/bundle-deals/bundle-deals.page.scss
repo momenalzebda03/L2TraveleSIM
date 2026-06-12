@@ -116,18 +116,6 @@ ion-header {
   position: relative;
   color: #fff;
 
-  &::after {
-    position: absolute;
-    z-index: 111;
-    left: 0;
-    right: 0;
-    top: -20px;
-    background-color: #fff;
-    height: 20px;
-    border-radius: 12px 12px 0 0;
-    content: "";
-  }
-
   h3 {
     font-size: 28px;
     margin: 0 10px 10px;
@@ -143,7 +131,7 @@ ion-header {
 }
 
 .datacontainer {
-  padding: 10px 15px;
+  padding: 20px 15px;
 }
 
 ion-card {
@@ -268,7 +256,7 @@ ion-card {
 }
 
 .unlimitedColor {
-  color: #ef413d !important
+  color: var(--theme-color-blue) !important
 }
 
 .bestdeal {

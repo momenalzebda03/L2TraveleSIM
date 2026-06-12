@@ -51,7 +51,8 @@ export class Tab1Page {
       this.token = window.localStorage.getItem("L2TraveleSIM_auth_token");
       this.isDataAvailActive = true;
       this.isDataAvailInActive = true;
-      this.bundleActiveList = [];
+      this.bundleActiveList = [
+      ];
       this.bundleInactiveList = [];
       this.bundleExpiredList = [];
       this.bundleTopupAgain = [];
@@ -287,7 +288,8 @@ ionViewDidEnter() {
 }
 
   ngOnInit() {
-   this.bundleActiveList = [];
+   this.bundleActiveList = [
+   ];
     this.bundleInactiveList = [];
     this.bundleExpiredList = [];
     this.bundleTopupAgain = [];
