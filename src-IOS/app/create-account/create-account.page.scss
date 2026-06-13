@@ -306,7 +306,7 @@ ion-button{
     .countryselect{
      width: 88px; background: var(--input-bg); border-radius: 10px; margin-right: 10px; color: #fff; display: flex; align-items: center; padding: 12px;
      min-height: 56px;
-   border: 1px solid var(--border-color) !important;
+   border: 1px solid var(--border-color-check) !important;
 
      .countryimg{ width: 25px; margin-right: 5px; border-radius: 2px;}
      .countrycode{ color: var(--theme-color-2); }

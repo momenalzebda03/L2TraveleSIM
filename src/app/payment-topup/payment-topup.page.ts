@@ -50,7 +50,8 @@ export class PaymentTopupPage implements OnInit {
   loading = false;
   creditDebitType: any = '';
   googlePayType: any = '';
-  cardList: any = [];
+  cardList: any = [
+  ];
  isGooglePayProcessing = false;
   private browserInstance: any;  // To store the reference to the browser
   private backButtonSubscription: any;  // To store the back button subscription

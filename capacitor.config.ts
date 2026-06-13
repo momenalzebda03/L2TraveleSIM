@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'demoApp',
+  appId: 'com.egosim.app',
+  appName: 'EGO Sim',
   webDir: 'www',
   server: {
     androidScheme: 'https'
